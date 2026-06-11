@@ -8,7 +8,8 @@ Live at **https://ngquangtrung57.github.io**
 
 - [Astro 5](https://astro.build) — static output, zero framework JS
 - Vanilla TypeScript for the interactive bit:
-  - `src/scripts/forward-pass.ts` — "The Forward Pass": an explorable multimodal LLM pipeline (input → tokenize → attend → logits → decode) with a "be the sampler" next-token mini-game
+  - `src/scripts/sampler.ts` — "The Sampler": a one-sentence toy LM with a temperature slider (0 = greedy, 2 = chaos); click any sampled word to reroll it
+- Light/dark theme toggle (persisted in `localStorage`, defaults to `prefers-color-scheme`)
 - Self-hosted fonts (Fraunces, Newsreader, IBM Plex Mono) via Fontsource
 
 ## Development

@@ -17,6 +17,32 @@ const sections = ['publications', 'experience', 'projects', 'contact'];
         ))
       }
     </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <svg
+        class="icon-sun"
+        width="15"
+        height="15"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="4.4"></circle>
+        <path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3 17 7M7 17l-1.7 1.7"></path>
+      </svg>
+      <svg
+        class="icon-moon"
+        width="15"
+        height="15"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"></path>
+      </svg>
+    </button>
     <a
       class="gh"
       href={profile.links.github}
@@ -44,7 +70,7 @@ const sections = ['publications', 'experience', 'projects', 'contact'];
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(11, 14, 20, 0.8);
+    background: var(--header-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -126,6 +152,39 @@ const sections = ['publications', 'experience', 'projects', 'contact'];
     color: var(--accent);
   }
 
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  .theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* moon shown in dark mode, sun in light mode */
+  .icon-sun {
+    display: none;
+  }
+
+  :global(html[data-theme='light']) .icon-sun {
+    display: block;
+  }
+
+  :global(html[data-theme='light']) .icon-moon {
+    display: none;
+  }
+
   @media (min-width: 720px) {
     .gh {
       display: none;
@@ -137,8 +196,23 @@ const sections = ['publications', 'experience', 'projects', 'contact'];
       display: none;
     }
 
-    .gh {
+    .theme-toggle {
       margin-left: auto;
     }
   }
 </style>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {}
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', next === 'light' ? '#f6f1e6' : '#0b0e14');
+  });
+</script>

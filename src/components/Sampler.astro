@@ -1,0 +1,194 @@
+---
+/* A tiny toy: one sentence, sampled live. Drag the temperature to make it
+   weirder; click a highlighted word to reroll just that one. The static
+   markup below is the greedy (temp = 0) sentence, shown before JS loads. */
+---
+
+<aside class="sampler" data-sampler aria-label="Token sampling toy">
+  <header class="bar">
+    <span class="title">$ ./sample --temp <output data-temp-out data-zone="warm">0.70</output></span>
+    <button class="reroll" type="button" data-reroll>↻ resample</button>
+  </header>
+
+  <p class="sentence" data-sentence aria-live="polite">
+    I <button type="button" class="tok">train</button>
+    <button type="button" class="tok">multimodal</button> models that
+    <button type="button" class="tok">listen</button><button type="button" class="tok">.</button>
+  </p>
+
+  <div class="controls">
+    <label class="temp-label" for="temp-slider">temperature</label>
+    <input
+      id="temp-slider"
+      data-temp
+      type="range"
+      min="0"
+      max="2"
+      step="0.05"
+      value="0.7"
+      aria-label="Sampling temperature"
+    />
+    <div class="scale" aria-hidden="true">
+      <span>0 · greedy</span>
+      <span>2 · chaos</span>
+    </div>
+  </div>
+
+  <p class="joint meta">p(sentence) ≈ <span data-prob-out>—</span></p>
+
+  <p class="hint">
+    every word above is sampled from real(ish) logits — drag the temperature,
+    or click a word to resample it.
+  </p>
+</aside>
+
+<script>
+  import { mountSampler } from '../scripts/sampler';
+
+  const root = document.querySelector<HTMLElement>('[data-sampler]');
+  if (root) mountSampler(root);
+</script>
+
+<style>
+  .sampler {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-terminal);
+    padding: var(--space-6);
+    box-shadow: 0 0 40px var(--accent-dim);
+  }
+
+  .bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .title {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .title output {
+    font-weight: 500;
+  }
+
+  .title output[data-zone='cold'] {
+    color: var(--accent-2);
+  }
+
+  .title output[data-zone='warm'] {
+    color: var(--accent);
+  }
+
+  .title output[data-zone='hot'] {
+    color: var(--accent-hot);
+  }
+
+  .reroll {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    padding: 0.15rem 0.7rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  .reroll:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .sentence {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 460;
+    line-height: 1.75;
+    letter-spacing: -0.005em;
+  }
+
+  /* sampled-word chips; .tok elements are (re)built by the script */
+  .sentence :global(.tok) {
+    display: inline;
+    padding: 0.04em 0.28em;
+    margin-inline: 0.04em;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--accent-dim);
+    font: inherit;
+    color: var(--accent);
+    cursor: pointer;
+    transition: border-color var(--transition);
+  }
+
+  .sentence :global(.tok:hover) {
+    border-color: var(--accent);
+  }
+
+  .sentence :global(.tok.flash) {
+    animation: tok-flash 480ms ease-out;
+  }
+
+  @keyframes tok-flash {
+    0% {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    100% {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+  }
+
+  .controls {
+    margin-top: var(--space-6);
+  }
+
+  .temp-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    margin-bottom: var(--space-2);
+  }
+
+  input[type='range'] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: ew-resize;
+  }
+
+  .scale {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-faint);
+    margin-top: var(--space-1);
+  }
+
+  .joint {
+    margin-top: var(--space-4);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+  }
+
+  .joint span {
+    color: var(--text-muted);
+  }
+
+  .hint {
+    margin-top: var(--space-3);
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--text-faint);
+  }
+</style>

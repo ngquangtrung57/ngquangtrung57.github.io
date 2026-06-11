@@ -43,6 +43,23 @@ const jsonLd = JSON.stringify({
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#0b0e14" />
+    <script is:inline>
+      (() => {
+        let theme;
+        try {
+          theme = localStorage.getItem('theme');
+        } catch {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.dataset.theme = theme;
+        if (theme === 'light') {
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute('content', '#f6f1e6');
+        }
+      })();
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

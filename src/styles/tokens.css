@@ -1,6 +1,8 @@
 /* Design tokens — single source of truth for the visual system.
-   Direction: editorial serif × amber-phosphor terminal on deep ink. */
-:root {
+   Direction: editorial serif × amber-phosphor terminal.
+   Two themes: deep ink (default) and warm paper. */
+:root,
+:root[data-theme='dark'] {
   /* surfaces */
   --bg: #0b0e14;
   --bg-elevated: #10141d;
@@ -8,15 +10,18 @@
   --bg-terminal: #0d1119;
   --border: #222a39;
   --border-glow: rgba(245, 183, 85, 0.22);
+  --header-bg: rgba(11, 14, 20, 0.8);
+  --grid-dot: rgba(233, 228, 216, 0.045);
 
   /* text */
   --text: #e9e4d8;
   --text-muted: #9aa1ad;
   --text-faint: #5f6775;
 
-  /* accents — amber phosphor primary, soft green for "ok" states only */
+  /* accents — amber phosphor primary, green for "ok", pink for "hot" */
   --accent: #f5b755;
   --accent-2: #9ece6a;
+  --accent-hot: #e0719a;
   --accent-dim: rgba(245, 183, 85, 0.12);
 
   /* type */
@@ -40,4 +45,25 @@
   --content-width: 46rem;
   --wide-width: 64rem;
   --transition: 180ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* warm paper — same amber-ochre family, inverted values */
+:root[data-theme='light'] {
+  --bg: #f6f1e6;
+  --bg-elevated: #fcf9f1;
+  --bg-inset: #ede6d4;
+  --bg-terminal: #fbf7ec;
+  --border: #d9cfb8;
+  --border-glow: rgba(150, 100, 16, 0.18);
+  --header-bg: rgba(246, 241, 230, 0.82);
+  --grid-dot: rgba(42, 37, 30, 0.07);
+
+  --text: #2a2620;
+  --text-muted: #6b6151;
+  --text-faint: #99907c;
+
+  --accent: #8a5a0a;
+  --accent-2: #4f7d28;
+  --accent-hot: #b1456f;
+  --accent-dim: rgba(138, 90, 10, 0.12);
 }
