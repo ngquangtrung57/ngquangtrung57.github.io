@@ -1,0 +1,495 @@
+{
+ "topic": "llms",
+ "eras": {
+  "pre2012": [
+   {
+    "text": "You shall know a word by the company it keeps!",
+    "author": "J.R. Firth",
+    "year": "1957",
+    "source": "A Synopsis of Linguistic Theory 1930-1955 (paper)",
+    "url": "https://quoteinvestigator.com/2022/09/18/word-company/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim via Quote Investigator, including the exclamation mark. 1957, Philological Society volume Studies in Linguistic Analysis. Attribution correct."
+   },
+   {
+    "text": "The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point.",
+    "author": "Claude Shannon",
+    "year": "1948",
+    "source": "A Mathematical Theory of Communication (paper)",
+    "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the original 1948 Bell System Technical Journal paper (second paragraph). Attribution and year correct."
+   },
+   {
+    "text": "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
+    "author": "Alan Turing",
+    "year": "1950",
+    "source": "Computing Machinery and Intelligence (paper, closing line)",
+    "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim as the closing line of the 1950 Mind paper. Note this entry already uses the correct 'we can see plenty' wording (the common misquote is 'there is plenty')."
+   },
+   {
+    "text": "Colorless green ideas sleep furiously.",
+    "author": "Noam Chomsky",
+    "year": "1957",
+    "source": "Syntactic Structures (book)",
+    "url": "https://en.wikipedia.org/wiki/Colorless_green_ideas_sleep_furiously",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim; appears on p.15 of Syntactic Structures (1957). First used in Chomsky's 1955 thesis and 1956 paper, but the 1957 book is the standard citation, so attribution is fine."
+   },
+   {
+    "text": "When I look at an article in Russian, I say \"This is really written in English, but it has been coded in some strange symbols. I will now proceed to decode.\"",
+    "author": "Warren Weaver",
+    "year": "1947",
+    "source": "letter to Norbert Wiener, March 4, 1947",
+    "url": "https://aclanthology.org/www.mt-archive.info/50/Weaver-1947-original.pdf",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the Rockefeller Foundation Archives scan of the letter. Fixed minor drift: the original has no colon after 'I say' and uses plain quotation marks. Date and attribution correct."
+   },
+   {
+    "text": "But invariably, simple models and a lot of data trump more elaborate models based on less data.",
+    "author": "Alon Halevy, Peter Norvig & Fernando Pereira",
+    "year": "2009",
+    "source": "The Unreasonable Effectiveness of Data (paper, IEEE Intelligent Systems)",
+    "url": "https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact verbatim match verified against page 9 of the paper PDF (IEEE Intelligent Systems 24(2), March/April 2009), including the leading 'But invariably'. Attribution and year correct."
+   },
+   {
+    "text": "There's no data like more data.",
+    "author": "Robert Mercer",
+    "year": "1985",
+    "source": "remark at Arden House speech workshop (as recalled by attendees; folkloric provenance)",
+    "url": "https://www.journals.uchicago.edu/doi/10.1086/725132",
+    "spice": 3,
+    "keep": true,
+    "note": "Standard attribution: Mercer (IBM CSR group under Jelinek) at the 1985 Arden House speech recognition workshop. No verbatim contemporaneous record exists, but the attribution is accepted in scholarly literature (Xiaochang Li, Osiris 38, uses it as her article title) and the source line already discloses the folkloric provenance honestly. Sometimes rendered 'There is no data like more data'; often misattributed to Jelinek himself. Safe to keep as labeled."
+   },
+   {
+    "text": "What I had not realized is that extremely short exposures to a relatively simple computer program could induce powerful delusional thinking in quite normal people.",
+    "author": "Joseph Weizenbaum",
+    "year": "1976",
+    "source": "Computer Power and Human Reason (book, on ELIZA)",
+    "url": "https://en.wikipedia.org/wiki/ELIZA_effect",
+    "spice": 4,
+    "keep": true,
+    "note": "Exact verbatim, confirmed across multiple independent sources quoting Computer Power and Human Reason (1976, p. 7), where Weizenbaum reflects on reactions to ELIZA. Attribution and year correct."
+   },
+   {
+    "text": "But it must be recognized that the notion of 'probability of a sentence' is an entirely useless one, under any known interpretation of this term.",
+    "author": "Noam Chomsky",
+    "year": "1969",
+    "source": "'Some Empirical Assumptions in Modern Philosophy of Language', in Philosophy, Science and Method: Essays in Honor of Ernest Nagel (quoted in Norvig's 'On Chomsky and the Two Cultures of Statistical Learning')",
+    "url": "https://norvig.com/chomsky.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Wording verified exact against Norvig's essay. Corrected the essay title: the quote is from 'Some Empirical Assumptions in Modern Philosophy of Language' (1969), not 'Quine's Empirical Assumptions' (a different 1968 Chomsky essay). Year 1969 confirmed."
+   },
+   {
+    "text": "Every time I fire a linguist, the performance of our speech recognition system goes up.",
+    "author": "Frederick Jelinek",
+    "year": "c. 1988",
+    "source": "remark attributed to a December 1988 talk (popular version; exact wording disputed — Jelinek recalled saying 'Anytime a linguist leaves the group the recognition rate goes up')",
+    "url": "https://en.wikiquote.org/wiki/Fred_Jelinek",
+    "spice": 5,
+    "keep": true,
+    "note": "Genuine but folklore-polished. Per Wikiquote, the most famous circulated version is 'Every time I fire a linguist, the performance of our speech recognition system goes up' — corrected text to that. Jelinek himself recalled a milder phrasing (Wayne, PA, Dec 1988); Roger Moore dates a variant to a 1985 IEEE workshop; never in published proceedings. Kept because the source line discloses the disputed wording, which is honest enough for an academic site."
+   }
+  ],
+  "e2012_2017": [
+   {
+    "text": "Deep Learning waves have lapped at the shores of computational linguistics for several years now, but 2015 seems like the year when the full force of the tsunami hit the major Natural Language Processing (NLP) conferences.",
+    "author": "Christopher D. Manning",
+    "year": "2015",
+    "source": "Last Words: Computational Linguistics and Deep Learning (Computational Linguistics 41:4, p. 701)",
+    "url": "https://aclanthology.org/J15-4006.pdf",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified against the journal PDF. Input truncated the sentence after 'tsunami hit' — the original continues 'the major Natural Language Processing (NLP) conferences.' Corrected to the full exact sentence. Attribution and year correct."
+   },
+   {
+    "text": "With a large enough network, a large enough labelled training set, and a large enough budget for GPUs, success is guaranteed.",
+    "author": "Ilya Sutskever",
+    "year": "c. 2015",
+    "source": "Talk slides, as preserved in Michael Guerzhoy's U. Toronto CSC411 lecture deck '\"Success is guaranteed\"' (Winter 2017, credited 'Slides from Ilya Sutskever')",
+    "url": "https://www.cs.toronto.edu/~guerzhoy/411/lec/W12/success.pdf",
+    "spice": 1,
+    "keep": true,
+    "note": "Wording verified verbatim on slide 8 of the cited deck (rendered the PDF to images). But the 'Seq2Seq talk, NIPS 2014' attribution is wrong: per Sutskever's own NeurIPS 2024 Test of Time retrospective, the 2014 conclusion slide read 'if you have a very big dataset and you train a very big neural network, then success is guaranteed.' Source field corrected to the verifiable deck; year softened to c. 2015 since the exact talk is unpinned. If you want a directly-from-Ilya alternative, use the NIPS 2014 slide wording instead."
+   },
+   {
+    "text": "You can't cram the meaning of a whole %&!$# sentence into a single $&!#* vector!",
+    "author": "Ray Mooney",
+    "year": "2014",
+    "source": "Opening invited talk, ACL 2014 Workshop on Semantic Parsing (Baltimore); canonical censored rendering from Mooney's own page, echoed in the title of Conneau et al., ACL 2018",
+    "url": "https://www.cs.utexas.edu/~mooney/cramming.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified via Mooney's own UT Austin page, which gives the exact rendering '%&!$# sentence' — input had '%&!$ing'. Corrected. Year 2014 and attribution correct; URL swapped to Mooney's authoritative page (the previous presentation-attachment link is secondary)."
+   },
+   {
+    "text": "Gradient descent can write code better than you. I'm sorry.",
+    "author": "Andrej Karpathy",
+    "year": "2017",
+    "source": "Tweet, Aug 4 2017",
+    "url": "https://x.com/karpathy/status/893576281375219712",
+    "spice": 4,
+    "keep": true,
+    "note": "Exact and verified: the tweet exists at the cited URL with this precise wording, dated August 4, 2017, and Karpathy lists it among his favorite tweets on karpathy.ai/tweets.html. No changes needed."
+   },
+   {
+    "text": "There's something magical about Recurrent Neural Networks (RNNs).",
+    "author": "Andrej Karpathy",
+    "year": "2015",
+    "source": "Blog post: The Unreasonable Effectiveness of Recurrent Neural Networks (opening line)",
+    "url": "http://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified against the blog post (May 21, 2015). Corrected minor drift: the exact opening line ends with \"(RNNs).\""
+   },
+   {
+    "text": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+    "author": "Vaswani et al.",
+    "year": "2017",
+    "source": "Attention Is All You Need (abstract)",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the arXiv abstract. Attribution and year correct."
+   },
+   {
+    "text": "With artificial intelligence we are summoning the demon.",
+    "author": "Elon Musk",
+    "year": "2014",
+    "source": "MIT AeroAstro Centennial Symposium; reported in The Washington Post",
+    "url": "https://www.washingtonpost.com/news/innovations/wp/2014/10/24/elon-musk-with-artificial-intelligence-we-are-summoning-the-demon/",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified. Wording matches the cited Washington Post report (Oct 24, 2014). TechCrunch's video transcription renders the spoken line with a contraction (\"we're summoning the demon\"); since the source cited is the WaPo report, the \"we are\" version is accurate as attributed."
+   },
+   {
+    "text": "People should stop training radiologists now. It's just completely obvious that within five years deep learning is going to do better than radiologists.",
+    "author": "Geoffrey Hinton",
+    "year": "2016",
+    "source": "Machine Learning and the Market for Intelligence, Creative Destruction Lab (Toronto)",
+    "url": "https://www.youtube.com/watch?v=2HMPRXstSvQ",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified against the Creative Destruction Lab video (\"Geoff Hinton: On radiology\", Nov 2016) and Melanie Mitchell's widely cited transcription. Swapped URL from the X post to the primary CDL YouTube video. Fuller quote continues: \"...because it's going to be able to get a lot more experience. It might be 10 years, but we've got plenty of radiologists already.\" Famous spicy miss, but real and well documented."
+   },
+   {
+    "text": "I have a lot of respect for language. Deep-learning people seem not to.",
+    "author": "Yoav Goldberg",
+    "year": "2017",
+    "source": "Medium post: An Adversarial Review of 'Adversarial Generation of Natural Language' (opening lines)",
+    "url": "https://medium.com/@yoav.goldberg/an-adversarial-review-of-adversarial-generation-of-natural-language-409ac3378bd7",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim as the opening lines of Goldberg's June 2017 Medium post. Attribution, year, and URL all correct. Famous, real spicy take from a respected NLP researcher."
+   },
+   {
+    "text": "It's not a human move. I've never seen a human play this move. So beautiful.",
+    "author": "Fan Hui",
+    "year": "2016",
+    "source": "On AlphaGo's Move 37 vs Lee Sedol, Game 2; quoted in Cade Metz, Wired",
+    "url": "https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified: appears in Cade Metz's March 2016 Wired article 'In Two Moves, AlphaGo and Lee Sedol Redefined the Future' exactly as quoted ('It's not a human move. I've never seen a human play this move,' he says. 'So beautiful.'). Also appears in Metz's companion Wired piece 'The Sadness and Beauty of Watching Google's AI Play Go.' Attribution, year, and URL correct."
+   }
+  ],
+  "e2017_2020": [
+   {
+    "text": "Attention Is All You Need",
+    "author": "Vaswani et al.",
+    "year": "2017",
+    "source": "paper title, NeurIPS 2017",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified on arXiv. Corrected to official title-case wording and dropped the trailing period (it is a title, not a sentence). Conference was technically called NIPS in 2017; 'NeurIPS 2017' is the standard retroactive name and fine to keep."
+   },
+   {
+    "text": "The biggest lesson that can be read from 70 years of AI research is that general methods that leverage computation are ultimately the most effective, and by a large margin.",
+    "author": "Rich Sutton",
+    "year": "2019",
+    "source": "essay, \"The Bitter Lesson\"",
+    "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact match. Opening sentence of the essay, published March 13, 2019 on incompleteideas.net. Attribution and year correct."
+   },
+   {
+    "text": "The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude.",
+    "author": "Kaplan et al.",
+    "year": "2020",
+    "source": "paper abstract, \"Scaling Laws for Neural Language Models\"",
+    "url": "https://arxiv.org/abs/2001.08361",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact verbatim match against the arXiv abstract (submitted January 23, 2020). Attribution and year correct."
+   },
+   {
+    "text": "NLP's ImageNet moment has arrived",
+    "author": "Sebastian Ruder",
+    "year": "2018",
+    "source": "essay title, The Gradient",
+    "url": "https://thegradient.pub/nlp-imagenet/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified: exact article title on The Gradient, published July 8, 2018. Removed trailing period since it is quoted as a title."
+   },
+   {
+    "text": "Due to our concerns about malicious applications of the technology, we are not releasing the trained model.",
+    "author": "OpenAI",
+    "year": "2019",
+    "source": "blog, \"Better Language Models and Their Implications\" (GPT-2 announcement)",
+    "url": "https://openai.com/index/better-language-models/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim. The OpenAI blog itself 403s direct fetches, but the exact sentence is confirmed by multiple independent sources quoting the Feb 2019 post (e.g. Naoki Shibuya's blog, The Next Web), which quote it as: \"Our model, called GPT-2 ... Due to our concerns about malicious applications of the technology, we are not releasing the trained model.\" Attribution and year (Feb 2019) correct."
+   },
+   {
+    "text": "...the language modeling task, because it only uses form as training data, cannot in principle lead to learning of meaning.",
+    "author": "Emily M. Bender & Alexander Koller",
+    "year": "2020",
+    "source": "paper, \"Climbing towards NLU\" (ACL 2020; leading ellipsis trims \"We argue that\")",
+    "url": "https://aclanthology.org/2020.acl-main.463/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the ACL Anthology PDF (Section 3, italicized thesis sentence): \"We argue that the language modeling task, because it only uses form as training data, cannot in principle lead to learning of meaning.\" The leading-ellipsis trim is honest and noted in the source field. Attribution and year correct."
+   },
+   {
+    "text": "Playing with GPT-3 feels like seeing the future. I've gotten it to write songs, stories, press releases, guitar tabs, interviews, essays, technical manuals. It's shockingly good.",
+    "author": "Arram Sabeti",
+    "year": "2020",
+    "source": "tweet (@arram), July 9, 2020",
+    "url": "https://x.com/arram/status/1281258647566217216",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the live tweet (ID 1281258647566217216) and MIT Technology Review's contemporaneous coverage. Date July 9, 2020 and attribution correct."
+   },
+   {
+    "text": "The GPT-3 hype is way too much. It's impressive (thanks for the nice compliments!) but it still has serious weaknesses and sometimes makes very silly mistakes.",
+    "author": "Sam Altman",
+    "year": "2020",
+    "source": "tweet (@sama), July 19, 2020 — excerpt, first half of tweet",
+    "url": "https://twitter.com/sama/status/1284922296348454913",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim via Hacker News thread quoting the tweet at the time and Analytics India Magazine coverage; tweet continued \"AI is going to change the world, but GPT-3 is just a very early glimpse...\", consistent with the 'excerpt, first half' source note. Date July 19, 2020 and attribution correct. Spicy but real — keep."
+   },
+   {
+    "text": "It's a fluent spouter of bullshit, but even with 175 billion parameters and 450 gigabytes of input data, it's not a reliable interpreter of the world.",
+    "author": "Gary Marcus & Ernest Davis",
+    "year": "2020",
+    "source": "MIT Technology Review, \"GPT-3, Bloviator: OpenAI's language generator has no idea what it's talking about\" (Aug 22, 2020)",
+    "url": "https://www.technologyreview.com/2020/08/22/1007539/gpt3-openai-language-generator-artificial-intelligence-ai-opinion/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the MIT Technology Review article. Body wording was already exact; only fix is the trimmed opening — the sentence begins \"It's\", not \"[GPT-3] is\" as the original source note claimed. Returned the full sentence to avoid the misleading ellipsis. Attribution and 2020 date correct. Contains the word \"bullshit\", but it is an accurate quote from a major publication by two prominent academics, so it is defensible on an academic site."
+   },
+   {
+    "text": "Extrapolating the spectacular performance of GPT3 into the future suggests that the answer to life, the universe and everything is just 4.398 trillion parameters.",
+    "author": "Geoffrey Hinton",
+    "year": "2020",
+    "source": "tweet (@geoffreyhinton), June 10, 2020, as documented by Quote Investigator",
+    "url": "https://quoteinvestigator.com/2022/10/29/answer-universe/",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified word-for-word against Quote Investigator's record of the tweet (June 10, 2020, 4:26 PM), including the unhyphenated \"GPT3\". The joke: 4.398 trillion is approximately 2^42, a Hitchhiker's Guide reference. Attribution and year correct; no changes needed."
+   }
+  ],
+  "e2020_2023": [
+   {
+    "text": "Language Models are Few-Shot Learners",
+    "author": "Brown et al.",
+    "year": "2020",
+    "source": "GPT-3 paper title (NeurIPS 2020)",
+    "url": "https://arxiv.org/abs/2005.14165",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title verified on arXiv; Brown et al., 2020. Published at NeurIPS 2020 (won a Best Paper award there). No changes needed."
+   },
+   {
+    "text": "Let's think step by step",
+    "author": "Kojima et al.",
+    "year": "2022",
+    "source": "the magic prompt from \"Large Language Models are Zero-Shot Reasoners\" (NeurIPS 2022)",
+    "url": "https://arxiv.org/abs/2205.11916",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact prompt wording from the paper; arXiv abstract confirms the phrase and 'Accepted to NeurIPS2022'. Attribution and year correct."
+   },
+   {
+    "text": "ChatGPT is incredibly limited, but good enough at some things to create a misleading impression of greatness.",
+    "author": "Sam Altman",
+    "year": "2022",
+    "source": "tweet (first sentence of the post)",
+    "url": "https://x.com/sama/status/1601731295792414720",
+    "spice": 2,
+    "keep": true,
+    "note": "Verbatim first sentence of Altman's Dec 2022 tweet at exactly this URL; verified via search results showing the full tweet text. Tweet continues with 'it's a mistake to be relying on it for anything important right now...'"
+   },
+   {
+    "text": "We are at the iPhone moment of AI.",
+    "author": "Jensen Huang",
+    "year": "2023",
+    "source": "NVIDIA GTC 2023 keynote",
+    "url": "https://blogs.nvidia.com/blog/gtc-keynote-spring-2023/",
+    "spice": 2,
+    "keep": true,
+    "note": "Canonical wording per NVIDIA's official keynote wrap-up blog and VentureBeat coverage of the March 2023 GTC keynote. A variant ('The iPhone moment of AI has started') was also said, but this form is the officially recorded one."
+   },
+   {
+    "text": "Think of ChatGPT as a blurry jpeg of all the text on the Web.",
+    "author": "Ted Chiang",
+    "year": "2023",
+    "source": "\"ChatGPT Is a Blurry JPEG of the Web\", The New Yorker",
+    "url": "https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web",
+    "spice": 3,
+    "keep": true,
+    "note": "Verbatim exact, including lowercase 'jpeg' as in the original body text. Published Feb 9, 2023. Attribution and URL correct."
+   },
+   {
+    "text": "...haphazardly stitching together sequences of linguistic forms... but without any reference to meaning: a stochastic parrot.",
+    "author": "Bender, Gebru et al.",
+    "year": "2021",
+    "source": "\"On the Dangers of Stochastic Parrots\", FAccT '21 (trimmed with ellipses)",
+    "url": "https://dl.acm.org/doi/10.1145/3442188.3445922",
+    "spice": 3,
+    "keep": true,
+    "note": "Real quote (pp. 616-617), but the trim dropped 'but' before 'without any reference to meaning' — restored. Full sentence: 'an LM is a system for haphazardly stitching together sequences of linguistic forms it has observed in its vast training data, according to probabilistic information about how they combine, but without any reference to meaning: a stochastic parrot.' Verified via ACM PDF and Quote Investigator."
+   },
+   {
+    "text": "The hottest new programming language is English",
+    "author": "Andrej Karpathy",
+    "year": "2023",
+    "source": "tweet",
+    "url": "https://x.com/karpathy/status/1617979122625712128",
+    "spice": 4,
+    "keep": true,
+    "note": "Exact wording, tweeted Jan 24, 2023; URL/status ID match. Confirmed by Quote Investigator (2024) and the live tweet."
+   },
+   {
+    "text": "Sometimes I think it's as if aliens had landed and people haven't realized because they speak very good English.",
+    "author": "Geoffrey Hinton",
+    "year": "2023",
+    "source": "MIT Technology Review interview",
+    "url": "https://www.technologyreview.com/2023/05/02/1072528/geoffrey-hinton-google-why-scared-ai/",
+    "spice": 4,
+    "keep": true,
+    "note": "Exact wording confirmed in Will Douglas Heaven's May 2, 2023 MIT Technology Review interview (preceded by 'These things are totally different from us.'). Attribution, year, and URL correct."
+   },
+   {
+    "text": "it may be that today's large neural networks are slightly conscious",
+    "author": "Ilya Sutskever",
+    "year": "2022",
+    "source": "tweet",
+    "url": "https://x.com/ilyasut/status/1491554478243258368",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified exact (all-lowercase) wording via Quote Investigator and the live tweet; posted Feb 9, 2022 from @ilyasut. Attribution, year, and URL all correct."
+   },
+   {
+    "text": "i am a stochastic parrot, and so r u",
+    "author": "Sam Altman",
+    "year": "2022",
+    "source": "tweet (four days after ChatGPT launched)",
+    "url": "https://x.com/sama/status/1599471830255177728",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified exact wording via the live tweet and Wikipedia's 'Stochastic parrot' article; posted Dec 4, 2022, four days after ChatGPT's Nov 30 launch, so the source note is accurate. Attribution, year, and URL all correct."
+   }
+  ],
+  "e2023_2026": [
+   {
+    "text": "There's a new kind of coding I call \"vibe coding\", where you fully give in to the vibes, embrace exponentials, and forget that the code even exists.",
+    "author": "Andrej Karpathy",
+    "year": "2025",
+    "source": "X post (opening sentence of the tweet that coined 'vibe coding')",
+    "url": "https://x.com/karpathy/status/1886192184808149383",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified exact opening sentence of the Feb 2, 2025 tweet at this URL; full tweet continues 'It's possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good...'"
+   },
+   {
+    "text": "there is no wall",
+    "author": "Sam Altman",
+    "year": "2024",
+    "source": "X post (replying to AI-scaling-slowdown discourse)",
+    "url": "https://x.com/sama/status/1856941766915641580",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified exact (all lowercase, three words). Posted Nov 13, 2024 at this URL, widely read as a response to The Information's scaling-slowdown report."
+   },
+   {
+    "text": "Pre-training as we know it will unquestionably end.",
+    "author": "Ilya Sutskever",
+    "year": "2024",
+    "source": "NeurIPS 2024 Test-of-Time talk",
+    "url": "https://www.techmeme.com/241213/p33",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified exact per The Verge's onstage quote ('Pre-training as we know it will unquestionably end,' Sutskever said onstage); Techmeme URL covers the talk. Continued: '...because we have but one internet.'"
+   },
+   {
+    "text": "…in some sense, hallucination is all LLMs do. They are dream machines. We direct their dreams with prompts.",
+    "author": "Andrej Karpathy",
+    "year": "2023",
+    "source": "X post on the 'hallucination problem' (trimmed, leading ellipsis)",
+    "url": "https://x.com/karpathy/status/1733299213503787018",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified against the original X post (Dec 2023). Full sentence begins 'Because, in some sense, hallucination is all LLMs do.' — the leading ellipsis correctly marks the trim; wording is otherwise verbatim."
+   },
+   {
+    "text": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "author": "Rafailov et al.",
+    "year": "2023",
+    "source": "Paper title, NeurIPS 2023 (the DPO paper)",
+    "url": "https://arxiv.org/abs/2305.18290",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact paper title per arXiv 2305.18290 (Rafailov, Sharma, Mitchell, Ermon, Manning, Finn). Presented at NeurIPS 2023, Outstanding Paper Award runner-up."
+   },
+   {
+    "text": "…the programming language is human… Everybody in the world is now a programmer. This is the miracle of artificial intelligence.",
+    "author": "Jensen Huang",
+    "year": "2024",
+    "source": "World Government Summit, Dubai (trimmed, leading ellipsis)",
+    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-huang-advises-against-learning-to-code-leave-it-up-to-ai",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified at World Governments Summit, Dubai, Feb 2024 (Tom's Hardware and NVIDIA's own blog). Fixed small drift: full quote is 'It is our job to create computing technology such that nobody has to program. And that the programming language is human… Everybody in the world is now a programmer. This is the miracle of artificial intelligence.' — there is a pause (ellipsis), not a comma, between 'human' and 'Everybody'."
+   },
+   {
+    "text": "People outside the field are often surprised and alarmed to learn that we do not understand how our own AI creations work.",
+    "author": "Dario Amodei",
+    "year": "2025",
+    "source": "Essay: The Urgency of Interpretability",
+    "url": "https://www.darioamodei.com/post/the-urgency-of-interpretability",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the essay text at darioamodei.com (published April 2025). Wording, attribution, year, and URL all exact."
+   },
+   {
+    "text": "Auto-Regressive LLMs are doomed. They cannot be made factual, non-toxic, etc. They are not controllable.",
+    "author": "Yann LeCun",
+    "year": "2023",
+    "source": "Slide from NYU debate talk 'Do LLMs Need Sensory Grounding?' (also posted on LinkedIn)",
+    "url": "https://www.linkedin.com/posts/yann-lecun_i-have-claimed-that-auto-regressive-llms-activity-7045908925660950528-hJGk",
+    "spice": 5,
+    "keep": true,
+    "note": "Slide wording verified verbatim via multiple sources (ppc.land coverage, LinkedIn analyses). Slide originated in LeCun's March 2023 NYU sensory-grounding debate and was reused in later talks; he posted the related 'doomed' argument on LinkedIn in March 2023. Genuine spicy take, attribution and year correct."
+   }
+  ]
+ }
+}

@@ -1,0 +1,485 @@
+{
+ "topic": "multimodal",
+ "eras": {
+  "pre2012": [
+   {
+    "text": "What does it mean, to see? The plain man's answer (and Aristotle's, too) would be, to know what is where by looking.",
+    "author": "David Marr",
+    "year": "1982",
+    "source": "Vision (book, opening lines)",
+    "url": "https://visionbook.mit.edu/taxonomy.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Wording verified as the famous opening of Marr's Vision (1982, posthumous) via Edelman's Perception essay and MIT's Foundations of Computer Vision. Replaced the original URL (an unrelated talk-event page) with the MIT visionbook page that quotes the passage directly."
+   },
+   {
+    "text": "It can also be maintained that it is best to provide the machine with the best sense organs that money can buy, and then teach it to understand and speak English.",
+    "author": "Alan Turing",
+    "year": "1950",
+    "source": "Computing Machinery and Intelligence (Mind)",
+    "url": "https://www.abelard.org/turpap/turpap.php",
+    "spice": 2,
+    "keep": true,
+    "note": "Verbatim match confirmed against the full text of the paper (final section on learning machines). Attribution and year correct."
+   },
+   {
+    "text": "What the Frog's Eye Tells the Frog's Brain",
+    "author": "Lettvin et al.",
+    "year": "1959",
+    "source": "paper title, Proceedings of the IRE",
+    "url": "https://en.wikipedia.org/wiki/Jerome_Lettvin",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact paper title confirmed; Lettvin, Maturana, McCulloch & Pitts, Proceedings of the IRE, Vol. 47, No. 11, November 1959. One of the most cited papers in the Science Citation Index."
+   },
+   {
+    "text": "The main lesson of thirty-five years of AI research is that the hard problems are easy and the easy problems are hard.",
+    "author": "Steven Pinker",
+    "year": "1994",
+    "source": "The Language Instinct (on Moravec's paradox)",
+    "url": "https://en.wikipedia.org/wiki/Moravec%27s_paradox",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact wording confirmed (The Language Instinct, p. 192, 'Talking Heads' chapter); widely cited as a statement of Moravec's paradox. Attribution and year correct."
+   },
+   {
+    "text": "The world is its own best model. It is always exactly up to date. It always contains every detail there is to be known. The trick is to sense it appropriately and often enough.",
+    "author": "Rodney Brooks",
+    "year": "1990",
+    "source": "Elephants Don't Play Chess, Robotics and Autonomous Systems 6(1-2):3-15 (in the paper the sentence opens \"The key observation is that the world is its own best model\")",
+    "url": "https://people.csail.mit.edu/brooks/papers/elephants.pdf",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim across multiple sources quoting the 1990 paper. Replaced URL: the previous link was a 2022 ICRA paper that merely quotes the slogan; new link is Brooks' own copy of the original paper."
+   },
+   {
+    "text": "…difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.",
+    "author": "Hans Moravec",
+    "year": "1988",
+    "source": "Mind Children, pp. 15-16 (trimmed with leading ellipsis; full sentence: \"it is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility\")",
+    "url": "https://en.wikipedia.org/wiki/Moravec%27s_paradox",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact wording confirmed against Narayanan's fact-check of Mind Children (normaltech.ai) and Wikipedia. Note it says \"checkers\", not \"checkers or chess\" as popular retellings have it — this entry avoids that error."
+   },
+   {
+    "text": "The summer vision project is an attempt to use our summer workers effectively in the construction of a significant part of a visual system.",
+    "author": "Seymour Papert",
+    "year": "1966",
+    "source": "The Summer Vision Project, MIT AI Memo 100 (Vision Memo), Project MAC — the famously optimistic plan to solve vision in one summer",
+    "url": "https://dspace.mit.edu/handle/1721.1/6125",
+    "spice": 4,
+    "keep": true,
+    "note": "Verbatim opening line of the abstract, confirmed via MIT DSpace and MIT's Foundations of Computer Vision textbook. Attribution and year correct."
+   },
+   {
+    "text": "Every time I fire a linguist, the performance of the speech recognizer goes up.",
+    "author": "Fred Jelinek",
+    "year": "c. 1988",
+    "source": "attributed remark at a speech workshop (canonical popular wording; possibly apocryphal — Jelinek recalled the milder \"Anytime a linguist leaves the group the recognition rate goes up\", Dec. 1988, and later downplayed the story; a 1985 variant is also reported)",
+    "url": "https://en.wikipedia.org/wiki/Frederick_Jelinek",
+    "spice": 4,
+    "keep": true,
+    "note": "Canonical wording and ~1988 dating confirmed (Jurafsky & Martin: Wayne, PA, Dec 1988; Moore dates a variant to 1985). No version appears in published proceedings and Jelinek later suggested it never quite happened, so the strengthened 'attributed/possibly apocryphal' hedge in the source line is essential for an academic site. Widely cited in NLP, so keep with the disclaimer."
+   },
+   {
+    "text": "Most recognizers behave, not like scientists, but like mad inventors or untrustworthy engineers.",
+    "author": "John R. Pierce",
+    "year": "1969",
+    "source": "Whither Speech Recognition? (J. Acoust. Soc. Am.)",
+    "url": "https://languagelog.ldc.upenn.edu/nll/?p=3317",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against Mark Liberman's Language Log post quoting Pierce's 1969 JASA letter (46(4B):1049-1051); also quoted in Church's 'Tribute to Charles Wayne' (Natural Language Engineering). Wording, attribution, and year exact."
+   },
+   {
+    "text": "The Navy revealed the embryo of an electronic computer today that it expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence.",
+    "author": "The New York Times",
+    "year": "1958",
+    "source": "New Navy Device Learns By Doing (on Rosenblatt's perceptron)",
+    "url": "https://www.nytimes.com/1958/07/08/archives/new-navy-device-learns-by-doing-psychologist-shows-embryo-of.html",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against the AITopics archive of the article; opening sentence of the NYT piece published July 8, 1958 (July 7 dateline). Wording, attribution, year, and URL all correct."
+   }
+  ],
+  "e2012_2017": [
+   {
+    "text": "Little by little, we're giving sight to the machines. First, we teach them to see. Then, they help us to see better.",
+    "author": "Fei-Fei Li",
+    "year": "2015",
+    "source": "TED talk \"How we're teaching computers to understand pictures\" (closing lines)",
+    "url": "https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified: matches the closing of her TED2015 talk; TED Blog and secondary sources confirm the 'teach them to see / help us see better' closing sequence. Attribution and year correct."
+   },
+   {
+    "text": "I consider the pixel data in images and video to be the dark matter of the Internet. We are now starting to illuminate it.",
+    "author": "Fei-Fei Li",
+    "year": "2014",
+    "source": "interview in The New York Times (John Markoff, \"Researchers Announce Advance in Image-Recognition Software\")",
+    "url": "https://www.nytimes.com/2014/11/18/science/researchers-announce-advance-in-image-recognition-software.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim via multiple quote compilations citing Markoff's November 2014 NYT article. Attribution, year, and URL correct."
+   },
+   {
+    "text": "We never told it during the training, 'This is a cat.' It basically invented the concept of a cat.",
+    "author": "Jeff Dean",
+    "year": "2012",
+    "source": "The New York Times, \"How Many Computers to Identify a Cat? 16,000\" (Google Brain YouTube cat-neuron experiment)",
+    "url": "https://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the NYT article as quoted by historyofinformation.com (original has a comma before the closing quote: \"...'This is a cat,'\" with attribution interposed; joined form is faithful). Published June 25, 2012 online / June 26 in print; year and URL correct."
+   },
+   {
+    "text": "The pooling operation used in convolutional neural networks is a big mistake and the fact that it works so well is a disaster.",
+    "author": "Geoffrey Hinton",
+    "year": "2014",
+    "source": "Reddit r/MachineLearning AMA (November 2014)",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim. Posted by u/geoffhinton in his Nov 2014 AMA; widely cited as his most controversial answer and the motivation for capsule networks. Wording, attribution, year, and URL all correct."
+   },
+   {
+    "text": "Adversarial training is the coolest thing since sliced bread.",
+    "author": "Yann LeCun",
+    "year": "2016",
+    "source": "Quora session answer (July 28, 2016) on upcoming breakthroughs in unsupervised learning; quoted verbatim by Deshpande's GAN review and O'Reilly",
+    "url": "https://adeshpande3.github.io/Deep-Learning-Research-Review-Week-1-Generative-Adversarial-Nets",
+    "spice": 3,
+    "keep": true,
+    "note": "Real but secondary-sourced: the original Quora answer is offline and unarchived. Adit Deshpande's 2016 review quotes it verbatim and hyperlinks the Quora answer directly; O'Reilly's GAN tutorial repeats it. Swapped URL to the citing source since the Quora link is dead. If you want a bulletproof primary-sourced alternative, use his verified line from the same session: 'the most interesting idea in the last 10 years in ML.'"
+   },
+   {
+    "text": "We've reached human parity. This is an historic achievement.",
+    "author": "Xuedong Huang",
+    "year": "2016",
+    "source": "Microsoft AI blog (Oct 18, 2016), on conversational speech recognition reaching a 5.9% word error rate on Switchboard",
+    "url": "https://web.archive.org/web/20180208153054/https://blogs.microsoft.com/ai/historic-achievement-microsoft-researchers-reach-human-parity-conversational-speech-recognition/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the archived blog post: 'We've reached human parity,' said Huang, the company's chief speech scientist. 'This is an historic achievement.' Original Microsoft URL now returns HTTP 410 Gone, so URL updated to the Wayback Machine snapshot. Also reported by CBS News; technical claim is arXiv:1610.05256."
+   },
+   {
+    "text": "As speech-recognition accuracy goes from 95% to 99%, we'll go from barely using it to using all the time!",
+    "author": "Andrew Ng",
+    "year": "2016",
+    "source": "tweet (X/Twitter, December 2016)",
+    "url": "https://x.com/andrewyng/status/809579698883727360",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified exact against the live tweet, including the slightly ungrammatical 'to using all the time!' ending — do not 'fix' it to 'using it all the time'. Attribution, year, and URL correct."
+   },
+   {
+    "text": "…we are very, very far and this depresses me. What is the way forward? :( Maybe I should just do a startup. I have a really cool idea for a mobile local social iPhone app.",
+    "author": "Andrej Karpathy",
+    "year": "2012",
+    "source": "blog post \"The state of Computer Vision and AI: we are really, really far away.\" (closing lines, trimmed with leading ellipsis)",
+    "url": "https://karpathy.github.io/2012/10/22/state-of-computer-vision/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the live blog post (Oct 22, 2012). Full sentence begins \"In any case, we are very, very far...\"; the leading ellipsis correctly marks the trim. Title and date check out. Self-deprecating humor, safe for an academic site."
+   },
+   {
+    "text": "You Only Look Once: Unified, Real-Time Object Detection",
+    "author": "Joseph Redmon et al.",
+    "year": "2016",
+    "source": "paper title (CVPR 2016, the YOLO paper)",
+    "url": "https://arxiv.org/abs/1506.02640",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact title confirmed on arXiv (1506.02640) and in the CVPR 2016 open-access proceedings (Redmon, Divvala, Girshick, Farhadi). Attribution and year correct."
+   }
+  ],
+  "e2017_2020": [
+   {
+    "text": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+    "author": "Dosovitskiy et al.",
+    "year": "2020",
+    "source": "Vision Transformer (ViT) paper title, Google Brain",
+    "url": "https://arxiv.org/abs/2010.11929",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact title verified against arXiv abs page (submitted Oct 22, 2020). First author Alexey Dosovitskiy; Google Brain/Research team. No changes needed."
+   },
+   {
+    "text": "...the same exact model trained on pixel sequences can generate coherent image completions and samples.",
+    "author": "OpenAI",
+    "year": "2020",
+    "source": "Image GPT announcement tweet (trimmed with leading ellipsis)",
+    "url": "https://x.com/openai/status/1273323325431754753",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified against the live tweet (June 17, 2020). Full text: 'We found that just as a large transformer model trained on language can generate coherent text, the same exact model trained on pixel sequences can generate coherent image completions and samples.' The trimmed portion matches verbatim and the leading ellipsis is honestly disclosed. Keep."
+   },
+   {
+    "text": "That was a real call you just heard. The amazing thing is the Assistant can actually understand the nuances of conversation.",
+    "author": "Sundar Pichai",
+    "year": "2018",
+    "source": "Google I/O keynote, unveiling Google Duplex (transcripts vary slightly on 'the Assistant')",
+    "url": "https://singjupost.com/full-transcript-sundar-pichai-at-google-i-o-2018-developer-conference/",
+    "spice": 2,
+    "keep": true,
+    "note": "Substantiated: the SingjuPost transcript has Pichai saying 'That was a real call you just heard' after the salon demo, followed by the nuances-of-conversation line (May 8, 2018). Contemporary reports render the second sentence slightly differently — Interesting Engineering: 'the amazing thing is that Assistant can actually understand the nuances of conversation'; Inc.: 'our system can actually understand...'. The quote matches the cited transcript and the variance is already disclosed in the source note, so keeping as-is with medium-confidence caveat. Bonus spice: the demo was later criticized (TechCrunch, Axios) as pre-recorded/edited, which makes the 'real call' line a fair spicy artifact for an academic site — it is genuinely what he said on stage."
+   },
+   {
+    "text": "The revolution will not be supervised",
+    "author": "Yann LeCun",
+    "year": "2018",
+    "source": "Recurring talk slide on self-supervised learning, e.g. NYU Tandon 'Modern Artificial Intelligence' seminar kickoff, March 2018",
+    "url": "https://engineering.nyu.edu/news/revolution-will-not-be-supervised-promises-facebooks-yann-lecun-kickoff-ai-seminar",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified: LeCun used this slogan in his March 2018 NYU Tandon kickoff talk and on recurring slides, confirmed by the NYU Tandon news page. One caveat: the slogan originally came from Berkeley's Alyosha Efros (LeCun himself acknowledged this on Twitter in 2019), so LeCun popularized rather than coined it. Attribution as worded ('recurring talk slide') is fair, but consider crediting Efros, e.g. 'Yann LeCun (after Alyosha Efros)'."
+   },
+   {
+    "text": "We are outgunned. The number of people working on the video-synthesis side, as opposed to the detector side, is 100 to 1.",
+    "author": "Hany Farid",
+    "year": "2019",
+    "source": "Washington Post interview on deepfake detection, June 2019 (via UC Berkeley School of Information)",
+    "url": "https://www.ischool.berkeley.edu/news/2019/hany-farid-race-detect-deepfake-videos-we-are-outgunned",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim. From the June 2019 Washington Post story 'Top AI researchers race to detect deepfake videos: We are outgunned' (widely syndicated, e.g. Seattle Times, Anchorage Daily News), highlighted on the UC Berkeley iSchool news page at the given URL. Wording, attribution, and year are all exact."
+   },
+   {
+    "text": "It's been a little bit of a fluke, historically, that we're able to rely on videos as evidence that something really happened.",
+    "author": "Ian Goodfellow",
+    "year": "2017",
+    "source": "Interview at MIT Technology Review's EmTech conference, November 2017",
+    "url": "https://www.technologyreview.com/s/609358/ai-could-send-us-back-100-years-when-it-comes-to-how-we-consume-news/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim. Said in an offstage interview at EmTech MIT, November 2017, reported in MIT Technology Review's 'AI Could Set Us Back 100 Years When It Comes to How We Consume News.' Swapped the URL from the secondhand the-decoder.com summary to the original MIT Technology Review article, and tweaked source from 'remarks at' to 'interview at' (it was offstage, not onstage)."
+   },
+   {
+    "text": "In that sense, lidar is really a shortcut. It sidesteps the fundamental problems, the important problem of visual recognition, that is necessary for autonomy.",
+    "author": "Andrej Karpathy",
+    "year": "2019",
+    "source": "Tesla Autonomy Day, April 2019 (he added it gives 'a false sense of progress' and is 'ultimately a crutch')",
+    "url": "https://techcrunch.com/2019/04/22/anyone-relying-on-lidar-is-doomed-elon-musk-says/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against TechCrunch's April 22, 2019 Autonomy Day report and corroborating coverage (EVANNEX, CleanTechnica): 'fundamental problems' (plural) followed by 'the important problem' (singular) matches the as-reported quote. The full remark continues 'It gives a false sense of progress, and is ultimately a crutch' — added that to the source note. Attribution and year correct."
+   },
+   {
+    "text": "We're entering an era in which our enemies can make it look like anyone is saying anything at any point in time.",
+    "author": "Jordan Peele (as deepfake Barack Obama)",
+    "year": "2018",
+    "source": "BuzzFeed deepfake PSA video (trimmed; line continues 'even if they would never say those things')",
+    "url": "https://www.buzzfeednews.com/article/davidmack/obama-fake-news-jordan-peele-psa-video-buzzfeed",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against BuzzFeed News transcript: full line is 'We're entering an era in which our enemies can make it look like anyone is saying anything at any point in time — even if they would never say those things.' The trim is already disclosed in the source field. Attribution (Peele voicing deepfake Obama, April 2018 BuzzFeed/Monkeypaw PSA) and year are correct."
+   },
+   {
+    "text": "Lidar is a fool's errand. Anyone relying on lidar is doomed. Doomed!",
+    "author": "Elon Musk",
+    "year": "2019",
+    "source": "Tesla Autonomy Day",
+    "url": "https://techcrunch.com/2019/04/22/anyone-relying-on-lidar-is-doomed-elon-musk-says/",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against TechCrunch's contemporaneous report of Tesla Autonomy Day (April 22, 2019): 'Lidar is a fool's errand,' ... 'Anyone relying on lidar is doomed. Doomed!' Wording, attribution, year, and source all correct; quote appears around 1:41 in the official event video."
+   }
+  ],
+  "e2020_2023": [
+   {
+    "text": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs.",
+    "author": "OpenAI",
+    "year": "2023",
+    "source": "GPT-4 Technical Report (abstract)",
+    "url": "https://arxiv.org/abs/2303.08774",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the arXiv abstract (2303.08774); opening sentence matches exactly. Attribution to OpenAI and 2023 are correct."
+   },
+   {
+    "text": "We've trained and are open-sourcing a neural net called Whisper that approaches human level robustness and accuracy on English speech recognition.",
+    "author": "OpenAI",
+    "year": "2022",
+    "source": "Introducing Whisper (blog announcement)",
+    "url": "https://openai.com/index/whisper/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim as the opening line of OpenAI's 'Introducing Whisper' post (Sept 2022); confirmed via OpenAI's CDN copy and announcement tweet since openai.com returned 403 to the fetcher. 'human level' (no hyphen) is correct for the blog; the tweet variant uses 'human-level'."
+   },
+   {
+    "text": "For me, it's the most delightful thing to play with we've created so far.",
+    "author": "Sam Altman",
+    "year": "2022",
+    "source": "blog post \"DALL•E 2\"",
+    "url": "https://blog.samaltman.com/dall-star-e-2",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim on Sam Altman's blog post 'DALL•E 2' (April 6, 2022). Wording, attribution, and year all correct."
+   },
+   {
+    "text": "Diffusion Models Beat GANs on Image Synthesis",
+    "author": "Dhariwal & Nichol",
+    "year": "2021",
+    "source": "paper title (OpenAI)",
+    "url": "https://arxiv.org/abs/2105.05233",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified exact. arXiv 2105.05233, Prafulla Dhariwal and Alex Nichol, submitted May 2021, NeurIPS 2021 spotlight. Title is verbatim."
+   },
+   {
+    "text": "much of human knowledge and all of animal knowledge is non verbal (& non-symbolic)",
+    "author": "Yann LeCun",
+    "year": "2022",
+    "source": "post announcing \"AI and the Limits of Language\" (excerpt)",
+    "url": "https://www.linkedin.com/posts/yann-lecun_ai-and-the-limits-of-language-activity-6967929903409205248--ypi",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim, including 'non verbal (& non-symbolic)'. From LeCun's Aug 2022 LinkedIn post announcing the Noema essay co-authored with Jacob Browning; it is point 2 of his three-point summary."
+   },
+   {
+    "text": "why settle for a few images from #stablediffusion when you can slowly walk your way around the sample space and create hyponotic videos you can't look away from?",
+    "author": "Andrej Karpathy",
+    "year": "2022",
+    "source": "X post (excerpt; typo \"hyponotic\" is in the original)",
+    "url": "https://x.com/karpathy/status/1559343616270557184",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the tweet (Aug 16, 2022), including Karpathy's original 'hyponotic' typo. Excerpt is the first sentence; the tweet continues describing the 2-min interpolation video."
+   },
+   {
+    "text": "When radar and vision disagree, which one do you believe? Vision has much more precision, so better to double down on vision than do sensor fusion.",
+    "author": "Elon Musk",
+    "year": "2021",
+    "source": "X post on Tesla going camera-only",
+    "url": "https://x.com/elonmusk/status/1380796939151704071",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim (tweet ID 1380796939151704071, April 10, 2021, via Trendsmap archive). Full tweet is a reply prefixed '@WholeMarsBlog'; the quoted excerpt is exact. Real spicy take, widely cited as defining Tesla Vision."
+   },
+   {
+    "text": "Like all deep generative models today, Google's #imagen gives beautiful, convincing output, but can't understand + follow specific logical instructions.",
+    "author": "DeWeese Lab (@DeWeeseLab)",
+    "year": "2022",
+    "source": "tweet (May 26, 2022) quoted approvingly by Gary Marcus in \"Horse rides astronaut\" (Substack)",
+    "url": "https://garymarcus.substack.com/p/horse-rides-astronaut",
+    "spice": 4,
+    "keep": true,
+    "note": "Wording is exact, but the attribution was wrong: the tweet is by the DeWeese Lab (UC Berkeley), not Gary Marcus — Marcus only embedded/quoted it in his Substack post. Attribution corrected. If you specifically want a Gary Marcus quote here, his own tweet from the same post is: \"@GoogleAI, 'a deep level understanding'? Seriously?! Your system can't distinguish 'a horse riding an astronaut' from 'an astronaut riding a horse'.\""
+   },
+   {
+    "text": "It's all about scale now! The Game is Over! It's about making these models bigger, safer, compute efficient, faster at sampling, smarter memory, more modalities…",
+    "author": "Nando de Freitas",
+    "year": "2022",
+    "source": "X post on DeepMind's Gato, May 14, 2022 (excerpt, trimmed mid-list)",
+    "url": "https://x.com/NandoDF/status/1525397036325019649",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against the original X post. Full tweet opens \"Someone's opinion article. My opinion:\" and the list continues \"more modalities, INNOVATIVE DATA, on/offline, … 1/N\" — the trimming is honest and already disclosed in the source field. Attribution and year correct; widely covered (The Next Web, MIT Technology Review). De Freitas partially walked it back in an April 2024 follow-up, which you could optionally note."
+   }
+  ],
+  "e2023_2026": [
+   {
+    "text": "ChatGPT can now see, hear, and speak.",
+    "author": "OpenAI",
+    "year": "2023",
+    "source": "OpenAI announcement (blog title / X post), Sept 25, 2023",
+    "url": "https://x.com/OpenAI/status/1706280618429141022",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim. The X post opens with exactly this sentence; the blog post title is identical (without the period). Date confirmed Sept 25, 2023."
+   },
+   {
+    "text": "Video generation models as world simulators",
+    "author": "Tim Brooks et al. (OpenAI)",
+    "year": "2024",
+    "source": "Sora technical report title, Feb 15, 2024",
+    "url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title of the OpenAI Sora technical report, published Feb 2024; standardly cited as Tim Brooks et al."
+   },
+   {
+    "text": "The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision)",
+    "author": "Zhengyuan Yang et al. (Microsoft)",
+    "year": "2023",
+    "source": "arXiv paper title (arXiv:2309.17421)",
+    "url": "https://arxiv.org/abs/2309.17421",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title confirmed on arXiv; first author Zhengyuan Yang (Microsoft), submitted Sept 29, 2023."
+   },
+   {
+    "text": "It was built from the ground up to be multimodal, which means it can generalize and seamlessly understand, operate across and combine different types of information…",
+    "author": "Demis Hassabis",
+    "year": "2023",
+    "source": "Google blog: Introducing Gemini, Dec 6, 2023 (trimmed, trailing ellipsis added)",
+    "url": "https://blog.google/technology/ai/google-gemini-ai/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim for the quoted span; the original sentence continues 'including text, code, audio, image and video.' Ellipsis appropriately marks the trim. Hassabis authored the 'Introducing Gemini' section, Dec 6, 2023."
+   },
+   {
+    "text": "the new voice (and video) mode is the best computer interface I've ever used. It feels like AI from the movies; and it's still a bit surprising to me that it's real.",
+    "author": "Sam Altman",
+    "year": "2024",
+    "source": "Sam Altman's blog, \"GPT-4o\"",
+    "url": "https://blog.samaltman.com/gpt-4o",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the blog post (May 13, 2024). Original sentence begins \"But the new voice...\"; excerpting without the leading \"But\" is accurate. Attribution and year correct."
+   },
+   {
+    "text": "It started with perception AI — understanding images, words and sounds. Then generative AI — creating text, images and sound.",
+    "author": "Jensen Huang",
+    "year": "2025",
+    "source": "CES 2025 keynote (NVIDIA blog recap)",
+    "url": "https://blogs.nvidia.com/blog/ces-2025-jensen-huang/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against NVIDIA's official blog recap of the Jan 2025 CES keynote, which continues: \"Now, we're entering the era of 'physical AI...'\" Attribution and year correct."
+   },
+   {
+    "text": "Tesla has been able to do real-world video generation with accurate physics for about a year",
+    "author": "Elon Musk",
+    "year": "2024",
+    "source": "X post replying to Sora/FSD comparison",
+    "url": "https://www.latestly.com/auto/tesla-able-to-produce-real-world-video-similar-to-openais-sora-for-over-a-year-says-elon-musk-5767190.html",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim across multiple outlets (Teslarati, LatestLY, Prokerala) quoting Musk's Feb 2024 X reply after OpenAI unveiled Sora. He added the videos \"wasn't super interesting\" since training data came only from Tesla's fleet. Real spicy take, accurately quoted."
+   },
+   {
+    "text": "There is absolutely no way in hell we will ever reach human-level AI without getting machines to learn from high-bandwidth sensory inputs, such as vision.",
+    "author": "Yann LeCun",
+    "year": "2024",
+    "source": "X post (language-vs-vision bandwidth thread; asterisk emphasis removed)",
+    "url": "https://x.com/ylecun/status/1766498677751787723",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified: the March 9, 2024 X thread at this exact status ID ends with this line (original has asterisk emphasis: *absolutely no way in hell*, already disclosed in source note). LeCun also posted the same argument on LinkedIn in July 2023, but the cited X post and 2024 year are correct."
+   },
+   {
+    "text": "If you think OpenAI Sora is a creative toy like DALLE, ... think again. Sora is a data-driven physics engine.",
+    "author": "Jim Fan",
+    "year": "2024",
+    "source": "X post (opening lines of viral Sora thread, Feb 15, 2024; ellipsis is in the original)",
+    "url": "https://x.com/DrJimFan/status/1758210245799920123",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the original X post; search snippet shows the tweet opens exactly with this wording, ellipsis included. Attribution, year, and URL all correct."
+   },
+   {
+    "text": "it's super fun seeing people love images in chatgpt. but our GPUs are melting",
+    "author": "Sam Altman",
+    "year": "2025",
+    "source": "X post during the GPT-4o Studio-Ghibli image-gen frenzy (Mar 27, 2025)",
+    "url": "https://x.com/sama/status/1905296867145154688",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim — the tweet begins exactly with these two sentences (lowercase as written). Swapped the Fortune article URL for the primary X post; Fortune piece confirms context (Ghibli image frenzy, rate limits)."
+   }
+  ]
+ }
+}

@@ -1,0 +1,445 @@
+{
+ "topic": "alignment",
+ "eras": {
+  "pre2012": [
+   {
+    "text": "Thus the first ultraintelligent machine is the last invention that man need ever make, provided that the machine is docile enough to tell us how to keep it under control.",
+    "author": "I. J. Good",
+    "year": "1965",
+    "source": "Speculations Concerning the First Ultraintelligent Machine, Advances in Computers",
+    "url": "https://quoteinvestigator.com/2022/01/04/ultraintelligent/",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact. Quote Investigator verified this wording against scans of Good's 1965 'Speculations Concerning the First Ultraintelligent Machine' in Advances in Computers vol. 6 — including the often-omitted 'docile' proviso, which this version correctly retains."
+   },
+   {
+    "text": "Will robots inherit the earth? Yes, but they will be our children.",
+    "author": "Marvin Minsky",
+    "year": "1994",
+    "source": "Will Robots Inherit the Earth?, Scientific American",
+    "url": "https://web.mit.edu/dxh/www/marvin/web.media.mit.edu/~minsky/papers/sciam.inherit.html",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact. Confirmed in the MIT-archived text of Minsky's article (Scientific American, October 1994), where the line appears at both the opening and the close. Attribution and year correct; a genuinely spicy but real take."
+   },
+   {
+    "text": "At some stage therefore we should have to expect the machines to take control, in the way that is mentioned in Samuel Butler's Erewhon.",
+    "author": "Alan Turing",
+    "year": "1951",
+    "source": "Intelligent Machinery, A Heretical Theory (lecture to the '51 Society, Manchester; published posthumously in Sara Turing's 1959 memoir)",
+    "url": "https://quoteinvestigator.com/2022/01/06/outstrip/",
+    "spice": 3,
+    "keep": true,
+    "note": "Wording exact, verified by Quote Investigator. Source description corrected: provenance runs through Sara Turing's 1959 book and the Turing archive, not 'authenticated by the Turing Institute'. Year 1951 is the standard dating (sometimes given as c. 1951)."
+   },
+   {
+    "text": "...the time will come when the machines will hold the real supremacy over the world and its inhabitants...",
+    "author": "Samuel Butler",
+    "year": "1863",
+    "source": "Darwin among the Machines, letter in The Press, Christchurch NZ, 13 June 1863 (signed 'Cellarius'; trimmed, ellipses)",
+    "url": "https://en.wikisource.org/wiki/Darwin_among_the_Machines",
+    "spice": 4,
+    "keep": true,
+    "note": "Exact mid-sentence excerpt from the original: '...but that the time will come when the machines will hold the real supremacy over the world and its inhabitants is what no person of a truly philosophic mind can for a moment question.' Ellipses honestly mark the trim. URL swapped to Wikisource full text since the Wikipedia article does not contain the passage verbatim."
+   },
+   {
+    "text": "Within thirty years, we will have the technological means to create superhuman intelligence. Shortly after, the human era will be ended.",
+    "author": "Vernor Vinge",
+    "year": "1993",
+    "source": "The Coming Technological Singularity (NASA VISION-21 symposium essay, abstract)",
+    "url": "https://edoras.sdsu.edu/~vinge/misc/singularity.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the primary source abstract at the given URL. Attribution and year correct."
+   },
+   {
+    "text": "The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else.",
+    "author": "Eliezer Yudkowsky",
+    "year": "2008",
+    "source": "Artificial Intelligence as a Positive and Negative Factor in Global Risk, in Global Catastrophic Risks (Oxford University Press)",
+    "url": "https://intelligence.org/files/AIPosNegFactor.pdf",
+    "spice": 4,
+    "keep": true,
+    "note": "Wording exact ('made out of atoms which it can use for something else'). 2008 OUP chapter is the standard citation; an earlier draft circulated in 2006. Quote is famous enough to have titled Tom Chivers's book The AI Does Not Hate You."
+   },
+   {
+    "text": "Once the computers got control, we might never get it back. We would survive at their sufferance. If we're lucky, they might decide to keep us as pets.",
+    "author": "Marvin Minsky",
+    "year": "1970",
+    "source": "LIFE magazine, Nov 20, 1970, Brad Darrach's profile of Shakey the robot (as quoted by Darrach; Minsky later denied saying it)",
+    "url": "https://quoteinvestigator.com/2017/06/21/robot-pet/",
+    "spice": 5,
+    "keep": true,
+    "note": "Wording is verbatim as printed in LIFE (Nov 20, 1970, p. 58D), confirmed by Quote Investigator. Attribution caveat is accurate: Minsky disputed the quote per Frank Rose's 1985 book Into the Heart of the Mind. Safe to keep since the denial is disclosed in the source line."
+   },
+   {
+    "text": "I can visualize a time in the future when we will be to robots as dogs are to humans. … I am rooting for the machines! I have always been on the machines' side.",
+    "author": "Claude Shannon",
+    "year": "1987",
+    "source": "Omni magazine interview, August 1987 (two answers from the same interview, joined with an ellipsis)",
+    "url": "https://en.wikiquote.org/wiki/Claude_Elwood_Shannon",
+    "spice": 5,
+    "keep": true,
+    "note": "Substance genuine, but the submitted one-liner ('I visualize a time when we will be to robots what dogs are to humans. And I'm rooting for the machines.') is a popular paraphrase merging two separate answers. Corrected to verbatim wording per Wikiquote/Omni Aug 1987, with an ellipsis marking the splice. URL updated from libquotes to Wikiquote for a citable source."
+   }
+  ],
+  "e2012_2017": [
+   {
+    "text": "Machine intelligence is the last invention that humanity will ever need to make.",
+    "author": "Nick Bostrom",
+    "year": "2015",
+    "source": "TED talk: What happens when our computers get smarter than we are?",
+    "url": "https://www.ted.com/talks/nick_bostrom_what_happens_when_our_computers_get_smarter_than_we_are",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the TED talk transcript; talk filmed March 2015, posted April 2015. Attribution and year correct."
+   },
+   {
+    "text": "...instead of pure intelligence, we need to build intelligence that is provably aligned with human values.",
+    "author": "Stuart Russell",
+    "year": "2014",
+    "source": "Of Myths and Moonshine, Edge.org (trimmed with leading ellipsis)",
+    "url": "https://www.edge.org/conversation/the-myth-of-ai",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim match to Russell's November 2014 Edge.org reply ('Of Myths and Moonshine') in The Myth of AI conversation. Full sentence begins 'The right response seems to be to change the goals of the field itself;' — the ellipsis trim is accurate and disclosed. Cross-checked via LessWrong repost and FHI."
+   },
+   {
+    "text": "I could give you the usual arguments. But the truth is that the prospect of discovery is too sweet.",
+    "author": "Geoffrey Hinton",
+    "year": "2015",
+    "source": "The New Yorker, \"The Doomsday Invention\" (on why he does AI research despite the risks)",
+    "url": "https://www.newyorker.com/magazine/2015/11/23/doomsday-invention-artificial-intelligence-nick-bostrom",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim from Raffi Khatchadourian's Nov 23, 2015 New Yorker profile of Nick Bostrom; Hinton said it when asked why he continues AI research despite risks. Attribution, source, and year correct."
+   },
+   {
+    "text": "The development of full artificial intelligence could spell the end of the human race.",
+    "author": "Stephen Hawking",
+    "year": "2014",
+    "source": "BBC interview",
+    "url": "https://www.bbc.com/news/technology-30290540",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified; Snopes rates it correctly attributed. BBC interview aired Dec 2, 2014. In full context Hawking prefaced it with 'I think', but the standalone wording matches how BBC reported it."
+   },
+   {
+    "text": "I don't work on preventing AI from turning evil for the same reason that I don't work on the problem of overpopulation on the planet Mars.",
+    "author": "Andrew Ng",
+    "year": "2015",
+    "source": "GPU Technology Conference keynote, San Jose (verified by Quote Investigator)",
+    "url": "https://quoteinvestigator.com/2020/10/04/mars/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim by Quote Investigator against the video of Ng's March 19, 2015 GTC keynote; also reported by The Register and Wired in 2015. Attribution and year correct."
+   },
+   {
+    "text": "Development of superhuman machine intelligence (SMI) is probably the greatest threat to the continued existence of humanity.",
+    "author": "Sam Altman",
+    "year": "2015",
+    "source": "Blog post: Machine intelligence, part 1",
+    "url": "https://blog.samaltman.com/machine-intelligence-part-1",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the original blog post (published Feb 25, 2015). Wording, attribution, and year all exact."
+   },
+   {
+    "text": "With artificial intelligence we're summoning the demon.",
+    "author": "Elon Musk",
+    "year": "2014",
+    "source": "MIT AeroAstro Centennial Symposium (as reported by The Washington Post)",
+    "url": "https://www.washingtonpost.com/news/innovations/wp/2014/10/24/elon-musk-with-artificial-intelligence-we-are-summoning-the-demon/",
+    "spice": 5,
+    "keep": true,
+    "note": "Authentic; said at MIT AeroAstro Centennial Symposium, Oct 24, 2014. Corrected 'we are' to the contraction 'we're' per TechCrunch's verbatim video transcription; 'we are' was the headline rendering."
+   }
+  ],
+  "e2017_2020": [
+   {
+    "text": "Success in creating effective AI could be the biggest event in the history of our civilization. Or the worst. We just don't know.",
+    "author": "Stephen Hawking",
+    "year": "2017",
+    "source": "Web Summit keynote, Lisbon (Nov 6, 2017)",
+    "url": "https://www.cnbc.com/2017/11/06/stephen-hawking-ai-could-be-worst-event-in-civilization.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against CNBC and Fortune coverage of the Nov 6, 2017 Web Summit keynote. Full sentence continues '...So we cannot know if we will be infinitely helped by AI, or ignored by it and side-lined, or conceivably destroyed by it.' Distinct from his similar 2016 Cambridge CFI quote ('...but it could also be the last'). Attribution and year correct."
+   },
+   {
+    "text": "OpenAI's mission is to ensure that artificial general intelligence … benefits all of humanity.",
+    "author": "OpenAI",
+    "year": "2018",
+    "source": "OpenAI Charter (AGI definition clause trimmed, marked with ellipsis)",
+    "url": "https://openai.com/charter/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified against the live Charter. Full sentence: 'OpenAI's mission is to ensure that artificial general intelligence (AGI)—by which we mean highly autonomous systems that outperform humans at most economically valuable work—benefits all of humanity.' Ellipsis honestly marks the trim. Charter published April 2018; year correct."
+   },
+   {
+    "text": "Success would be the biggest event in human history … and perhaps the last event in human history.",
+    "author": "Stuart Russell",
+    "year": "2019",
+    "source": "Human Compatible (book, p. 3, posing the question 'What if we succeed?')",
+    "url": "https://people.eecs.berkeley.edu/~russell/hc.html",
+    "spice": 2,
+    "keep": true,
+    "note": "Corrected: the verbatim book line (p. 3, recounting his 2013 Dulwich Picture Gallery talk) is 'Success would be the biggest event in human history . . . and perhaps the last event in human history.' The 'What if we succeed?' lead-in is Russell's framing question (section title in AIMA), not part of the verbatim sentence, so it was moved to the source note. Swapped Goodreads URL for Russell's official book page. Author and year correct."
+   },
+   {
+    "text": "AI is one of the most important things humanity is working on. It is more profound than, I dunno, electricity or fire.",
+    "author": "Sundar Pichai",
+    "year": "2018",
+    "source": "MSNBC/Recode town hall, San Francisco",
+    "url": "https://www.cnbc.com/2018/02/01/google-ceo-sundar-pichai-ai-is-more-important-than-fire-electricity.html",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact wording as reported by CNBC from the January 2018 MSNBC/Recode town hall. Note a more polished variant ('AI is probably the most important thing humanity has ever worked on...') was said at Davos the same month; the attributed event matches this 'I dunno' version."
+   },
+   {
+    "text": "AI is a fundamental risk to the existence of human civilization, in a way that car accidents, airplane crashes, faulty drugs or bad food were not.",
+    "author": "Elon Musk",
+    "year": "2017",
+    "source": "remarks to the National Governors Association meeting, Providence, RI",
+    "url": "https://www.cnbc.com/2017/07/16/musk-says-a-i-is-a-fundamental-risk-to-the-existence-of-human-civilization.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Genuine quote from the July 15, 2017 NGA summer meeting, reported consistently by CNBC, NPR, and Fortune. Original input truncated the sentence without an ellipsis, so restored the full sentence; also swapped the fan-site Teslarati URL for CNBC's contemporaneous report."
+   },
+   {
+    "text": "You can't fetch the coffee if you're dead.",
+    "author": "Stuart Russell",
+    "year": "2019",
+    "source": "Human Compatible (book)",
+    "url": "https://forum.effectivealtruism.org/posts/tsHfFdAGehzoH6BZR/summary-of-stuart-russell-s-new-book-human-compatible",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim. Russell's most famous line from Human Compatible (2019), illustrating self-preservation as a convergent instrumental subgoal. Attribution and year correct."
+   },
+   {
+    "text": "We are concerned about late-stage AGI development becoming a competitive race without time for adequate safety precautions.",
+    "author": "OpenAI Charter",
+    "year": "2018",
+    "source": "OpenAI Charter",
+    "url": "https://openai.com/charter/",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact sentence from the merge-and-assist clause of the April 2018 Charter. Attribution and year correct. OpenAI revised its principles in 2026, but the original wording is accurately quoted."
+   },
+   {
+    "text": "There's No Fire Alarm for Artificial General Intelligence",
+    "author": "Eliezer Yudkowsky",
+    "year": "2017",
+    "source": "MIRI essay title",
+    "url": "https://intelligence.org/2017/10/13/fire-alarm/",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact title confirmed on intelligence.org, published Oct 13, 2017 by Yudkowsky."
+   },
+   {
+    "text": "The future depends on some graduate student who is deeply suspicious of everything I have said.",
+    "author": "Geoffrey Hinton",
+    "year": "2017",
+    "source": "Axios interview ('throw it all away and start again')",
+    "url": "https://www.axios.com/2017/12/15/artificial-intelligence-pioneer-says-we-need-to-start-over-1513305524",
+    "spice": 4,
+    "keep": true,
+    "note": "Verbatim match with the Sept 2017 Axios article by Steve LeVine. In context it follows Hinton citing Max Planck's 'science progresses one funeral at a time.'"
+   },
+   {
+    "text": "Intelligence is situational — there is no such thing as general intelligence.",
+    "author": "François Chollet",
+    "year": "2017",
+    "source": "The Implausibility of Intelligence Explosion (essay)",
+    "url": "https://medium.com/@francois.chollet/the-impossibility-of-intelligence-explosion-5be4a9eda6ec",
+    "spice": 4,
+    "keep": true,
+    "note": "Quote wording is exact (TL;DR bullet of the essay, Nov 2017). Corrected source title: the published title is 'The implausibility of intelligence explosion' — the URL slug says 'impossibility,' which causes frequent misnaming."
+   },
+   {
+    "text": "The future is going to be good for the AIs regardless. It would be nice if it were good for humans as well.",
+    "author": "Ilya Sutskever",
+    "year": "2019",
+    "source": "iHuman documentary",
+    "url": "https://dailydoc.com/ilya-sutskever-from-ihuman-documentary/",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified against the iHuman documentary transcript (segment ~1:27:20-1:28:21). Corrected minor wording drift: the cited transcript reads 'if it were good for humans as well', not 'if it would be good'. Some press renderings use the 'would be' variant, but the cited source uses 'were'. Attribution and year confirmed."
+   },
+   {
+    "text": "GPT-3, Bloviator: OpenAI's language generator has no idea what it's talking about",
+    "author": "Gary Marcus & Ernest Davis",
+    "year": "2020",
+    "source": "MIT Technology Review article title",
+    "url": "https://www.technologyreview.com/2020/08/22/1007539/gpt3-openai-language-generator-artificial-intelligence-ai-opinion/",
+    "spice": 5,
+    "keep": true,
+    "note": "Exact title verified at MIT Technology Review, published August 22, 2020, by Gary Marcus and Ernest Davis. Wording, attribution, year, and URL all correct as given."
+   }
+  ],
+  "e2020_2023": [
+   {
+    "text": "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.",
+    "author": "Statement on AI Risk (signed by Hinton, Bengio, Altman, Hassabis, Amodei, et al.)",
+    "year": "2023",
+    "source": "Center for AI Safety, Statement on AI Risk (full text of the one-sentence statement)",
+    "url": "https://aistatement.com/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact. This is the complete text of the May 30, 2023 one-sentence statement hosted by CAIS; signatories as listed are correct (Hinton, Bengio, Altman, Hassabis, Amodei all signed)."
+   },
+   {
+    "text": "We must take the risks of AI as seriously as other major global challenges, like climate change.",
+    "author": "Demis Hassabis",
+    "year": "2023",
+    "source": "Interview with The Guardian ahead of the UK AI Safety Summit",
+    "url": "https://www.theguardian.com/technology/2023/oct/24/ai-risk-climate-crisis-google-deepmind-chief-demis-hassabis-regulation",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact against The Guardian's Oct 24, 2023 interview (published in the Oct 25 print edition), given ahead of the UK AI Safety Summit. Quote continues: 'It took the international community too long to coordinate an effective global response to this...'"
+   },
+   {
+    "text": "I console myself with the normal excuse: If I hadn't done it, somebody else would have.",
+    "author": "Geoffrey Hinton",
+    "year": "2023",
+    "source": "New York Times interview on leaving Google to warn about AI (Cade Metz, May 1, 2023)",
+    "url": "https://www.nytimes.com/2023/05/01/technology/ai-google-chatbot-engineer-quits-hinton.html",
+    "spice": 2,
+    "keep": true,
+    "note": "Wording verified exact. Fixed source/URL mismatch: the quote is from the NYT interview, but the original URL pointed to CNN's secondary coverage (which also reports the quote, citing NYT). URL updated to the original NYT article; CNN link is a fine non-paywalled fallback."
+   },
+   {
+    "text": "I think if this technology goes wrong, it can go quite wrong, and we want to be vocal about that.",
+    "author": "Sam Altman",
+    "year": "2023",
+    "source": "US Senate Judiciary Subcommittee testimony, official transcript (S.Hrg. 118-37), May 16, 2023",
+    "url": "https://www.congress.gov/event/118th-congress/senate-event/LC71543/text",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified exact against the official Congressional record and the TechPolicy.Press full transcript. Many media versions drop the leading 'I think' — this version correctly includes it."
+   },
+   {
+    "text": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜",
+    "author": "Emily M. Bender, Timnit Gebru et al.",
+    "year": "2021",
+    "source": "paper title, ACM FAccT '21 (the parrot emoji is part of the official title)",
+    "url": "https://dl.acm.org/doi/10.1145/3442188.3445922",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified exact, emoji included in official ACM title. Full author list is Bender, Gebru, McMillan-Major, and Shmitchell; 'et al.' attribution is fine. DOI 10.1145/3442188.3445922 confirmed."
+   },
+   {
+    "text": "Sparks of Artificial General Intelligence: Early experiments with GPT-4",
+    "author": "Sébastien Bubeck et al.",
+    "year": "2023",
+    "source": "paper title, Microsoft Research, arXiv:2303.12712",
+    "url": "https://arxiv.org/abs/2303.12712",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified exact title and arXiv ID; submitted 22 Mar 2023 by a Microsoft Research team led by Bubeck. Attribution and year correct."
+   },
+   {
+    "text": "AI doomism is quickly becoming indistinguishable from an apocalyptic religion.",
+    "author": "Yann LeCun",
+    "year": "2023",
+    "source": "tweet (@ylecun), Apr 1, 2023 — first sentence of the post",
+    "url": "https://x.com/ylecun/status/1642205736678637572",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified exact first sentence of the Apr 1, 2023 post (which continues: 'Complete with prophecies of imminent fire and brimstone caused by an omnipotent entity that doesn't actually exist.'). Source label correctly flags it as the first sentence; status ID matches."
+   },
+   {
+    "text": "…the most likely result of building a superhumanly smart AI, under anything remotely like the current circumstances, is that literally everyone on Earth will die.",
+    "author": "Eliezer Yudkowsky",
+    "year": "2023",
+    "source": "TIME op-ed, 'The Only Way to Deal With the Threat From AI? Shut It Down' (Mar 29, 2023; trimmed with leading ellipsis — full sentence begins 'Many researchers steeped in these issues, including myself, expect that…')",
+    "url": "https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/",
+    "spice": 5,
+    "keep": true,
+    "note": "Verbatim match confirmed against the TIME piece. Only correction: TIME's published headline is 'The Only Way to Deal With the Threat From AI? Shut It Down'; the 'Pausing AI Developments Isn't Enough…' phrasing survives only in the URL slug. Ellipsis accurately marks the trimmed sentence opening."
+   }
+  ],
+  "e2023_2026": [
+   {
+    "text": "The more it reasons, the more unpredictable it becomes.",
+    "author": "Ilya Sutskever",
+    "year": "2024",
+    "source": "NeurIPS 2024 Test of Time award talk",
+    "url": "https://www.technology.org/2024/12/16/ilya-sutskever-the-more-ai-reasons-the-more-unpredictable-it-becomes/",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact per Reuters coverage of his Dec 13, 2024 NeurIPS Vancouver talk (Test of Time award for the 2014 seq2seq paper). He cited AlphaGo's move 37 and chess engines as examples."
+   },
+   {
+    "text": "We're not building animals. We're building ghosts or spirits or whatever people want to call it, because we're not doing training by evolution.",
+    "author": "Andrej Karpathy",
+    "year": "2025",
+    "source": "Dwarkesh Podcast, 'AGI is still a decade away' (trimmed from mid-sentence: full line begins 'In my post, I said...')",
+    "url": "https://www.dwarkesh.com/p/andrej-karpathy",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified against the official Dwarkesh transcript (episode 'Andrej Karpathy — AGI is still a decade away', Oct 17, 2025, ~00:07:41). Full line is 'In my post, I said we're not building animals. We're building ghosts...'; the trim is honest and disclosed in the source field."
+   },
+   {
+    "text": "i always wanted to write a six-word story. here it is: near the singularity; unclear which side.",
+    "author": "Sam Altman",
+    "year": "2025",
+    "source": "X post, January 4, 2025",
+    "url": "https://x.com/sama/status/1875603249472139576",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified against the original X post (status ID matches, posted Jan 4, 2025). Original has a line break after 'here it is:'; rendered here as a space, which preserves the wording exactly."
+   },
+   {
+    "text": "…before \"urgently figuring out how to control AI systems much smarter than us\" we need to have the beginning of a hint of a design for a system smarter than a house cat.",
+    "author": "Yann LeCun",
+    "year": "2024",
+    "source": "X post, May 2024 (leading ellipsis: trimmed opener 'It seems to me that')",
+    "url": "https://x.com/ylecun/status/1791890883425570823",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the original X post (full text begins 'It seems to me that before…'); ellipsis correctly marks the trimmed opener. Posted May 2024 in response to Jan Leike's OpenAI departure statement. Attribution, year, and URL all correct."
+   },
+   {
+    "text": "Pausing AI Developments Isn't Enough. We Need to Shut it All Down",
+    "author": "Eliezer Yudkowsky",
+    "year": "2023",
+    "source": "TIME op-ed title, March 29, 2023",
+    "url": "https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/",
+    "spice": 5,
+    "keep": true,
+    "note": "Title verified verbatim across TIME, MIRI's official mirror (intelligence.org), LessWrong, EA Forum, and Slashdot (dated March 29, 2023). Attribution, year, and URL all correct."
+   },
+   {
+    "text": "Superintelligence is within reach. Building safe superintelligence (SSI) is the most important technical problem of our time.",
+    "author": "Ilya Sutskever, Daniel Gross, Daniel Levy",
+    "year": "2024",
+    "source": "Safe Superintelligence Inc. founding announcement",
+    "url": "https://ssi.inc/",
+    "spice": 2,
+    "keep": true,
+    "note": "Both sentences verified verbatim and consecutive as the opening lines of the June 2024 announcement on ssi.inc, signed by all three founders."
+   },
+   {
+    "text": "But over the past years, safety culture and processes have taken a backseat to shiny products.",
+    "author": "Jan Leike",
+    "year": "2024",
+    "source": "X post (resignation thread on leaving OpenAI)",
+    "url": "https://x.com/janleike/status/1791498184671605209",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified exact. From Leike's May 17, 2024 resignation thread; wording confirmed verbatim by Fortune, CNN, Decrypt, and Fast Company. The tweet ID sits within the confirmed thread (between adjacent thread tweets ...178346549382 and ...185627865147). In the full tweet it is preceded by 'OpenAI is shouldering an enormous responsibility on behalf of all of humanity.' — fine as an excerpted standalone sentence."
+   },
+   {
+    "text": "AI will probably be smarter than any single human next year. By 2029, AI is probably smarter than all humans combined.",
+    "author": "Elon Musk",
+    "year": "2024",
+    "source": "X post (replying to a Kurzweil clip on Joe Rogan)",
+    "url": "https://x.com/elonmusk/status/1767738797276451090",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified exact and at the exact URL given — search returned the X post itself with this verbatim text as its title. Posted March 13, 2024, replying to a Joe Rogan podcast clip of Ray Kurzweil predicting human-level AI by 2029. Attribution, year, source, and context all correct."
+   }
+  ]
+ }
+}

@@ -49,9 +49,15 @@ const supervisors = item.supervisors ?? [];
     }
   </div>
 
-  <ul class="bullets">
-    {item.bullets.map((bullet) => <li>{bullet}</li>)}
-  </ul>
+  {
+    item.bullets.length > 0 && (
+      <ul class="bullets">
+        {item.bullets.map((bullet) => (
+          <li>{bullet}</li>
+        ))}
+      </ul>
+    )
+  }
 
   {
     item.tags && item.tags.length > 0 && (

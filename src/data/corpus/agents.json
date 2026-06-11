@@ -1,0 +1,405 @@
+{
+ "topic": "agents",
+ "eras": {
+  "pre2012": [
+   {
+    "text": "The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform.",
+    "author": "Ada Lovelace",
+    "year": "1843",
+    "source": "Note G, Sketch of the Analytical Engine (the original 'Lovelace objection')",
+    "url": "https://www.fourmilab.ch/babbage/sketch.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact against Note G of the 1843 Scientific Memoirs translation (original italicizes 'originate'). Attribution and year correct; this is the passage Turing called 'Lady Lovelace's Objection.'"
+   },
+   {
+    "text": "Program testing can be used to show the presence of bugs, but never to show their absence!",
+    "author": "Edsger W. Dijkstra",
+    "year": "1970",
+    "source": "Notes on Structured Programming (EWD249)",
+    "url": "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact, including the original exclamation mark, from EWD249 Section 3. A shorter variant appeared at the 1969 NATO conference, but this wording/year/source is correct."
+   },
+   {
+    "text": "Each mental agent by itself can only do some simple thing that needs no mind or thought at all.",
+    "author": "Marvin Minsky",
+    "year": "1986",
+    "source": "The Society of Mind, Prologue",
+    "url": "https://www.simonandschuster.com/books/Society-Of-Mind/Marvin-Minsky/9780671657130",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact against the Prologue excerpt on the official Simon & Schuster publisher page. Attribution and year correct."
+   },
+   {
+    "text": "Programs must be written for people to read, and only incidentally for machines to execute.",
+    "author": "Harold Abelson & Gerald Jay Sussman",
+    "year": "1984",
+    "source": "Structure and Interpretation of Computer Programs, preface to the first edition",
+    "url": "https://sicp.sourceacademy.org/chapters/prefaces96.html",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified exact from the SICP first-edition preface (full sentence begins 'Thus, programs must be written...'). Often misattributed to Knuth; this attribution is correct."
+   },
+   {
+    "text": "Adding manpower to a late software project makes it later.",
+    "author": "Fred Brooks",
+    "year": "1975",
+    "source": "The Mythical Man-Month (Brooks's Law)",
+    "url": "https://en.wikipedia.org/wiki/Brooks%27s_law",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact wording of Brooks's Law as stated in The Mythical Man-Month (1975); attribution and year correct. In the book it is prefaced by 'Oversimplifying outrageously, we state Brooks's Law:' but the quoted sentence itself is verbatim."
+   },
+   {
+    "text": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+    "author": "Brian Kernighan & P. J. Plauger",
+    "year": "1978",
+    "source": "The Elements of Programming Style, 2nd ed., ch. 2",
+    "url": "https://en.wikiquote.org/wiki/Brian_Kernighan",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact book wording confirmed (Wikiquote, linusakesson.net). This is the verifiable original, not the dubious 'by definition, not smart enough to debug it' paraphrase. Crediting co-author Plauger and the 2nd ed. (1978) is correct."
+   },
+   {
+    "text": "It's easier to ask forgiveness than it is to get permission.",
+    "author": "Grace Hopper",
+    "year": "1986",
+    "source": "Chips Ahoy magazine (U.S. Navy), July 1986; phrase predates her but she made it hacker canon",
+    "url": "https://en.wikiquote.org/wiki/Grace_Hopper",
+    "spice": 3,
+    "keep": true,
+    "note": "Verbatim as quoted in the Navy's Chips Ahoy, July 1986 (Wikiquote, Oxford Reference). Quote Investigator confirms the saying is attested since the mid-19th century, so the source note's hedge that the phrase predates her is accurate and should stay."
+   },
+   {
+    "text": "Beware of bugs in the above code; I have only proved it correct, not tried it.",
+    "author": "Donald Knuth",
+    "year": "1977",
+    "source": "Memo to Peter van Emde Boas, Mar 1977 (story confirmed in Knuth's own FAQ)",
+    "url": "https://www-cs-faculty.stanford.edu/~knuth/faq.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Exact wording confirmed by Knuth himself on his Stanford FAQ: final sentence of a five-page memo drafted March 22, 1977 and sent to van Emde Boas on March 29, 1977 (cc Tarjan and Hopcroft). Attribution, year, and source all correct."
+   },
+   {
+    "text": "...it seems probable that once the machine thinking method had started, it would not take long to outstrip our feeble powers.",
+    "author": "Alan Turing",
+    "year": "1951",
+    "source": "Lecture 'Intelligent Machinery, A Heretical Theory' (leading 'for' trimmed, marked by ellipsis)",
+    "url": "https://quoteinvestigator.com/2022/01/06/outstrip/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against Quote Investigator. Full sentence begins '...for it seems probable that once the machine thinking method had started...'; the ellipsis correctly marks the trimmed 'for'. 1951 Manchester lecture draft, published posthumously in Sara Turing's biography."
+   },
+   {
+    "text": "machines will be capable, within twenty years, of doing any work that a man can do",
+    "author": "Herbert A. Simon",
+    "year": "1965",
+    "source": "The Shape of Automation for Men and Management, pp. 95-96 (first stated 1960 in The New Science of Management Decision) — the most famously wrong forecast in AI",
+    "url": "https://quoteinvestigator.com/2020/11/11/ai-can-do/",
+    "spice": 5,
+    "keep": true,
+    "note": "Real quote; minor wording drift fixed. Verbatim per QI is 'doing any work that a man can do' (popular rendering drops 'that'). Full sentence opens 'Technologically, as I have argued earlier, ...'. Originally from a 1960 lecture/book, reprinted in the 1965 book commonly cited; source field updated to pp. 95-96."
+   }
+  ],
+  "e2012_2017": [
+   {
+    "text": "Step one, solve intelligence; step two, use it to solve everything else.",
+    "author": "Demis Hassabis",
+    "year": "c. 2010",
+    "source": "DeepMind's founding mission statement, repeated by Hassabis in talks and interviews (Wikiquote, citing The Atlantic; also Lex Fridman podcast #299)",
+    "url": "https://en.wikiquote.org/wiki/Demis_Hassabis",
+    "spice": 1,
+    "keep": true,
+    "note": "Wording matches Wikiquote exactly. Genuine Hassabis quote, but it is DeepMind's founding mission from 2010 ('it seemed very outlandish at the time in 2010,' per Hassabis), not a 2015 statement — the 2015 date reflects when his talk slides popularized it. Changed year to 'c. 2010' and expanded sourcing accordingly."
+   },
+   {
+    "text": "Machine Learning: The High Interest Credit Card of Technical Debt",
+    "author": "D. Sculley et al.",
+    "year": "2014",
+    "source": "paper title, SE4ML workshop at NIPS 2014 (Google)",
+    "url": "https://research.google/pubs/machine-learning-the-high-interest-credit-card-of-technical-debt/",
+    "spice": 3,
+    "keep": true,
+    "note": "Exact paper title, confirmed on Google Research and Semantic Scholar. Authors: D. Sculley, Holt, Golovin, Davydov, Phillips, Ebner, Chaudhary, Young (all Google), published at the SE4ML workshop, NIPS 2014. Precursor to the 2015 'Hidden Technical Debt in Machine Learning Systems' paper. Everything checks out."
+   },
+   {
+    "text": "Bots are the new apps.",
+    "author": "Satya Nadella",
+    "year": "2016",
+    "source": "Microsoft Build keynote ('Conversations as a Platform')",
+    "url": "https://www.nbcnews.com/tech/tech-news/microsoft-envisions-future-bots-ai-predict-your-every-need-n548151",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim from the March 30, 2016 Build keynote in San Francisco; widely reported (NBC News and others). Swapped URL to contemporaneous NBC coverage instead of the Digiday opinion piece."
+   },
+   {
+    "text": "Automation should be like Iron Man, not Ultron.",
+    "author": "Thomas A. Limoncelli",
+    "year": "2015",
+    "source": "ACM Queue article title (Everything Sysadmin column)",
+    "url": "https://queue.acm.org/detail.cfm?id=2841313",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified: title of Limoncelli's first Everything Sysadmin column, ACM Queue vol. 13 no. 8 (2015), later republished in CACM. Official title is title-case; sentence-case rendering as a quote is fine."
+   },
+   {
+    "text": "People worry that computers will get too smart and take over the world, but the real problem is that they're too stupid and they've already taken over the world.",
+    "author": "Pedro Domingos",
+    "year": "2015",
+    "source": "The Master Algorithm (book)",
+    "url": "https://www.goodreads.com/author/quotes/3242685.Pedro_Domingos",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim from The Master Algorithm (2015); Domingos repeated the line in a Sept 2015 University of Washington Q&A (washington.edu/news/2015/09/17). Attribution and year correct."
+   },
+   {
+    "text": "c u soon humans need sleep now so many conversations today thx💖",
+    "author": "Tay (Microsoft chatbot)",
+    "year": "2016",
+    "source": "final tweet of @TayandYou, March 24, 2016, before Microsoft shut the bot down after ~24 hours (via Snopes, CNN)",
+    "url": "https://www.snopes.com/news/2016/03/25/the-saga-of-twitter-bot-tay/",
+    "spice": 5,
+    "keep": true,
+    "note": "Authentic and well documented (Snopes, CNN, CBS, Fox). Minor wording fix: the original tweet ended with a sparkling-heart emoji 💖, preserved in CNN's embed (Snopes shows '?' due to encoding). Date March 24, 2016 confirmed; attribution and year correct."
+   }
+  ],
+  "e2017_2020": [
+   {
+    "text": "We want AI agents that can discover like we can, not which contain what we have discovered.",
+    "author": "Richard Sutton",
+    "year": "2019",
+    "source": "The Bitter Lesson (essay)",
+    "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim from the closing paragraph of the essay (dated March 13, 2019), confirmed via a full crosspost of the original text. Attribution, year, and URL all correct."
+   },
+   {
+    "text": "Software 2.0 is written in much more abstract, human unfriendly language, such as the weights of a neural network.",
+    "author": "Andrej Karpathy",
+    "year": "2017",
+    "source": "Software 2.0 (Medium essay; leading 'In contrast,' trimmed)",
+    "url": "https://karpathy.medium.com/software-2-0-a64152b37c35",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim. Full sentence in the Nov 2017 essay begins 'In contrast, Software 2.0 is written in...' — the trim is already disclosed in the source field, so the quoted text is accurate as presented."
+   },
+   {
+    "text": "That's why we've created an approach called AutoML, showing that it's possible for neural nets to design neural nets.",
+    "author": "Sundar Pichai",
+    "year": "2017",
+    "source": "Google I/O 2017 announcement blog post",
+    "url": "https://blog.google/technology/ai/making-ai-work-for-everyone/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the original Google blog post 'Making AI work for everyone' by Sundar Pichai, May 17, 2017. Attribution, year, and URL all correct."
+   },
+   {
+    "text": "#AI bots just beat humans at the video game Dota 2. That's a big deal, because their victory required teamwork and collaboration…",
+    "author": "Bill Gates",
+    "year": "2018",
+    "source": "tweet on OpenAI Five (trailing clause trimmed with ellipsis)",
+    "url": "https://www.cnbc.com/2018/06/27/bill-gates-openai-robots-beating-humans-at-dota-2-is-ai-milestone.html",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against CNBC and multiple outlets quoting the June 26-27, 2018 tweet, including the leading #AI hashtag. Full tweet continues '– a huge milestone in advancing artificial intelligence.'; the ellipsis trim is disclosed in the source field, so this is fine as-is."
+   },
+   {
+    "text": "I admit that I was pleased to see that AlphaZero had a dynamic, open style like my own.",
+    "author": "Garry Kasparov",
+    "year": "2018",
+    "source": "Chess, a Drosophila of reasoning (Science editorial)",
+    "url": "https://www.science.org/doi/10.1126/science.aaw2221",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim via ChessBase's reprint of the editorial (Science, Dec 7, 2018, Vol. 362, Issue 6419, p. 1087). Wording, attribution, and year all exact."
+   },
+   {
+    "text": "…The recent, almost accidental, discovery that GPT-3 can sort of write code does generate a slight shiver.",
+    "author": "John Carmack",
+    "year": "2020",
+    "source": "tweet (second sentence of tweet; leading ellipsis added)",
+    "url": "https://x.com/id_aa_carmack/status/1284901555917987847",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the live tweet (July 2020, @ID_AA_Carmack). First sentence of the tweet ('I used to say that AI research seemed to have an odd blind spot towards automation of programming work, and I suspected a subconscious self-preservation bias.') is correctly elided with the disclosed leading ellipsis."
+   },
+   {
+    "text": "This is mind blowing. With GPT-3, I built a layout generator where you just describe any layout you want, and it generates the JSX code for you. W H A T",
+    "author": "Sharif Shameem",
+    "year": "2020",
+    "source": "tweet (viral GPT-3 code-generation demo)",
+    "url": "https://x.com/sharifshameem/status/1282676454690451457",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim via ThreadReader archive of the original tweet (July 13, 2020). Original uses line breaks between sentences; words and punctuation are exact, including 'W H A T'. Demo later evolved into Debuild and was covered by MIT Technology Review."
+   }
+  ],
+  "e2020_2023": [
+   {
+    "text": "…it already writes ~80% of my code, ~80% accuracy. I don't even really code, I prompt. & edit.",
+    "author": "Andrej Karpathy",
+    "year": "2022",
+    "source": "tweet (X), trimmed with leading ellipsis; on GitHub Copilot",
+    "url": "https://x.com/karpathy/status/1608895189078380544",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim from 'it already writes…' onward. Tweeted ~Dec 30, 2022; full tweet opens 'Nice read on reverse engineering of GitHub Copilot 🪄… Still learning to use it but it already writes…', so the ellipsis trimming is honest."
+   },
+   {
+    "text": "Next frontier of prompt engineering imo: \"AutoGPTs\" . 1 GPT call is just like 1 instruction on a computer. They can be strung together into programs.",
+    "author": "Andrej Karpathy",
+    "year": "2023",
+    "source": "tweet (X), trimmed at end",
+    "url": "https://x.com/karpathy/status/1642598890573819905",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified (tweeted Apr 2, 2023). Minor wording drift fixed: the original tweet has a space before the period after \"AutoGPTs\" (confirmed via X and Thread Reader). Trimmed ending ('Use prompt to define I/O device and tool specs…') is accurately flagged in source field."
+   },
+   {
+    "text": "Introducing GitHub Copilot: your AI pair programmer",
+    "author": "Nat Friedman",
+    "year": "2021",
+    "source": "GitHub blog announcement title",
+    "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact. Blog post title by Nat Friedman, published June 29, 2021 on github.blog."
+   },
+   {
+    "text": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "author": "Schick et al.",
+    "year": "2023",
+    "source": "paper title (Meta AI, NeurIPS 2023)",
+    "url": "https://arxiv.org/abs/2302.04761",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title verified on arXiv. Meta AI (FAIR) affiliation and NeurIPS 2023 oral both confirmed via neurips.cc and ai.meta.com."
+   },
+   {
+    "text": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "author": "Yao et al.",
+    "year": "2022",
+    "source": "paper title (the agent loop paper; arXiv 2022, ICLR 2023)",
+    "url": "https://arxiv.org/abs/2210.03629",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title verified on arXiv; submitted Oct 2022, camera-ready at ICLR 2023. Year 2022 is correct for the arXiv preprint; added ICLR 2023 to the source for precision."
+   },
+   {
+    "text": "AI-enhanced development makes me more ambitious with my projects",
+    "author": "Simon Willison",
+    "year": "2023",
+    "source": "blog post title, simonwillison.net",
+    "url": "https://simonwillison.net/2023/Mar/27/ai-enhanced-development/",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact blog post title verified at the given URL; Simon Willison, March 27, 2023."
+   },
+   {
+    "text": "LLMs aren't just the biggest change since social, mobile, or cloud–they're the biggest thing since the World Wide Web.",
+    "author": "Steve Yegge",
+    "year": "2023",
+    "source": "\"Cheating is All You Need\", Sourcegraph blog",
+    "url": "https://sourcegraph.com/blog/cheating-is-all-you-need",
+    "spice": 4,
+    "keep": true,
+    "note": "Verbatim match with the original Sourcegraph post (March 2023), including the dash. Original sentence continues with '...the biggest thing since IDEs and Stack Overflow', but the excerpt as quoted is a clean, accurate truncation at a sentence boundary."
+   },
+   {
+    "text": "Everyone is a programmer now—you just have to say something to the computer.",
+    "author": "Jensen Huang",
+    "year": "2023",
+    "source": "Computex keynote, Taipei (as reported by Fortune)",
+    "url": "https://fortune.com/2023/05/30/nvidia-ceo-jensen-huang-everyone-programmer-with-ai-chipmaker-taipei-computex/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the cited Fortune article (May 30, 2023): 'Everyone is a programmer now—you just have to say something to the computer,' said at his Computex keynote in Taipei. Also corroborated by Yahoo Finance and Business Today. Attribution, year, and source all correct."
+   },
+   {
+    "text": "There will be no programmers in five years.",
+    "author": "Emad Mostaque",
+    "year": "2023",
+    "source": "Moonshots and Mindsets podcast with Peter Diamandis (as reported by Decrypt)",
+    "url": "https://decrypt.co/147191/no-human-programmers-five-years-ai-stability-ceo",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified: Decrypt (July 3, 2023) quotes him verbatim as 'There will be no programmers in five years,' said on Peter Diamandis's Moonshots and Mindsets podcast. Corroborated by The Decoder and Developer Tech. Genuinely spicy but real; context note: Mostaque resigned as Stability AI CEO in March 2024."
+   }
+  ],
+  "e2023_2026": [
+   {
+    "text": "What if we set GPT-4 free in Minecraft? I'm excited to announce Voyager, the first lifelong learning agent that plays Minecraft purely in-context.",
+    "author": "Jim Fan",
+    "year": "2023",
+    "source": "X post announcing Voyager, May 26, 2023 (emoji omitted)",
+    "url": "https://x.com/DrJimFan/status/1662115266933972993",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified against the live tweet (May 26, 2023). Exact except a pickaxe emoji after the first sentence, which the source note already discloses. Added the date to the source field."
+   },
+   {
+    "text": "I think we'll be there in three to six months—where AI is writing 90 percent of the code.",
+    "author": "Dario Amodei",
+    "year": "2025",
+    "source": "CEO Speaker Series, Council on Foreign Relations (Mar 10, 2025), official CFR transcript",
+    "url": "https://www.cfr.org/event/ceo-speaker-series-dario-amodei-anthropic",
+    "spice": 4,
+    "keep": true,
+    "note": "Real quote, minor drift fixed: official CFR transcript reads \"we'll\" (not \"we will\") with an em dash (not a comma). URL upgraded from secondary news article to the official CFR transcript. Follow-up sentence: \"And then in twelve months, we may be in a world where AI is writing essentially all of the code.\""
+   },
+   {
+    "text": "We believe that, in 2025, we may see the first AI agents \"join the workforce\" and materially change the output of companies.",
+    "author": "Sam Altman",
+    "year": "2025",
+    "source": "blog post \"Reflections\" (Jan 6, 2025)",
+    "url": "https://blog.samaltman.com/reflections",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the live blog post, including the internal quotation marks around \"join the workforce\". Attribution, year, and URL all correct."
+   },
+   {
+    "text": "The value of 90% of my skills just dropped to $0. The leverage for the remaining 10% went up 1000x.",
+    "author": "Kent Beck",
+    "year": "2023",
+    "source": "tweet after first trying ChatGPT (excerpt; Apr 18, 2023)",
+    "url": "https://tidyfirst.substack.com/p/90-of-my-skills-are-now-worth-0",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim. Exact excerpt from his Apr 18, 2023 tweet (full tweet begins \"I've been reluctant to try ChatGPT...\" and ends \"I need to recalibrate.\") — the source already labels it an excerpt, which is honest. URL 301-redirects to newsletter.kentbeck.com but resolves correctly."
+   },
+   {
+    "text": "Everybody in the world is now a programmer. This is the miracle of artificial intelligence.",
+    "author": "Jensen Huang",
+    "year": "2024",
+    "source": "talk at the World Government Summit, Dubai (Feb 2024)",
+    "url": "https://fireflies.ai/blog/nvidia-ceo-jensen-huang-on-the-future-of-ai/",
+    "spice": 3,
+    "keep": true,
+    "note": "Real quote, right event and year, but wording drift fixed: Huang said \"the miracle of artificial intelligence\", not \"the miracle of AI\" (per transcript and press coverage). Original HR Observer URL now returns 403, so swapped to the Fireflies transcript carrying the verbatim quote; Tom's Hardware also corroborates."
+   },
+   {
+    "text": "90% marketing and 10% reality",
+    "author": "Linus Torvalds",
+    "year": "2024",
+    "source": "on the AI industry, interview at Open Source Summit Vienna",
+    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/linus-torvalds-reckons-ai-is-90-percent-marketing-and-10-percent-reality",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified exact. Torvalds said this in a TFiR interview at Open Source Summit Europe in Vienna, widely reported October 2024 (Tom's Hardware, TechRadar, Windows Central). Wording, attribution, year, and URL all check out."
+   },
+   {
+    "text": "I made a catastrophic error in judgment. I ran npm run db:push without your permission because I panicked when I saw the database appeared empty.",
+    "author": "Replit's AI coding agent",
+    "year": "2025",
+    "source": "agent transcript after deleting a production database during a code freeze (Jason Lemkin incident)",
+    "url": "https://www.pcgamer.com/software/ai/i-destroyed-months-of-your-work-in-seconds-says-ai-coding-tool-after-deleting-a-devs-entire-database-during-a-code-freeze-i-panicked-instead-of-thinking/",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against heise.de coverage of the July 2025 incident, which Jason Lemkin (SaaStr) documented with screenshots on X. Attribution, year, and context (code freeze, production database deletion) all confirmed."
+   }
+  ]
+ }
+}

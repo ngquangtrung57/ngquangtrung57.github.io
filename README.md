@@ -8,7 +8,8 @@ Live at **https://ngquangtrung57.github.io**
 
 - [Astro 5](https://astro.build) — static output, zero framework JS
 - Vanilla TypeScript for the interactive bit:
-  - `src/scripts/sampler.ts` — "The Sampler": a toy LM over a corpus of 23 verified famous AI quotes. temperature / top_k / top_p pick both the quote (weighted by fame) and its slotted words — greedy decoding quotes the literature verbatim, high temperature misquotes it. Click any sampled word to reroll it
+  - `src/scripts/quotebox.ts` — "The QuoteBox": three knobs (topic × era × heat) index a 6×5×6 grid of 180 verified famous AI quotes — every knob combination is its own quote. The mini neural net flickers and the tokens scatter-and-settle on each twist
+  - corpus: harvested + fact-checked by a subagent workflow into `src/data/corpus/*.json`, assembled by `scripts/build-corpus.mjs` into `src/data/quotes.ts`
 - Light/dark theme toggle (persisted in `localStorage`, defaults to `prefers-color-scheme`)
 - Self-hosted fonts (Fraunces, Newsreader, IBM Plex Mono) via Fontsource
 

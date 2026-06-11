@@ -1,0 +1,475 @@
+{
+ "topic": "rl",
+ "eras": {
+  "pre2012": [
+   {
+    "text": "Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal.",
+    "author": "Richard S. Sutton & Andrew G. Barto",
+    "year": "1998",
+    "source": "Reinforcement Learning: An Introduction (opening definition, Section 1.1)",
+    "url": "http://incompleteideas.net/book/ebook/node7.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the official online 1st edition (Section 1.1) and AITopics citation of the 1998 MIT Press edition. Wording, attribution, and year all exact."
+   },
+   {
+    "text": "That all of what we mean by goals and purposes can be well thought of as maximization of the expected value of the cumulative sum of a received scalar signal (reward).",
+    "author": "Richard S. Sutton",
+    "year": "2004",
+    "source": "\"The Reward Hypothesis\", RLAI web (incompleteideas.net)",
+    "url": "http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/rewardhypothesis.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified. 'Settling the Reward Hypothesis' (arXiv:2212.10420) quotes identical wording including '(reward)' and cites it as Sutton (2004), web page. The leading 'That' matches how the RLAI page states the hypothesis after a colon."
+   },
+   {
+    "text": "We normally associate punishments and rewards with the teaching process.",
+    "author": "Alan Turing",
+    "year": "1950",
+    "source": "\"Computing Machinery and Intelligence\", Mind (the child-machine section — RL avant la lettre)",
+    "url": "https://www.cs.ox.ac.uk/activities/ieg/e-library/sources/t_article.pdf",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim; appears on p. 457 in the learning-machines/child-machine section of the 1950 Mind paper. Attribution and year correct."
+   },
+   {
+    "text": "A random element is rather useful when we are searching for a solution of some problem.",
+    "author": "Alan Turing",
+    "year": "1950",
+    "source": "\"Computing Machinery and Intelligence\", Mind (exploration, 1950 edition)",
+    "url": "https://www.cs.ox.ac.uk/activities/ieg/e-library/sources/t_article.pdf",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim from the learning-machines section of the 1950 Mind paper, where Turing illustrates random vs. systematic search. Attribution and year correct."
+   },
+   {
+    "text": "...a computer can be programmed so that it will learn to play a better game of checkers than can be played by the person who wrote the program.",
+    "author": "Arthur L. Samuel",
+    "year": "1959",
+    "source": "\"Some Studies in Machine Learning Using the Game of Checkers\", IBM Journal of Research and Development (abstract; leading clause trimmed)",
+    "url": "https://ieeexplore.ieee.org/document/5392560",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the 1959 IBM Journal paper (doi:10.1147/rd.33.0210). Full sentence begins 'Enough work has been done to verify the fact that...' — the trim is honest and flagged. Attribution and year correct."
+   },
+   {
+    "text": "Reinforcement learning might be considered to encompass all of AI: an agent is placed in an environment and must learn to behave successfully therein.",
+    "author": "Stuart Russell & Peter Norvig",
+    "year": "2009",
+    "source": "Artificial Intelligence: A Modern Approach (3rd ed.)",
+    "url": "https://ar5iv.labs.arxiv.org/html/2202.11296",
+    "spice": 3,
+    "keep": true,
+    "note": "Wording verified verbatim in the linked paper and in other surveys (e.g. arXiv:1810.06339), all citing Russell & Norvig 2009 (3rd ed.). Note it reads 'all of AI', not 'all of artificial intelligence' — the given text is correct."
+   },
+   {
+    "text": "...we had better be quite sure that the purpose put into the machine is the purpose which we really desire.",
+    "author": "Norbert Wiener",
+    "year": "1960",
+    "source": "\"Some Moral and Technical Consequences of Automation\", Science (leading clause trimmed — the original reward-misspecification warning)",
+    "url": "https://lukemuehlhauser.com/wiener-on-the-ai-control-problem-in-1960/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim fragment of the 1960 Science passage. Minor caveat: the sentence also continues '...and not merely a colorful imitation of it', so the trailing clause is trimmed too, not just the leading one. Words shown are exact; attribution and year correct."
+   },
+   {
+    "text": "...the real question is not whether machines think but whether men do.",
+    "author": "B. F. Skinner",
+    "year": "1969",
+    "source": "Contingencies of Reinforcement, ch. 9 (leading \"But\" trimmed; verified by Quote Investigator)",
+    "url": "https://quoteinvestigator.com/2025/09/04/machines-think/",
+    "spice": 4,
+    "keep": true,
+    "note": "Quote Investigator confirms exact wording 'But the real question is not whether machines think but whether men do' in Contingencies of Reinforcement (1969), ch. 9, and Psychology Today (April 1969). Trim of leading 'But' is disclosed. Real, sourced spicy take — keep."
+   },
+   {
+    "text": "I could feel — I could smell — a new kind of intelligence across the table.",
+    "author": "Garry Kasparov",
+    "year": "1996",
+    "source": "TIME, \"The Day That I Sensed a New Kind of Intelligence\" (on Deep Blue)",
+    "url": "https://time.com/archive/6728763/the-day-that-i-sensed-a-new-kind-of-intelligence/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against TIME's archive (essay published March 25, 1996, about Game 1 vs Deep Blue on Feb 10, 1996). Original prints the dashes as double hyphens ('I could feel--I could smell--'); em-dash rendering is a faithful typographic normalization. Attribution, year, and URL correct."
+   },
+   {
+    "text": "When a measure becomes a target, it ceases to be a good measure.",
+    "author": "Marilyn Strathern",
+    "year": "1997",
+    "source": "\"'Improving Ratings': audit in the British University system\", European Review — the canonical phrasing of Goodhart's law, a.k.a. reward hacking's origin story",
+    "url": "https://gwern.net/doc/statistics/decision/1997-strathern.pdf",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim from p. 308 of Strathern 1997, European Review 5(3), 305-321. Correctly attributed to Strathern rather than Goodhart (who never wrote these words; his 1975 version differed, and Strathern's phrasing built on Hoskin 1996) — the source note's framing as 'the canonical phrasing of Goodhart's law' is accurate."
+   }
+  ],
+  "e2012_2017": [
+   {
+    "text": "…this one win is so valuable I would not exchange this with anything in the world.",
+    "author": "Lee Sedol",
+    "year": "2016",
+    "source": "Press conference after winning Game 4 vs AlphaGo (via NPR; trimmed with leading ellipsis)",
+    "url": "https://www.npr.org/sections/thetwo-way/2016/03/13/470284113/after-three-losses-master-go-player-scores-a-win-against-computer",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against NPR (March 13, 2016). Full sentence: \"because I lost three matches and I was able to get one single win, I think this one win is so valuable I would not exchange this with anything in the world.\" The trimmed tail after the ellipsis matches exactly (the ellipsis drops \"I think\")."
+   },
+   {
+    "text": "Human-level control through deep reinforcement learning",
+    "author": "Mnih et al.",
+    "year": "2015",
+    "source": "paper title, Nature (the DQN Atari paper)",
+    "url": "https://www.nature.com/articles/nature14236",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified. Exact title of Mnih, V., Kavukcuoglu, K., Silver, D. et al., Nature 518, 529–533 (25 February 2015), DOI 10.1038/nature14236. The DQN Atari paper."
+   },
+   {
+    "text": "This is a long overdue blog post on Reinforcement Learning (RL). RL is hot!",
+    "author": "Andrej Karpathy",
+    "year": "2016",
+    "source": "blog, \"Deep Reinforcement Learning: Pong from Pixels\" (opening lines)",
+    "url": "http://karpathy.github.io/2016/05/31/rl/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified by fetching the blog post directly: these are the exact first two sentences of \"Deep Reinforcement Learning: Pong from Pixels,\" May 31, 2016."
+   },
+   {
+    "text": "By not using human data or human expertise, we've actually removed the constraints of human knowledge.",
+    "author": "David Silver",
+    "year": "2017",
+    "source": "MIT Technology Review, on AlphaGo Zero",
+    "url": "https://www.technologyreview.com/2017/10/18/148511/alphago-zero-shows-machines-can-become-superhuman-without-any-help/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the MIT Technology Review article (Oct 18, 2017). Attribution and year correct. The article continues: 'It's able to create knowledge for itself from first principles.'"
+   },
+   {
+    "text": "AI = RL + DL",
+    "author": "David Silver",
+    "year": "2016",
+    "source": "ICML 2016 Deep Reinforcement Learning tutorial slides (slide \"Deep Reinforcement Learning: AI = RL + DL\")",
+    "url": "https://icml.cc/2016/tutorials/deep_rl_tutorial.pdf",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified by extracting text from the actual PDF: the slide is titled 'Deep Reinforcement Learning: AI = RL + DL' and also states 'RL + DL = general intelligence'. Corrected the slide title in the source field (it was previously cited as 'Deep Reinforcement Learning = AI?'). Equation wording is exact."
+   },
+   {
+    "text": "I prefer to eat a cake with a lot of cherries because I like reinforcement learning.",
+    "author": "Pieter Abbeel",
+    "year": "2017",
+    "source": "NIPS 2017 invited talk \"Deep Learning for Robotics\" (riffing on LeCun's cake analogy, via Synced)",
+    "url": "https://medium.com/syncedreview/yann-lecun-cake-analogy-2-0-a361da560dae",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified: Synced Review's 'Yann LeCun Cake Analogy 2.0' quotes Abbeel joking exactly this at his NIPS 2017 'Deep Learning for Robotics' invited talk, where he showed the DeepMind cherry-covered cake and pitched Hindsight Experience Replay. Wording matches the Synced report verbatim; attribution and year correct. Note it is a secondhand report of a spoken joke, but from a reputable outlet."
+   },
+   {
+    "text": "#AlphaGo WINS!!!! We landed it on the moon. So proud of the team!! Respect to the amazing Lee Sedol too",
+    "author": "Demis Hassabis",
+    "year": "2016",
+    "source": "tweet, after AlphaGo won Game 1 vs Lee Sedol",
+    "url": "https://x.com/demishassabis/status/707474683906674688",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the live tweet (March 9, 2016, posted after AlphaGo's Game 1 win over Lee Sedol). Wording, attribution, year, and URL all correct."
+   },
+   {
+    "text": "If intelligence is a cake, the bulk of the cake is unsupervised learning, the icing on the cake is supervised learning, and the cherry on the cake is reinforcement learning.",
+    "author": "Yann LeCun",
+    "year": "2016",
+    "source": "NIPS 2016 keynote (the \"cake analogy\" that riled the RL community)",
+    "url": "https://medium.com/syncedreview/yann-lecun-cake-analogy-2-0-a361da560dae",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against multiple sources (Synced Review, arXiv 2502.03038, widely cited slide text). Attribution and year correct; some versions append '(RL)' at the end. LeCun later revised it to 'self-supervised learning' in 2019, but the 2016 original is as quoted."
+   },
+   {
+    "text": "OpenAI first ever to defeat world's best players in competitive eSports. Vastly more complex than traditional board games like chess & Go.",
+    "author": "Elon Musk",
+    "year": "2017",
+    "source": "tweet, after OpenAI's 1v1 Dota 2 bot beat Dendi at The International (the \"vastly more complex\" claim was widely contested)",
+    "url": "https://www.fastcompany.com/40452901/elon-musk-openai-ai-beat-esports-best-gamers",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim — tweeted August 12, 2017; quoted exactly in Fast Company, Vice, Techworm, and Futurism coverage. The contested-claim framing in the source note is accurate (it was a restricted 1v1 mid matchup, not full 5v5)."
+   },
+   {
+    "text": "Even if AlphaGo can defeat Lee Se-dol, it can't beat me.",
+    "author": "Ke Jie",
+    "year": "2016",
+    "source": "Weibo post, March 2016 (translated; he lost 3-0 to AlphaGo in 2017)",
+    "url": "https://qz.com/702281/it-cant-beat-me-the-worlds-best-go-player-wants-a-shot-at-googles-undefeated-alphago",
+    "spice": 5,
+    "keep": true,
+    "note": "Real and well-documented Weibo post from March 2016 (confirmed by Quartz via Ars Technica, china.org.cn/Xinhua). It's a translation so wording varies slightly by outlet; corrected to the cited Quartz/Ars rendering ('it can't beat me' rather than 'it cannot beat me'). Attribution, year, and the 3-0 loss in May 2017 all check out."
+   }
+  ],
+  "e2017_2020": [
+   {
+    "text": "We've observed agents discovering progressively more complex tool use while playing a simple game of hide-and-seek.",
+    "author": "OpenAI (Baker et al.)",
+    "year": "2019",
+    "source": "Emergent Tool Use from Multi-Agent Interaction (OpenAI blog)",
+    "url": "https://openai.com/index/emergent-tool-use/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified as the verbatim first sentence of the OpenAI blog post 'Emergent tool use from multi-agent interaction' (Sept 17, 2019), accompanying Baker et al., arXiv:1909.07528 / ICLR 2020. Direct fetch of openai.com returned 403, but wording confirmed via search-indexed copies of the post."
+   },
+   {
+    "text": "Specification gaming is a behaviour that satisfies the literal specification of an objective without achieving the intended outcome.",
+    "author": "Victoria Krakovna et al.",
+    "year": "2020",
+    "source": "Specification Gaming: The Flip Side of AI Ingenuity (DeepMind blog)",
+    "url": "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim on the DeepMind blog (April 21, 2020); authors Krakovna, Uesato, Mikulik, Rahtz, Everitt, Kumar, Kenton, Leike, Legg. British spelling 'behaviour' is correct as in the original."
+   },
+   {
+    "text": "Last year, it was still quite humanlike when it played. But this year, it became like a god of Go.",
+    "author": "Ke Jie",
+    "year": "2017",
+    "source": "press conference after losing to AlphaGo at the Future of Go Summit (via NPR)",
+    "url": "https://www.npr.org/sections/thetwo-way/2017/05/23/529673475/like-a-god-google-a-i-beats-human-champ-of-notoriously-complex-go-game",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim against the NPR article (May 23, 2017): 'Last year, it was still quite humanlike when it played,' Ke said. 'But this year, it became like a god of Go.' Attribution, year, and source all correct; also syndicated via KQED/KERA member stations."
+   },
+   {
+    "text": "Even if I become the number one, there is an entity that cannot be defeated.",
+    "author": "Lee Sedol",
+    "year": "2019",
+    "source": "Yonhap interview announcing his retirement from Go (via CNN)",
+    "url": "https://www.cnn.com/2019/11/27/tech/go-master-google-intl-hnk-scli/index.html",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified: CNN, Gizmodo, China Daily, and Wikipedia all attribute this exact English wording to Lee Sedol's November 2019 Yonhap interview announcing his retirement. CNN page itself returned HTTP 451 to the fetcher, but search results confirm the CNN article carries the quote; appended /index.html to the URL for the canonical CNN path."
+   },
+   {
+    "text": "Whenever someone asks me if reinforcement learning can solve their problem, I tell them it can't. I think this is right at least 70% of the time.",
+    "author": "Alex Irpan",
+    "year": "2018",
+    "source": "Deep Reinforcement Learning Doesn't Work Yet (blog)",
+    "url": "https://www.alexirpan.com/2018/02/14/rl-hard.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the live blog post (opening section). Author, year (Feb 14, 2018), and URL all correct."
+   },
+   {
+    "text": "RL must be forced to work. If you screw something up or don't tune something well enough you're exceedingly likely to get a policy that is even worse than random.",
+    "author": "Andrej Karpathy",
+    "year": "2017",
+    "source": "Hacker News comment (the famous 'SL wants to work / RL must be forced to work' contrast)",
+    "url": "https://news.ycombinator.com/item?id=13519044",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the HN comment by user 'karpathy' at that exact item ID (Jan 2017). The preceding sentence is 'SL wants to work. Even if you screw something up you'll usually get something non-random back.' — the source description correctly captures the contrast."
+   },
+   {
+    "text": "The authors were asleep during the training process, so the problem was noticed only once training had finished.",
+    "author": "Daniel Ziegler et al.",
+    "year": "2019",
+    "source": "Fine-Tuning Language Models from Human Preferences, Section 4.4 (on the sign-flipped-reward RLHF bug that produced 'maximally bad output')",
+    "url": "https://arxiv.org/abs/1909.08593",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against the paper's full text. Minor source fix: the sentence is in Section 4.4 ('Bugs can optimize for bad behavior'), not a footnote. Paper submitted Sept 2019, Daniel M. Ziegler first author — attribution and year correct."
+   }
+  ],
+  "e2020_2023": [
+   {
+    "text": "Intelligence, and its associated abilities, can be understood as subserving the maximisation of reward by an agent acting in its environment.",
+    "author": "David Silver, Satinder Singh, Doina Precup & Richard Sutton",
+    "year": "2021",
+    "source": "paper — \"Reward is Enough\", Artificial Intelligence (the reward-is-enough hypothesis)",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0004370221000862",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact. This is the verbatim Reward-is-Enough Hypothesis statement from the paper; response papers (Vamplew et al., 2022) quote it identically. Attribution and year correct."
+   },
+   {
+    "text": "Training language models to follow instructions with human feedback",
+    "author": "Ouyang et al.",
+    "year": "2022",
+    "source": "paper title — the InstructGPT paper, the canonical RLHF recipe behind ChatGPT",
+    "url": "https://arxiv.org/abs/2203.02155",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified exact title on arXiv 2203.02155; first author Long Ouyang, submitted March 2022. Correct."
+   },
+   {
+    "text": "So RLHF is how we align the model to what humans want it to do.",
+    "author": "Sam Altman",
+    "year": "2023",
+    "source": "Lex Fridman Podcast #367 (transcript)",
+    "url": "https://auphonic.com/media/blog/LexFridmanPodcast367-transcript.html",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim (including leading \"So\") against the episode #367 transcript; speaker, episode, and 2023 date confirmed."
+   },
+   {
+    "text": "We introduce a framework that abstracts Reinforcement Learning (RL) as a sequence modeling problem.",
+    "author": "Chen et al.",
+    "year": "2021",
+    "source": "paper — \"Decision Transformer: Reinforcement Learning via Sequence Modeling\" (abstract, v1)",
+    "url": "https://arxiv.org/abs/2106.01345v1",
+    "spice": 2,
+    "keep": true,
+    "note": "Wording fixed: abstract says \"We introduce a framework...\", not \"We present...\". Authors (Lili Chen et al.) and 2021 (v1 June 2, 2021) confirmed."
+   },
+   {
+    "text": "RL is capable of learning when you should say, 'I don't know' and how much you should hedge.",
+    "author": "John Schulman",
+    "year": "2023",
+    "source": "talk — \"Reinforcement Learning from Human Feedback: Progress and Challenges\", UC Berkeley EECS Colloquium Distinguished Lecture, April 19, 2023 (Berkeley Talks transcript)",
+    "url": "https://news.berkeley.edu/2023/04/24/berkeley-talks-transcript-chatgpt-developer-john-schulman/",
+    "spice": 2,
+    "keep": true,
+    "note": "Wording verified verbatim against the Berkeley Talks transcript (full sentence: 'Or basically RL is capable of learning when you should say, \"I don't know\" and how much you should hedge.'). Corrected the talk title — it was not 'RL and Truthfulness' but 'Reinforcement Learning from Human Feedback: Progress and Challenges' (truthfulness was a major theme). Year and URL correct."
+   },
+   {
+    "text": "…to build an AI that could strategically outnegotiate humans *in natural language* in Diplomacy. Today, I'm excited to share our Science paper showing we've succeeded!",
+    "author": "Noam Brown",
+    "year": "2022",
+    "source": "X/LinkedIn post announcing CICERO, Nov 22, 2022 (trimmed with leading ellipsis)",
+    "url": "https://www.linkedin.com/posts/noam-brown-8b785b62_meta-ai-presents-cicero-activity-7000937046198337537-IhZW",
+    "spice": 2,
+    "keep": true,
+    "note": "Exact match verified. Full post: '3 years ago my teammates and I set out toward a goal that seemed like science fiction: to build an AI that could strategically outnegotiate humans *in natural language* in Diplomacy. Today, I'm excited to share our Science paper showing we've succeeded!' Posted Nov 22, 2022, same day the Science paper published. Attribution and year correct."
+   },
+   {
+    "text": "Scalar reward is not enough",
+    "author": "Vamplew et al.",
+    "year": "2021",
+    "source": "paper title — \"Scalar reward is not enough: A response to Silver, Singh, Precup and Sutton (2021)\"",
+    "url": "https://arxiv.org/abs/2112.15422",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified exact on arXiv 2112.15422: title, authors (Peter Vamplew et al., 12 authors), and submission date (Nov 25, 2021) all check out. Also published in JAAMAS 2022, but 2021 is correct for the arXiv preprint. A real published spicy rebuttal to the 'Reward is enough' paper — keep."
+   },
+   {
+    "text": "…represents something that thinks in a way that humans don't understand and that's totally different from the way that humans think",
+    "author": "@TetraspaceWest",
+    "year": "2023",
+    "source": "creator of the shoggoth-with-smiley-face RLHF meme, explaining it to the New York Times (Kevin Roose, \"Why an Octopus-like Creature Has Come to Symbolize the State of A.I.\", May 30, 2023; trimmed — the subject is the shoggoth)",
+    "url": "https://www.nytimes.com/2023/05/30/technology/shoggoth-meme-ai.html",
+    "spice": 3,
+    "keep": true,
+    "note": "Wording verified verbatim against the NYT article (via secondary sources quoting it directly): TetraspaceWest told Roose the shoggoth 'represents something that thinks in a way that humans don't understand and that's totally different from the way that humans think.' Swapped URL from Know Your Meme (returns 403, and is secondary) to the primary NYT source. Attribution and year correct."
+   },
+   {
+    "text": "The impact of RL has been exactly as small as I had predicted. The impact of Self-Supervised Learning has been even bigger that I had predicted.",
+    "author": "Yann LeCun",
+    "year": "2022",
+    "source": "X post, Dec 2022 ('that' typo is in the original)",
+    "url": "https://x.com/ylecun/status/1602226280984113152",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the original tweet (Dec 12, 2022), including the 'bigger that' typo. Attribution, year, and URL all correct. Context: reply in a thread about RL's post-AlphaGo impact; consistent with his NeurIPS 2022 'abandon RL' stance."
+   },
+   {
+    "text": "…My opinion: It's all about scale now! The Game is Over!",
+    "author": "Nando de Freitas",
+    "year": "2022",
+    "source": "X post reacting to DeepMind's Gato generalist agent (trimmed; opens \"Someone's opinion article.\")",
+    "url": "https://x.com/NandoDF/status/1525397036325019649",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against the original tweet (May 14, 2022): 'Someone's opinion article. My opinion: It's all about scale now! The Game is Over!…'. Trimming is honest and disclosed in the source note. Attribution, year, and URL correct. He posted a 'Revised beliefs' follow-up in April 2024, but the original stands as quoted."
+   }
+  ],
+  "e2023_2026": [
+   {
+    "text": "A new generation of agents will acquire superhuman capabilities by learning predominantly from experience.",
+    "author": "David Silver & Richard Sutton",
+    "year": "2025",
+    "source": "Welcome to the Era of Experience (paper abstract)",
+    "url": "https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim match with the paper abstract; authors and year correct. Preprint of a chapter in 'Designing an Intelligence' (MIT Press)."
+   },
+   {
+    "text": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "author": "DeepSeek-AI et al.",
+    "year": "2025",
+    "source": "paper title, arXiv:2501.12948",
+    "url": "https://arxiv.org/abs/2501.12948",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title per arXiv; submitted Jan 22, 2025, later published in Nature 645 (2025)."
+   },
+   {
+    "text": "In three words: RL finally works. More precisely: RL finally generalizes.",
+    "author": "Shunyu Yao",
+    "year": "2025",
+    "source": "The Second Half (blog essay)",
+    "url": "https://ysymyth.github.io/The-Second-Half/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verbatim match with the essay text; author and year correct."
+   },
+   {
+    "text": "…o1 thinks for seconds, but we aim for future versions to think for hours, days, even weeks.",
+    "author": "Noam Brown",
+    "year": "2024",
+    "source": "X post (leading \"@OpenAI's\" trimmed)",
+    "url": "https://x.com/polynoamial/status/1834280969786065278",
+    "spice": 2,
+    "keep": true,
+    "note": "Matches the Sept 12, 2024 tweet exactly; ellipsis correctly marks the trimmed leading \"@OpenAI's\"."
+   },
+   {
+    "text": "True invention is not possible yet with AI. It can't come up with a new hypothesis or new conjecture.",
+    "author": "Demis Hassabis",
+    "year": "2025",
+    "source": "World Economic Forum panel, Davos (via The Register)",
+    "url": "https://www.theregister.com/2025/01/22/google_deepmind_ai_drugs/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified exact against The Register article (Jan 22, 2025), which reports Hassabis saying this on a WEF Davos panel. Wording matches verbatim, attribution and year correct."
+   },
+   {
+    "text": "The bitter lesson, who cares about that? That's an empirical observation about a particular period in history.",
+    "author": "Richard Sutton",
+    "year": "2025",
+    "source": "Dwarkesh Podcast",
+    "url": "https://www.dwarkesh.com/p/richard-sutton",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified exact. From the Sept 2025 Dwarkesh Podcast episode 'Richard Sutton – Father of RL thinks LLMs are a dead end'; transcript continues '70 years in history, it doesn't necessarily have to apply to the next 70 years.' Spicy but real — Sutton dismissing his own essay."
+   },
+   {
+    "text": "RL is powerful. RLHF is not.",
+    "author": "Andrej Karpathy",
+    "year": "2024",
+    "source": "X post (\"RLHF is just barely RL\")",
+    "url": "https://x.com/karpathy/status/1821277264996352246",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified exact. Sentence appears verbatim in Karpathy's Aug 7, 2024 X post titled '# RLHF is just barely RL' (status 1821277264996352246); exact-phrase search confirms wording. Attribution and year correct."
+   },
+   {
+    "text": "…you're sucking the bits of supervision of the final reward signal through a straw… It's just stupid and crazy. A human would never do this.",
+    "author": "Andrej Karpathy",
+    "year": "2025",
+    "source": "Dwarkesh Podcast, on RL (trimmed with ellipses)",
+    "url": "https://www.dwarkesh.com/p/andrej-karpathy",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified against the official Dwarkesh transcript (episode Oct 17, 2025). Full passage: \"...you're sucking the bits of supervision of the final reward signal through a straw and you're broadcasting that across the entire trajectory and using that to upweight or downweight that trajectory. It's just stupid and crazy.\" then \"A human would never do this.\" The ellipsis-trimmed version is a faithful condensation; attribution and year correct."
+   },
+   {
+    "text": "Wait, wait. Wait. That's an aha moment I can flag here.",
+    "author": "DeepSeek-R1-Zero (model output)",
+    "year": "2025",
+    "source": "DeepSeek-R1 paper, Table 3 (the \"aha moment\")",
+    "url": "https://arxiv.org/abs/2501.12948",
+    "spice": 5,
+    "keep": true,
+    "note": "Exact verbatim match with Table 3 of the DeepSeek-R1 paper (arXiv 2501.12948, Jan 2025; later published in Nature). Wording, punctuation, attribution, and year all correct."
+   }
+  ]
+ }
+}

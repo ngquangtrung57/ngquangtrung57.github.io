@@ -1,0 +1,365 @@
+{
+ "topic": "scaling",
+ "eras": {
+  "pre2012": [
+   {
+    "text": "Civilization advances by extending the number of important operations which we can perform without thinking about them.",
+    "author": "Alfred North Whitehead",
+    "year": "1911",
+    "source": "An Introduction to Mathematics (book, ch. 5)",
+    "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Whitehead/quotations/",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim match. Ch. 5 'The Symbolism of Mathematics', pp. 41-42 of the 1911 edition; confirmed via Wikiquote and IIT Kanpur full text."
+   },
+   {
+    "text": "The complexity for minimum component costs has increased at a rate of roughly a factor of two per year.",
+    "author": "Gordon Moore",
+    "year": "1965",
+    "source": "Cramming more components onto integrated circuits, Electronics magazine (the original Moore's Law)",
+    "url": "https://en.wikipedia.org/wiki/Moore%27s_law",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim from Electronics, Vol. 38 No. 8, Apr 19, 1965 (original has a '(see graph)' parenthetical after the sentence, routinely omitted). Attribution and year correct."
+   },
+   {
+    "text": "The purpose of computing is insight, not numbers.",
+    "author": "Richard Hamming",
+    "year": "1962",
+    "source": "Numerical Methods for Scientists and Engineers (book motto, preface)",
+    "url": "https://en.wikipedia.org/wiki/Richard_Hamming",
+    "spice": 1,
+    "keep": true,
+    "note": "Verbatim. Book motto, p. v of the 1962 McGraw-Hill edition; a 1962 Science review confirms it as the book's recurring slogan."
+   },
+   {
+    "text": "When in doubt, use brute force.",
+    "author": "Ken Thompson",
+    "year": "1985",
+    "source": "via Jon Bentley, 'Bumper-Sticker Computer Science', Communications of the ACM",
+    "url": "http://quotes.cat-v.org/programming/bumper-sticker-computer-science",
+    "spice": 2,
+    "keep": true,
+    "note": "Verbatim as printed in Bentley's Sept 1985 CACM column, credited to 'Ken Thompson, Bell Labs'. Bentley noted he credited submitters, but Thompson is the standard and uncontested attribution. Source/year correct."
+   },
+   {
+    "text": "With four parameters I can fit an elephant, and with five I can make him wiggle his trunk.",
+    "author": "John von Neumann",
+    "year": "1953",
+    "source": "as recounted by Freeman Dyson, 'A meeting with Enrico Fermi', Nature (2004)",
+    "url": "https://en.wikipedia.org/wiki/Von_Neumann%27s_elephant",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified exact. Fermi quoted von Neumann's remark to Dyson in 1953; Dyson published the anecdote in Nature, 22 Jan 2004. Wording matches verbatim."
+   },
+   {
+    "text": "If you were plowing a field, which would you rather use? Two strong oxen or 1024 chickens?",
+    "author": "Seymour Cray",
+    "year": "undated (attributed)",
+    "source": "attributed quip on massively parallel computing vs. supercomputers (no documented primary source)",
+    "url": "https://en.wikiquote.org/wiki/Talk:Seymour_Cray",
+    "spice": 4,
+    "keep": true,
+    "note": "Universally attributed to Cray and consistent with his design philosophy, but no primary source exists; Wikiquote lists it as unsourced and the earliest commonly cited print appearance (Larman 2002) gives no citation. Kept because the entry honestly labels it 'attributed'; year softened from 'c. 1990' to 'undated (attributed)' since that date is itself unverifiable. Must retain the attributed/no-primary-source label to stay safe for an academic site."
+   },
+   {
+    "text": "Tape is dead, disk is tape, flash is disk, RAM locality is king.",
+    "author": "Jim Gray",
+    "year": "2006",
+    "source": "talk title, Storage Guru Gong Show, Redmond, WA, 10 December 2006 (repeated at CIDR Gong Show, Jan 2007; one of his final public talks)",
+    "url": "https://jimgray.azurewebsites.net/jimgraytalks.htm",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified exact. Gray's own archived talks page lists this title verbatim with venue 'Storage Guru Gong Show, Redmond, WA, 10 December 2006', and the original slide deck (flash_is_good.ppt) is still hosted there. Attribution, wording, and year all correct."
+   }
+  ],
+  "e2012_2017": [
+   {
+    "text": "All of our experiments suggest that our results can be improved simply by waiting for faster GPUs and bigger datasets to become available.",
+    "author": "Krizhevsky, Sutskever & Hinton",
+    "year": "2012",
+    "source": "ImageNet Classification with Deep Convolutional Neural Networks (the AlexNet paper, closing line of the introduction)",
+    "url": "https://proceedings.neurips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the paper text; it is indeed the final sentence of the introduction (Section 1). Attribution and year correct."
+   },
+   {
+    "text": "Deep Learning Scaling is Predictable, Empirically",
+    "author": "Hestness et al.",
+    "year": "2017",
+    "source": "Paper title, Baidu Research (arXiv 1712.00409) — the proto-scaling-laws paper",
+    "url": "https://arxiv.org/abs/1712.00409",
+    "spice": 1,
+    "keep": true,
+    "note": "Exact title confirmed on arXiv; submitted Dec 1, 2017 by Joel Hestness et al. at Baidu Research. Widely cited precursor to Kaplan et al. scaling laws."
+   },
+   {
+    "text": "Is learning better networks as easy as stacking more layers?",
+    "author": "Kaiming He et al.",
+    "year": "2015",
+    "source": "Deep Residual Learning for Image Recognition (the ResNet paper, introduction)",
+    "url": "https://arxiv.org/abs/1512.03385",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim in the introduction of arXiv 1512.03385 (Dec 2015). The paper's famous motivating question; attribution and year correct."
+   },
+   {
+    "text": "An analogy is to building a space rocket: You need a huge rocket engine, and you need a lot of fuel.",
+    "author": "Andrew Ng",
+    "year": "2015",
+    "source": "Fortune interview (engines = supercomputers, fuel = data)",
+    "url": "https://fortune.com/2015/09/23/baidu-andrew-ng-deep-learning/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the Fortune article (Sept 23, 2015), where Ng was Baidu chief scientist. The engines=large computers/supercomputers, fuel=data mapping is also stated explicitly in the article."
+   },
+   {
+    "text": "Software is eating the world, but AI is going to eat software.",
+    "author": "Jensen Huang",
+    "year": "2017",
+    "source": "MIT Technology Review interview",
+    "url": "https://www.technologyreview.com/2017/05/12/151722/nvidia-ceo-software-is-eating-the-world-but-ai-is-going-to-eat-software/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim in the body of the May 12, 2017 MIT Technology Review interview (not just the headline). Attribution and year correct."
+   },
+   {
+    "text": "If you have a large big dataset, and you train a very big neural network, then success is guaranteed!",
+    "author": "Ilya Sutskever",
+    "year": "2014",
+    "source": "NIPS 2014 seq2seq talk, Montreal (he re-affirmed the line in his NeurIPS 2024 Test of Time talk)",
+    "url": "https://www.latent.space/p/what-ilya-saw",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified. Wording matches the 2014 conclusion-slide text as quoted by Latent.Space; Sutskever paraphrased it himself in the NeurIPS 2024 Test of Time talk ('if you have a very big dataset and you train a very big neural network, then success is guaranteed'). The quirky 'large big dataset' phrasing is authentic to the slide."
+   },
+   {
+    "text": "The models, they just want to learn. You have to understand this. The models, they just want to learn.",
+    "author": "Ilya Sutskever (as recounted by Dario Amodei)",
+    "year": "c. 2015",
+    "source": "Remark to Dario Amodei just before OpenAI's founding, retold on the Dwarkesh Podcast (2023)",
+    "url": "https://www.dwarkesh.com/p/dario-amodei",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the Dwarkesh Podcast transcript: Amodei quotes Ilya as saying 'Look. The models, they just want to learn. You have to understand this. The models, they just want to learn.' Said just before OpenAI started, so c. 2015 is accurate; the 'as recounted by' framing correctly flags it as secondhand."
+   },
+   {
+    "text": "…codenamed \"Inception\", which derives its name from … the famous \"we need to go deeper\" internet meme",
+    "author": "Szegedy et al.",
+    "year": "2014",
+    "source": "Going Deeper with Convolutions (the GoogLeNet paper, introduction; trimmed with ellipses — the paper literally cites knowyourmeme)",
+    "url": "https://arxiv.org/abs/1409.4842",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified against the paper's introduction: 'codenamed \"Inception\", which derives its name from the \"Network in network\" paper by Lin et al [12] in conjunction with the famous \"we need to go deeper\" internet meme [1].' Ellipsis trimming is faithful; reference [1] is indeed Know Your Meme; 2014 correct."
+   }
+  ],
+  "e2017_2020": [
+   {
+    "text": "Since 2012, the amount of compute used in the largest AI training runs has been increasing exponentially with a 3.4-month doubling time",
+    "author": "Dario Amodei & Danny Hernandez",
+    "year": "2018",
+    "source": "AI and Compute (OpenAI blog)",
+    "url": "https://openai.com/index/ai-and-compute/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verbatim match to the opening line of the May 2018 post; authors and year confirmed. Note later analyses (Heim 2021, Epoch AI) revised the doubling time to ~6 months, but the quote as a 2018 claim is accurate."
+   },
+   {
+    "text": "The GPT-3 hype is way too much... AI is going to change the world, but GPT-3 is just a very early glimpse. We have a lot still to figure out.",
+    "author": "Sam Altman",
+    "year": "2020",
+    "source": "tweet (middle sentence elided, trim disclosed)",
+    "url": "https://x.com/sama/status/1284922296348454913",
+    "spice": 3,
+    "keep": true,
+    "note": "Tweet of July 19, 2020 confirmed. Elided middle: \"It's impressive (thanks for the nice compliments!) but it still has serious weaknesses and sometimes makes very silly mistakes.\" The ellipsis and disclosed trim make the quote fair and accurate."
+   },
+   {
+    "text": "The scaling hypothesis regards the blessings of scale as the secret of AGI: intelligence is 'just' simple neural units & learning algorithms applied to diverse experiences...",
+    "author": "Gwern Branwen",
+    "year": "2020",
+    "source": "The Scaling Hypothesis (essay; trailing trim disclosed)",
+    "url": "https://gwern.net/scaling-hypothesis",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against gwern.net. Full sentence ends 'at a (currently) unreachable scale.' — the trailing trim is disclosed via ellipsis, so the quoted portion is exact. Essay created 2020-05-28; year correct."
+   },
+   {
+    "text": "The leading approaches in language modeling are all obsessed with TV shows of my youth - namely Transformers and Sesame Street.",
+    "author": "Stephen Merity",
+    "year": "2019",
+    "source": "Single Headed Attention RNN: Stop Thinking With Your Head (abstract, opening line)",
+    "url": "https://arxiv.org/abs/1911.11423",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified verbatim against the arXiv abstract (arXiv:1911.11423, submitted Nov 2019). Wording, punctuation (hyphen), author, and year all exact."
+   },
+   {
+    "text": "Do we still need models or just more data and compute?",
+    "author": "Max Welling",
+    "year": "2019",
+    "source": "essay title, written in response to The Bitter Lesson",
+    "url": "https://staff.fnwi.uva.nl/m.welling/wp-content/uploads/Model-versus-Data-AI-1.pdf",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified: exact title of Welling's essay dated April 20, 2019, written as a counterpoint to Sutton's The Bitter Lesson (March 2019). Author, year, and the UvA-hosted PDF URL all check out."
+   }
+  ],
+  "e2020_2023": [
+   {
+    "text": "…current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant.",
+    "author": "Hoffmann et al.",
+    "year": "2022",
+    "source": "Training Compute-Optimal Large Language Models (Chinchilla, abstract; leading 'We find that' trimmed)",
+    "url": "https://arxiv.org/abs/2203.15556",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the arXiv abstract; full sentence begins 'We find that', and the trim is disclosed in the source field. Attribution/year correct."
+   },
+   {
+    "text": "…when a research idea wins because it is suited to the available software and hardware and not because the idea is superior to alternative research directions.",
+    "author": "Sara Hooker",
+    "year": "2020",
+    "source": "The Hardware Lottery (abstract, defining the term; leading clause trimmed)",
+    "url": "https://arxiv.org/abs/2009.06489",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the arXiv abstract (confirmed via raw page grep). Note other versions differ slightly (CACM says 'compatible with available software and hardware'; the essay website adds 'universally superior'), but this wording matches the cited arXiv version exactly."
+   },
+   {
+    "text": "Making Deep Learning go Brrrr From First Principles",
+    "author": "Horace He",
+    "year": "2022",
+    "source": "blog post title, horace.io",
+    "url": "https://horace.io/brrr_intro.html",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified; published mid-March 2022. The page's own title uses lowercase 'go' ('Making Deep Learning go Brrrr From First Principles'); corrected casing to match the source."
+   },
+   {
+    "text": "we will have to monetize it somehow at some point; the compute costs are eye-watering",
+    "author": "Sam Altman",
+    "year": "2022",
+    "source": "tweet, five days after ChatGPT launch",
+    "url": "https://x.com/sama/status/1599669571795185665",
+    "spice": 3,
+    "keep": true,
+    "note": "Verbatim match confirmed against the tweet itself (reply to @ahmedsalims, Dec 5, 2022). ChatGPT launched Nov 30, 2022, so 'five days after launch' is accurate."
+   },
+   {
+    "text": "Moore's Law is dead.",
+    "author": "Jensen Huang",
+    "year": "2022",
+    "source": "GTC 2022 press Q&A, defending RTX 4090 pricing",
+    "url": "https://www.techspot.com/news/96094-nvidia-jensen-huang-once-again-claims-moore-law.html",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified: said at the September 2022 GTC press Q&A in response to a PC World question about RTX 40-series (incl. 4090) pricing; widely reported by PC Gamer, VentureBeat (full Q&A), Tom's Guide. He added it is 'completely over.'"
+   },
+   {
+    "text": "I think we're at the end of the era where it's going to be these, like, giant, giant models. We'll make them better in other ways.",
+    "author": "Sam Altman",
+    "year": "2023",
+    "source": "remarks at MIT 'Imagination in Action' event, as reported by Wired",
+    "url": "https://www.wired.com/story/openai-ceo-sam-altman-the-age-of-giant-ai-models-is-already-over/",
+    "spice": 4,
+    "keep": true,
+    "note": "Verbatim match with Wired's April 2023 report of his MIT remarks (delivered over Zoom); corroborated by VentureBeat, LessWrong, and others. Attribution and year correct."
+   }
+  ],
+  "e2023_2026": [
+   {
+    "text": "We've achieved peak data and there'll be no more. We have to deal with the data that we have. There's only one internet.",
+    "author": "Ilya Sutskever",
+    "year": "2024",
+    "source": "NeurIPS 2024 test-of-time talk (as reported by The Verge/Techmeme)",
+    "url": "https://www.techmeme.com/241213/p33",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim. Widely reported wording from his NeurIPS 2024 Test of Time award talk (Vancouver, Dec 2024), e.g. The Verge, WinBuzzer, Reuters coverage. Attribution and year correct."
+   },
+   {
+    "text": "We could summarize this as a 'country of geniuses in a datacenter.'",
+    "author": "Dario Amodei",
+    "year": "2024",
+    "source": "Machines of Loving Grace (essay)",
+    "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+    "spice": 1,
+    "keep": true,
+    "note": "Verified verbatim against the October 2024 essay (original renders the inner phrase in double quotes with period outside: ...as a \"country of geniuses in a datacenter\".). Attribution and year correct."
+   },
+   {
+    "text": "Spending 20 seconds thinking in a hand of poker got the same boost in performance as scaling up the size of the model and the training by 100,000x.",
+    "author": "Noam Brown",
+    "year": "2024",
+    "source": "TED talk \"AI won't plateau — if we give it time to think\"",
+    "url": "https://www.ted.com/talks/noam_brown_ai_won_t_plateau_if_we_give_it_time_to_think",
+    "spice": 2,
+    "keep": true,
+    "note": "Wording matches the official TED talk version (confirmed via TED Talks Daily episode summary). The previously cited VentureBeat URL covers a different delivery (TED AI Conference, SF, Oct 2024) with slightly different phrasing ('got the same boosting performance as scaling up the model by 100,000x and training it for 100,000 times longer'). Source and URL updated to match the wording used."
+   },
+   {
+    "text": "I think compute is going to be the currency of the future. I think it will be maybe the most precious commodity in the world.",
+    "author": "Sam Altman",
+    "year": "2024",
+    "source": "Lex Fridman Podcast #419",
+    "url": "https://lexfridman.com/sam-altman-2-transcript/",
+    "spice": 2,
+    "keep": true,
+    "note": "Verified verbatim against the official transcript (timestamp ~1:10:01, March 2024). Full line opens with 'Look,' and continues '...and I think we should be investing heavily to make a lot more compute' — the excerpt as quoted is exact and fair."
+   },
+   {
+    "text": "You can see the future first in San Francisco.",
+    "author": "Leopold Aschenbrenner",
+    "year": "2024",
+    "source": "Situational Awareness: The Decade Ahead (opening line)",
+    "url": "https://situational-awareness.ai/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified verbatim as the opening line of the essay, published June 2024, by fetching situational-awareness.ai directly. Wording, attribution, and year all exact."
+   },
+   {
+    "text": "We've now exhausted basically the cumulative sum of human knowledge ... in AI training. That happened basically last year.",
+    "author": "Elon Musk",
+    "year": "2025",
+    "source": "Livestream interview with Mark Penn on X (via TechCrunch; ellipsis as in source)",
+    "url": "https://techcrunch.com/2025/01/08/elon-musk-agrees-that-weve-exhausted-ai-training-data/",
+    "spice": 3,
+    "keep": true,
+    "note": "Verified against the TechCrunch article (Jan 8, 2025): wording matches exactly, including the ellipsis present in the source quote, said during a livestreamed conversation with Stagwell chairman Mark Penn on X."
+   },
+   {
+    "text": "...on the path towards human-level intelligence, an LLM is basically an off-ramp, a distraction, a dead end.",
+    "author": "Yann LeCun",
+    "year": "2024",
+    "source": "Meta AI event, London (via The Next Web; leading 'But' trimmed)",
+    "url": "https://thenextweb.com/news/meta-yann-lecun-ai-behind-human-intelligence",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified: The Next Web (April 2024) quotes LeCun at a Meta event in London saying 'They're useful, there's no question about that. But on the path towards human-level intelligence, an LLM is basically an off-ramp, a distraction, a dead end.' The trimmed-'But' rendering with leading ellipsis is accurate and honestly flagged in the source note."
+   },
+   {
+    "text": "We are living in a timeline where a non-US company is keeping the original mission of OpenAI alive - truly open, frontier research that empowers all.",
+    "author": "Jim Fan",
+    "year": "2025",
+    "source": "X post on DeepSeek-R1 release day (opening line of post)",
+    "url": "https://x.com/DrJimFan/status/1881353126210687089",
+    "spice": 4,
+    "keep": true,
+    "note": "Verified verbatim against the original X post (Jan 20, 2025, DeepSeek-R1 release day), including the hyphen punctuation. Attribution, year, and URL all correct; widely corroborated by VentureBeat and other coverage."
+   },
+   {
+    "text": "The more you buy, the more you save. That's called CEO math. It's not accurate, but it is correct.",
+    "author": "Jensen Huang",
+    "year": "2024",
+    "source": "Computex 2024 keynote (as quoted by The Verge's Tom Warren)",
+    "url": "https://x.com/tomwarren/status/1797229530358149282",
+    "spice": 5,
+    "keep": true,
+    "note": "Verified. Tom Warren's June 2, 2024 X post (with video) quotes Huang verbatim: 'the more you buy, the more you save ... That's called CEO math. It's not accurate, but it is correct.' Also covered by Business Insider/Yahoo Tech and DesignTAXI. Attribution, year, and URL all check out."
+   }
+  ]
+ }
+}

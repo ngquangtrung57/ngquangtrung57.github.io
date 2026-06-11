@@ -4,7 +4,7 @@ export interface Profile {
   metaDescription: string;
   /** Phrases cycled by the token typewriter in the hero tagline. */
   taglinePhrases: string[];
-  /** Bio paragraphs, plain text. */
+  /** Bio paragraphs; may contain inline <a> HTML links (rendered with set:html). */
   bio: string[];
   /** Education line shown as metadata in the hero. */
   education: string;
