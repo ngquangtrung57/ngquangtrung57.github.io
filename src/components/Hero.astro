@@ -1,26 +1,24 @@
 ---
 import { profile } from '../data/profile';
-import TokenTagline from './TokenTagline.astro';
-import HeroCanvas from './HeroCanvas.astro';
+import Terminal from './Terminal.astro';
 
 const links = [
-  { label: 'GitHub', href: profile.links.github, external: true },
-  { label: 'Google Scholar', href: profile.links.scholar, external: true },
-  { label: 'LinkedIn', href: profile.links.linkedin, external: true },
-  { label: 'Email', href: `mailto:${profile.email}`, external: false },
+  { label: 'github', href: profile.links.github, external: true },
+  { label: 'scholar', href: profile.links.scholar, external: true },
+  { label: 'linkedin', href: profile.links.linkedin, external: true },
+  { label: 'email', href: `mailto:${profile.email}`, external: false },
 ];
 ---
 
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <p class="greeting">hi, I'm</p>
-      <h1>{profile.name}</h1>
-      <p class="role">{profile.role}</p>
-
-      <div class="tagline-slot">
-        <TokenTagline />
-      </div>
+      <p class="greeting">~/trung · undergraduate researcher</p>
+      <h1>Nguyen<br /><em>Quang Trung</em></h1>
+      <p class="role">
+        Researching <strong>audio</strong> &amp; <strong>multimodal LLMs</strong> —
+        post-training, evaluation, and RL reasoning.
+      </p>
 
       <div class="bio">
         {profile.bio.map((paragraph) => <p>{paragraph}</p>)}
@@ -38,7 +36,7 @@ const links = [
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'noopener' : undefined}
               >
-                {link.label}
+                {link.label} <span class="arrow" aria-hidden="true">↗</span>
               </a>
             </li>
           ))
@@ -46,65 +44,70 @@ const links = [
       </ul>
     </div>
 
-    <div class="hero-visual">
-      <HeroCanvas />
+    <div class="hero-term">
+      <Terminal />
     </div>
   </div>
-
-  <p class="scroll-hint" aria-hidden="true">↓ scroll</p>
 </section>
 
 <style>
   .hero {
-    position: relative;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
     padding: var(--space-16) 0 var(--space-12);
   }
 
   /* the hero breathes wider than --content-width */
   .hero-inner {
-    width: min(100% - 2.5rem, 64rem);
+    width: min(100% - 2.5rem, var(--wide-width));
     margin-inline: auto;
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
-    gap: var(--space-8);
+    gap: var(--space-12);
   }
 
   .greeting {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--accent);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
   }
 
   h1 {
-    font-size: clamp(2.4rem, 5vw, 3.4rem);
-    font-weight: 600;
+    font-size: clamp(2.9rem, 6.5vw, 4.5rem);
+    font-weight: 480;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 420;
+    color: var(--accent);
   }
 
   .role {
-    margin-top: var(--space-2);
-    font-size: 1.05rem;
+    margin-top: var(--space-4);
+    font-size: 1.2rem;
+    line-height: 1.5;
     color: var(--text-muted);
+    max-width: 30rem;
   }
 
-  .tagline-slot {
-    margin-top: var(--space-4);
+  .role strong {
+    color: var(--text);
+    font-weight: 500;
   }
 
   .bio {
     margin-top: var(--space-6);
-    max-width: 34rem;
+    max-width: 32rem;
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
   }
 
   .bio p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
   }
 
@@ -124,70 +127,44 @@ const links = [
 
   .link-chip {
     display: inline-block;
-    padding: 0.3rem 0.85rem;
+    padding: 0.28rem 0.8rem;
     border: 1px solid var(--border);
     border-radius: 999px;
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.76rem;
     color: var(--text-muted);
     transition:
       color var(--transition),
-      border-color var(--transition),
-      box-shadow var(--transition);
+      border-color var(--transition);
+  }
+
+  .link-chip .arrow {
+    color: var(--text-faint);
+    transition: color var(--transition);
   }
 
   .link-chip:hover {
     color: var(--accent);
     border-color: var(--accent);
-    box-shadow: 0 0 14px var(--border-glow);
     text-decoration: none;
-    text-shadow: none;
   }
 
-  .hero-visual {
+  .link-chip:hover .arrow {
+    color: var(--accent);
+  }
+
+  .hero-term {
     min-width: 0;
   }
 
-  .scroll-hint {
-    position: absolute;
-    bottom: var(--space-4);
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-faint);
-    animation: hero-bob 2.4s ease-in-out infinite;
-  }
-
-  @keyframes hero-bob {
-    0%,
-    100% {
-      transform: translate(-50%, 0);
-    }
-    50% {
-      transform: translate(-50%, 6px);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .scroll-hint {
-      animation: none;
-    }
-  }
-
-  @media (max-width: 860px) {
+  @media (max-width: 920px) {
     .hero {
       padding-top: var(--space-12);
     }
 
     .hero-inner {
       grid-template-columns: 1fr;
-      gap: var(--space-6);
-    }
-
-    /* canvas band sits above the text block on mobile */
-    .hero-visual {
-      order: -1;
+      gap: var(--space-8);
     }
   }
 </style>

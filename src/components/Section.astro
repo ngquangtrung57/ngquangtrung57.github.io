@@ -1,16 +1,16 @@
 ---
 interface Props {
   id: string;
-  index: string;
   title: string;
 }
 
-const { id, index, title } = Astro.props;
+const { id, title } = Astro.props;
 ---
 
 <section id={id}>
   <div class="container">
-    <h2><span class="meta index">{index} /</span> {title}</h2>
+    <p class="path" aria-hidden="true">~/{id}</p>
+    <h2>{title}</h2>
     <slot />
   </div>
 </section>
@@ -18,14 +18,26 @@ const { id, index, title } = Astro.props;
 <style>
   section {
     padding-block: var(--space-12);
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 4.5rem;
+  }
+
+  .path {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    color: var(--accent);
+    margin-bottom: var(--space-2);
+  }
+
+  .path::before {
+    content: '$ cd ';
+    color: var(--text-faint);
   }
 
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.9rem;
     margin-bottom: var(--space-8);
     position: relative;
-    padding-bottom: var(--space-3);
+    padding-bottom: var(--space-4);
   }
 
   h2::after {
@@ -33,14 +45,8 @@ const { id, index, title } = Astro.props;
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 2rem;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 1px;
-    box-shadow: 0 0 10px var(--border-glow);
-  }
-
-  .index {
-    color: var(--accent);
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
   }
 </style>

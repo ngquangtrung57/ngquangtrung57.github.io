@@ -7,10 +7,9 @@ Live at **https://ngquangtrung57.github.io**
 ## Stack
 
 - [Astro 5](https://astro.build) — static output, zero framework JS
-- Vanilla TypeScript for the interactive bits:
-  - `src/scripts/attention-field.ts` — the "multimodal attention field" hero canvas (cursor acts as a query over drifting text/audio/vision tokens)
-  - `src/scripts/token-typewriter.ts` — token-by-token tagline generation with fake top-k logit chips
-- Self-hosted fonts (Inter Variable, JetBrains Mono Variable) via Fontsource
+- Vanilla TypeScript for the interactive bit:
+  - `src/scripts/terminal.ts` — the hero terminal: type `help`, `cd publications`, `whoami`, `neofetch`… to explore the site
+- Self-hosted fonts (Fraunces, Newsreader, IBM Plex Mono) via Fontsource
 
 ## Development
 
@@ -27,8 +26,8 @@ All content lives in typed data files — no markup edits needed:
 
 | File | Contents |
 | --- | --- |
-| `src/data/profile.ts` | Name, bio, tagline phrases, links |
-| `src/data/news.ts` | News items (supports `[label](url)` links) |
+| `src/data/profile.ts` | Name, bio, links |
+| `src/data/news.ts` | News items (currently unmounted — kept for later) |
 | `src/data/publications.ts` | Papers — venue, status, arXiv/code links |
 | `src/data/experience.ts` | Research/work timeline |
 | `src/data/projects.ts` | Open-source & projects grid |
