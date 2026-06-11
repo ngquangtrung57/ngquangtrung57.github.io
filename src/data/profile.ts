@@ -4,9 +4,9 @@ export const profile: Profile = {
   name: 'Nguyen Quang Trung',
   role: 'Undergraduate Researcher · NTU Singapore',
   metaDescription:
-    'Nguyen Quang Trung (Trung) — EEE undergraduate at NTU Singapore interested in multimodal and audio LLMs and reinforcement learning. Research assistant at A*STAR and undergraduate researcher at S-Lab, NTU.',
+    'Nguyen Quang Trung (Trung) — EEE undergraduate at NTU Singapore interested in multimodal LLMs and reinforcement learning. Research assistant at A*STAR and undergraduate researcher at S-Lab, NTU.',
   taglinePhrases: [
-    'post-training audio LLMs',
+    'post-training multimodal LLMs',
     'evaluating multimodal models',
     'RL for reasoning and alignment',
     'building open-source LMM tools',

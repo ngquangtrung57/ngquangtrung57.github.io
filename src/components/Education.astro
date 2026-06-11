@@ -1,0 +1,97 @@
+---
+import Section from './Section.astro';
+import { education } from '../data/education';
+---
+
+<Section id="education" title="Education">
+  <article class="entry">
+    <div class="head">
+      <h3 class="degree">{education.degree}</h3>
+      <p class="school">{education.school}</p>
+      <p class="meta">{education.period}</p>
+      <p class="meta">{education.details}</p>
+    </div>
+
+    {
+      education.activities.length > 0 && (
+        <ul class="activities">
+          {education.activities.map((activity) => (
+            <li class="activity">
+              <p class="activity-head">
+                <span class="activity-role">{activity.role}</span>
+                <span class="activity-name">{activity.name}</span>
+              </p>
+              <p class="meta activity-meta">{activity.period}</p>
+              <p class="activity-desc">{activity.description}</p>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+</Section>
+
+<style>
+  .degree {
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline;
+  }
+
+  .school {
+    display: inline;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .school::before {
+    content: ' · ';
+    color: var(--text-faint);
+  }
+
+  .head .meta {
+    display: block;
+    margin-top: var(--space-1);
+  }
+
+  .activities {
+    list-style: none;
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .activity {
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--border);
+  }
+
+  .activity-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .activity-name {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .activity-name::before {
+    content: ' · ';
+    color: var(--text-faint);
+  }
+
+  .activity-meta {
+    margin-top: var(--space-1);
+    color: var(--text-faint);
+  }
+
+  .activity-desc {
+    margin-top: var(--space-1);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+</style>

@@ -15,7 +15,7 @@ const links = [
     <div class="hero-copy">
       <h1>Nguyen Quang<br /><em>Trung</em></h1>
       <p class="role">
-        Interested in <strong>audio</strong> &amp; <strong>multimodal LLMs</strong> —
+        Interested in <strong>multimodal LLMs</strong> —
         currently most excited about <strong>RL</strong> for reasoning and alignment.
       </p>
 
@@ -23,7 +23,6 @@ const links = [
         {profile.bio.map((paragraph) => <p set:html={paragraph} />)}
       </div>
 
-      <p class="meta education">{profile.education}</p>
 
       <ul class="links">
         {
@@ -113,11 +112,6 @@ const links = [
   .bio :global(a:hover) {
     color: var(--accent);
     text-decoration-color: var(--accent);
-  }
-
-  .education {
-    margin-top: var(--space-4);
-    color: var(--text-faint);
   }
 
   .links {

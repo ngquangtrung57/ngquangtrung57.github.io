@@ -37,16 +37,6 @@ export const experience: ExperienceItem[] = [
     tags: ['Multimodal', 'Omni Models', 'RL', 'Evaluation'],
   },
   {
-    id: 'mlda',
-    role: 'Projects Tech Lead (Main Committee)',
-    org: 'Machine Learning and Data Analytics Club @ NTU EEE',
-    location: 'Singapore',
-    start: '2024-08',
-    end: '2025-05',
-    bullets: [],
-    tags: ['CCA', 'Machine Learning'],
-  },
-  {
     id: 'amst',
     role: 'Student Research Assistant (NLP)',
     org: 'Academy of Military Science and Technology',
