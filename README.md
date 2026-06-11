@@ -8,7 +8,7 @@ Live at **https://ngquangtrung57.github.io**
 
 - [Astro 5](https://astro.build) — static output, zero framework JS
 - Vanilla TypeScript for the interactive bit:
-  - `src/scripts/terminal.ts` — the hero terminal: type `help`, `cd publications`, `whoami`, `neofetch`… to explore the site
+  - `src/scripts/forward-pass.ts` — "The Forward Pass": an explorable multimodal LLM pipeline (input → tokenize → attend → logits → decode) with a "be the sampler" next-token mini-game
 - Self-hosted fonts (Fraunces, Newsreader, IBM Plex Mono) via Fontsource
 
 ## Development

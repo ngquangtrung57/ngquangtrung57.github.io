@@ -7,7 +7,8 @@ interface Props {
 
 const { pub } = Astro.props;
 
-const OWNER = 'Nguyen Quang Trung';
+// name variants across publication venues
+const OWNER = new Set(['Nguyen Quang Trung', 'Trung Nguyen Quang']);
 const titleUrl = pub.links.arxiv ?? pub.links.paper;
 
 const linkRow: { label: string; url: string }[] = [];
@@ -34,7 +35,7 @@ if (pub.links.project) linkRow.push({ label: 'project', url: pub.links.project }
     {
       pub.authors.map((author, i) => (
         <>
-          {author === OWNER ? (
+          {OWNER.has(author) ? (
             <strong>{author}</strong>
           ) : author === 'et al.' ? (
             <em class="etal">{author}</em>

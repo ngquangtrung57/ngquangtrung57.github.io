@@ -1,6 +1,6 @@
 ---
 import { profile } from '../data/profile';
-import Terminal from './Terminal.astro';
+import ForwardPass from './ForwardPass.astro';
 
 const links = [
   { label: 'github', href: profile.links.github, external: true },
@@ -13,7 +13,6 @@ const links = [
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <p class="greeting">~/trung · undergraduate researcher</p>
       <h1>Nguyen<br /><em>Quang Trung</em></h1>
       <p class="role">
         Researching <strong>audio</strong> &amp; <strong>multimodal LLMs</strong> —
@@ -45,7 +44,7 @@ const links = [
     </div>
 
     <div class="hero-term">
-      <Terminal />
+      <ForwardPass />
     </div>
   </div>
 </section>
@@ -63,13 +62,6 @@ const links = [
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
     gap: var(--space-12);
-  }
-
-  .greeting {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--accent);
-    margin-bottom: var(--space-4);
   }
 
   h1 {
