@@ -1,39 +1,25 @@
 ---
-/* A tiny toy: one sentence about me, sampled live. Pick a prompt, drag the
-   knobs (temperature / top_k / top_p), click a highlighted word to reroll
-   just that one. The static markup below is the greedy (temp = 0) sentence
-   for the default prompt, shown before JS loads. */
-const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
+/* A tiny toy: famous AI quotes, sampled live. At temperature 0 you get the
+   most famous quote, verbatim. Turn the knobs (temperature / top_k / top_p)
+   and both the choice of quote and its words get progressively weirder.
+   Click a highlighted word to reroll just that one. The static markup below
+   is the greedy (temp = 0) output, shown before JS loads. */
 ---
 
-<aside class="sampler" data-sampler aria-label="Sentence sampling toy">
+<aside class="sampler" data-sampler aria-label="Quote sampling toy">
   <header class="bar">
-    <span class="title">$ ./sample --prompt <output data-prompt-out>research</output></span>
+    <span class="title">$ ./sample --corpus ai_quotes</span>
     <button class="reroll" type="button" data-reroll>↻ resample</button>
   </header>
 
-  <div class="prompts" aria-label="Prompt">
-    {
-      promptIds.map((id, i) => (
-        <button
-          type="button"
-          class="prompt-chip"
-          data-prompt={id}
-          aria-pressed={i === 0 ? 'true' : 'false'}
-        >
-          {id}
-        </button>
-      ))
-    }
-  </div>
-
   <p class="sentence" data-sentence aria-live="polite">
-    I <button type="button" class="tok">train</button>
-    <button type="button" class="tok">multimodal</button> models that
-    <button type="button" class="tok">listen</button><button type="button" class="tok">.</button>
+    <button type="button" class="tok">Attention</button> is all you
+    <button type="button" class="tok">need</button>.
   </p>
 
-  <p class="quip" data-quip>// greedy decoding. safe. a little boring.</p>
+  <p class="attribution" data-attr>— Vaswani et al., “Attention Is All You Need”, 2017</p>
+
+  <p class="quip" data-quip>// verbatim. citation intact.</p>
 
   <div class="knobs">
     <div class="knob knob-wide">
@@ -53,8 +39,8 @@ const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
       </div>
     </div>
     <div class="knob">
-      <label for="k-topk">top_k · <output data-topk-out>7</output></label>
-      <input id="k-topk" data-topk type="range" min="1" max="7" step="1" value="7" />
+      <label for="k-topk">top_k · <output data-topk-out>23</output></label>
+      <input id="k-topk" data-topk type="range" min="1" max="23" step="1" value="23" />
     </div>
     <div class="knob">
       <label for="k-topp">top_p · <output data-topp-out>1.00</output></label>
@@ -73,8 +59,8 @@ const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
   <p class="joint meta">p(sentence) ≈ <span data-prob-out>—</span></p>
 
   <p class="hint">
-    every highlighted word is sampled from real(ish) logits — switch prompts,
-    turn the knobs, or click a word to resample it.
+    at temperature 0 the corpus is quoted verbatim — turn the knobs and watch
+    the literature get misquoted. click a highlighted word to resample just it.
   </p>
 </aside>
 
@@ -99,7 +85,7 @@ const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
     align-items: baseline;
     justify-content: space-between;
     gap: var(--space-3);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
     padding-bottom: var(--space-3);
     border-bottom: 1px dashed var(--border);
   }
@@ -108,11 +94,6 @@ const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
     font-family: var(--font-mono);
     font-size: 0.78rem;
     color: var(--text-muted);
-  }
-
-  .title output {
-    color: var(--accent);
-    font-weight: 500;
   }
 
   .reroll {
@@ -133,44 +114,13 @@ const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
     border-color: var(--accent);
   }
 
-  .prompts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    margin-bottom: var(--space-4);
-  }
-
-  .prompt-chip {
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: transparent;
-    padding: 0.1rem 0.6rem;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-faint);
-    cursor: pointer;
-    transition: color var(--transition), border-color var(--transition),
-      background var(--transition);
-  }
-
-  .prompt-chip:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
-  .prompt-chip[aria-pressed='true'] {
-    color: var(--accent);
-    border-color: var(--accent);
-    background: var(--accent-dim);
-  }
-
   .sentence {
     font-family: var(--font-display);
     font-size: clamp(1.15rem, 2vw, 1.35rem);
     font-weight: 460;
     line-height: 1.8;
     letter-spacing: -0.005em;
-    min-height: 5.2em; /* tallest prompt, so switching doesn't shift layout */
+    min-height: 6.5em; /* room for the longest quote, so resampling doesn't shift layout */
   }
 
   /* sampled-word chips; .tok elements are (re)built by the script */
@@ -206,8 +156,16 @@ const promptIds = ['research', 'football', 'rl', 'phd', 'lol'];
     }
   }
 
-  .quip {
+  .attribution {
     margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  .quip {
+    margin-top: var(--space-1);
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--text-faint);

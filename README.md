@@ -8,7 +8,7 @@ Live at **https://ngquangtrung57.github.io**
 
 - [Astro 5](https://astro.build) — static output, zero framework JS
 - Vanilla TypeScript for the interactive bit:
-  - `src/scripts/sampler.ts` — "The Sampler": a one-sentence toy LM with five prompts (research / football / rl / phd / lol) and temperature, top_k, and top_p knobs; click any sampled word to reroll it
+  - `src/scripts/sampler.ts` — "The Sampler": a toy LM over a corpus of 23 verified famous AI quotes. temperature / top_k / top_p pick both the quote (weighted by fame) and its slotted words — greedy decoding quotes the literature verbatim, high temperature misquotes it. Click any sampled word to reroll it
 - Light/dark theme toggle (persisted in `localStorage`, defaults to `prefers-color-scheme`)
 - Self-hosted fonts (Fraunces, Newsreader, IBM Plex Mono) via Fontsource
 
