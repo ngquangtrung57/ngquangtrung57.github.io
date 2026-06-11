@@ -30,8 +30,7 @@ All content lives in typed data files — no markup edits needed:
 | `src/data/news.ts` | News items (currently unmounted — kept for later) |
 | `src/data/publications.ts` | Papers — venue, status, arXiv/code links |
 | `src/data/experience.ts` | Research/work timeline |
-| `src/data/projects.ts` | Open-source & projects grid |
-| `src/data/skills.ts` | Skill groups |
+| `src/data/projects.ts` | Open-source contributions grid |
 
 ## Deployment
 

@@ -34,13 +34,4 @@ export const projects: Project[] = [
     },
     tags: ['Audio LLM', 'ASR'],
   },
-  {
-    id: 'rl-vlm-reasoning',
-    name: 'RL for VLM reasoning',
-    description:
-      'Ongoing research on improving multi-hop reasoning in vision–language models with reinforcement learning.',
-    role: 'Research',
-    links: {},
-    tags: ['RL', 'Reasoning', 'Ongoing'],
-  },
 ];
