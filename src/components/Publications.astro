@@ -1,0 +1,19 @@
+---
+import Section from './Section.astro';
+import PublicationCard from './PublicationCard.astro';
+import { publications } from '../data/publications';
+---
+
+<Section id="publications" index="02" title="Publications">
+  <div class="stack">
+    {publications.map((pub) => <PublicationCard pub={pub} />)}
+  </div>
+</Section>
+
+<style>
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+</style>

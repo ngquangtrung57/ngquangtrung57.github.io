@@ -1,0 +1,160 @@
+---
+import type { Publication } from '../data/types';
+
+interface Props {
+  pub: Publication;
+}
+
+const { pub } = Astro.props;
+
+const OWNER = 'Nguyen Quang Trung';
+const titleUrl = pub.links.arxiv ?? pub.links.paper;
+
+const linkRow: { label: string; url: string }[] = [];
+if (pub.links.arxiv) linkRow.push({ label: 'arXiv', url: pub.links.arxiv });
+if (pub.links.paper) linkRow.push({ label: 'paper', url: pub.links.paper });
+if (pub.links.code) linkRow.push({ label: 'code', url: pub.links.code });
+if (pub.links.project) linkRow.push({ label: 'project', url: pub.links.project });
+---
+
+<article class:list={['card', { highlight: pub.highlight }]}>
+  <h3 class="title">
+    {
+      titleUrl ? (
+        <a href={titleUrl} target="_blank" rel="noopener noreferrer">
+          {pub.title}
+        </a>
+      ) : (
+        pub.title
+      )
+    }
+  </h3>
+
+  <p class="authors">
+    {
+      pub.authors.map((author, i) => (
+        <>
+          {author === OWNER ? (
+            <strong>{author}</strong>
+          ) : author === 'et al.' ? (
+            <em class="etal">{author}</em>
+          ) : (
+            <span class="coauthor">{author}</span>
+          )}
+          {i < pub.authors.length - 1 && ', '}
+        </>
+      ))
+    }
+  </p>
+
+  <div class="meta-row">
+    <span class:list={['pill', pub.status]}>{pub.venue}</span>
+    {pub.note && <span class="note">{pub.note}</span>}
+    {
+      linkRow.map((link) => (
+        <a
+          class="paper-link"
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [{link.label}]
+        </a>
+      ))
+    }
+  </div>
+</article>
+
+<style>
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+    transition: border-color var(--transition);
+  }
+
+  .card.highlight {
+    border-color: var(--border-glow);
+    box-shadow: 0 0 24px var(--accent-dim);
+  }
+
+  .title {
+    font-size: 1.05rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .title a {
+    color: var(--text);
+  }
+
+  .title a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .authors {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+  }
+
+  .authors strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .etal {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .coauthor {
+    color: var(--text-muted);
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .pill {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .pill.accepted {
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 500;
+  }
+
+  .pill.under-review,
+  .pill.preprint {
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: transparent;
+  }
+
+  .note {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+  }
+
+  .paper-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .paper-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>

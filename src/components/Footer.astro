@@ -1,0 +1,74 @@
+---
+import { profile } from '../data/profile';
+---
+
+<footer id="contact">
+  <div class="container">
+    <p class="mini-heading">Get in touch</p>
+    <a class="email" href={`mailto:${profile.email}`}>{profile.email}</a>
+
+    <div class="links">
+      <a href={profile.links.github} target="_blank" rel="noopener noreferrer">github</a>
+      <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">linkedin</a>
+      <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer">scholar</a>
+    </div>
+
+    <p class="copyright">© 2026 Nguyen Quang Trung · Built with Astro</p>
+    <p class="easter-egg">// més que un club · gg wp</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-12);
+    margin-top: var(--space-12);
+    scroll-margin-top: 5rem;
+  }
+
+  .mini-heading {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: var(--space-2);
+  }
+
+  .email {
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+
+  .email:hover {
+    color: var(--accent);
+  }
+
+  .links {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+  }
+
+  .links a {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .copyright {
+    margin-top: var(--space-8);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .easter-egg {
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-faint);
+  }
+</style>

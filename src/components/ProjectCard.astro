@@ -1,0 +1,102 @@
+---
+import type { Project } from '../data/types';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+
+const linkRow: { label: string; url: string }[] = [];
+if (project.links.github) linkRow.push({ label: 'github', url: project.links.github });
+if (project.links.post) linkRow.push({ label: 'post', url: project.links.post });
+---
+
+<article class="card">
+  <div class="head">
+    <h3 class="name">{project.name}</h3>
+    <span class="chip">{project.role}</span>
+  </div>
+
+  <p class="description">{project.description}</p>
+
+  <div class="foot">
+    <div class="tags">
+      {project.tags.map((tag) => <span class="chip">{tag}</span>)}
+    </div>
+    {
+      linkRow.length > 0 && (
+        <div class="links">
+          {linkRow.map((link) => (
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              [{link.label}]
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: border-color var(--transition);
+  }
+
+  .card:hover {
+    border-color: var(--border-glow);
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .name {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+  }
+
+  .foot {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .links {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .links a {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>

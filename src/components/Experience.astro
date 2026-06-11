@@ -1,0 +1,49 @@
+---
+import Section from './Section.astro';
+import TimelineItem from './TimelineItem.astro';
+import { experience } from '../data/experience';
+---
+
+<Section id="experience" index="03" title="Experience">
+  <div class="timeline">
+    {experience.map((item) => <TimelineItem item={item} />)}
+
+    <article class="entry education">
+      <p class="degree">B.Eng in Electrical &amp; Electronic Engineering — NTU Singapore</p>
+      <p class="meta">
+        2023–2027 · CGPA 4.96/5.0 · Dean's List ×2 · ASEAN Undergraduate Scholarship
+      </p>
+    </article>
+  </div>
+</Section>
+
+<style>
+  /* final, muted education entry — mirrors TimelineItem's rail geometry */
+  .entry {
+    position: relative;
+    padding-left: var(--space-8);
+  }
+
+  .entry::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+  }
+
+  .degree {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .education .meta {
+    margin-top: var(--space-1);
+    color: var(--text-faint);
+  }
+</style>

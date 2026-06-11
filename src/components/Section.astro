@@ -1,0 +1,46 @@
+---
+interface Props {
+  id: string;
+  index: string;
+  title: string;
+}
+
+const { id, index, title } = Astro.props;
+---
+
+<section id={id}>
+  <div class="container">
+    <h2><span class="meta index">{index} /</span> {title}</h2>
+    <slot />
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: var(--space-12);
+    scroll-margin-top: 5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-bottom: var(--space-8);
+    position: relative;
+    padding-bottom: var(--space-3);
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 1px;
+    box-shadow: 0 0 10px var(--border-glow);
+  }
+
+  .index {
+    color: var(--accent);
+  }
+</style>

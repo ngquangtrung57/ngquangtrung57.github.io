@@ -1,0 +1,193 @@
+---
+import { profile } from '../data/profile';
+import TokenTagline from './TokenTagline.astro';
+import HeroCanvas from './HeroCanvas.astro';
+
+const links = [
+  { label: 'GitHub', href: profile.links.github, external: true },
+  { label: 'Google Scholar', href: profile.links.scholar, external: true },
+  { label: 'LinkedIn', href: profile.links.linkedin, external: true },
+  { label: 'Email', href: `mailto:${profile.email}`, external: false },
+];
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="greeting">hi, I'm</p>
+      <h1>{profile.name}</h1>
+      <p class="role">{profile.role}</p>
+
+      <div class="tagline-slot">
+        <TokenTagline />
+      </div>
+
+      <div class="bio">
+        {profile.bio.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+
+      <p class="meta education">{profile.education}</p>
+
+      <ul class="links">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                class="link-chip"
+                href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener' : undefined}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <HeroCanvas />
+    </div>
+  </div>
+
+  <p class="scroll-hint" aria-hidden="true">↓ scroll</p>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-16) 0 var(--space-12);
+  }
+
+  /* the hero breathes wider than --content-width */
+  .hero-inner {
+    width: min(100% - 2.5rem, 64rem);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  .greeting {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 600;
+  }
+
+  .role {
+    margin-top: var(--space-2);
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
+
+  .tagline-slot {
+    margin-top: var(--space-4);
+  }
+
+  .bio {
+    margin-top: var(--space-6);
+    max-width: 34rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .bio p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .education {
+    margin-top: var(--space-4);
+    color: var(--text-faint);
+  }
+
+  .links {
+    list-style: none;
+    margin: var(--space-6) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .link-chip {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition:
+      color var(--transition),
+      border-color var(--transition),
+      box-shadow var(--transition);
+  }
+
+  .link-chip:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 14px var(--border-glow);
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  .hero-visual {
+    min-width: 0;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-faint);
+    animation: hero-bob 2.4s ease-in-out infinite;
+  }
+
+  @keyframes hero-bob {
+    0%,
+    100% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, 6px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-hint {
+      animation: none;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .hero {
+      padding-top: var(--space-12);
+    }
+
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    /* canvas band sits above the text block on mobile */
+    .hero-visual {
+      order: -1;
+    }
+  }
+</style>

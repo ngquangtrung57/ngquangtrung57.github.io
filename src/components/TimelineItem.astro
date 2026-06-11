@@ -1,0 +1,150 @@
+---
+import type { ExperienceItem } from '../data/types';
+import { formatRange } from '../data/format';
+
+interface Props {
+  item: ExperienceItem;
+}
+
+const { item } = Astro.props;
+
+const range = formatRange(item.start, item.end);
+const metaLine = item.location ? `${item.location} · ${range}` : range;
+const supervisors = item.supervisors ?? [];
+---
+
+<article class="entry">
+  <div class="head">
+    <h3 class="role">{item.role}</h3>
+    <p class="org">
+      {
+        item.orgUrl ? (
+          <a href={item.orgUrl} target="_blank" rel="noopener noreferrer">
+            {item.org}
+          </a>
+        ) : (
+          item.org
+        )
+      }
+    </p>
+    <p class="meta">{metaLine}</p>
+    {
+      supervisors.length > 0 && (
+        <p class="meta advisors">
+          Advised by{' '}
+          {supervisors.map((sup, i) => (
+            <>
+              {sup.url ? (
+                <a href={sup.url} target="_blank" rel="noopener noreferrer">
+                  {sup.name}
+                </a>
+              ) : (
+                sup.name
+              )}
+              {i < supervisors.length - 1 && ', '}
+            </>
+          ))}
+        </p>
+      )
+    }
+  </div>
+
+  <ul class="bullets">
+    {item.bullets.map((bullet) => <li>{bullet}</li>)}
+  </ul>
+
+  {
+    item.tags && item.tags.length > 0 && (
+      <div class="tags">
+        {item.tags.map((tag) => (
+          <span class="chip">{tag}</span>
+        ))}
+      </div>
+    )
+  }
+</article>
+
+<style>
+  .entry {
+    position: relative;
+    padding-left: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+
+  /* vertical rail */
+  .entry::before {
+    content: '';
+    position: absolute;
+    left: 3.5px;
+    top: 14px;
+    bottom: -2px;
+    width: 1px;
+    background: var(--border);
+  }
+
+  /* glowing node */
+  .entry::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-dim), 0 0 12px var(--border-glow);
+  }
+
+  .head {
+    margin-bottom: var(--space-3);
+  }
+
+  .role {
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline;
+  }
+
+  .org {
+    display: inline;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .org::before {
+    content: ' · ';
+    color: var(--text-faint);
+  }
+
+  .head .meta {
+    display: block;
+    margin-top: var(--space-1);
+  }
+
+  .advisors {
+    font-style: italic;
+  }
+
+  .bullets {
+    margin: 0 0 var(--space-3);
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .bullets li {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .bullets li::marker {
+    color: var(--text-faint);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+</style>

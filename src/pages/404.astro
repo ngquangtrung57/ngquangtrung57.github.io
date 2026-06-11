@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 — Nguyen Quang Trung">
+  <main id="main" class="lost">
+    <p class="code">404</p>
+    <p class="line">
+      This page doesn't exist — yet the search policy converged here.
+    </p>
+    <p class="line muted">Even Messi misplaces a pass sometimes. ⚽</p>
+    <p class="wink">// flashed at the wrong moment</p>
+    <a class="home" href="/">cd ~/</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .lost {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: var(--space-8);
+    text-align: center;
+  }
+
+  .code {
+    font-family: var(--font-mono);
+    font-size: clamp(4.5rem, 16vw, 8rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent);
+    text-shadow:
+      0 0 24px var(--border-glow),
+      0 0 64px var(--border-glow);
+  }
+
+  .line {
+    max-width: 34rem;
+    color: var(--text);
+    text-wrap: balance;
+  }
+
+  .muted {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .wink {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-faint);
+  }
+
+  .home {
+    margin-top: var(--space-4);
+    padding: var(--space-2) var(--space-6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-elevated);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    transition:
+      border-color var(--transition),
+      box-shadow var(--transition);
+  }
+
+  .home:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 18px var(--border-glow);
+  }
+</style>
