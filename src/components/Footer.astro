@@ -1,5 +1,6 @@
 ---
 import { profile } from '../data/profile';
+const year = new Date().getFullYear();
 ---
 
 <footer id="contact">
@@ -13,7 +14,7 @@ import { profile } from '../data/profile';
       <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer">scholar</a>
     </div>
 
-    <p class="copyright">© 2026 Nguyen Quang Trung · Built with Astro</p>
+    <p class="copyright">© {year} Nguyen Quang Trung · Built with Astro</p>
   </div>
 </footer>
 

@@ -17,6 +17,11 @@ const sections = ['publications', 'experience', 'education', 'projects', 'contac
         ))
       }
     </nav>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" id="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme">
       <svg
         class="icon-sun"
@@ -185,15 +190,62 @@ const sections = ['publications', 'experience', 'education', 'projects', 'contac
     display: none;
   }
 
-  @media (min-width: 720px) {
-    .gh {
+  /* Fix C — prevent icon flash for light-mode OS preference before JS runs */
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) .icon-moon {
       display: none;
     }
+    :root:not([data-theme]) .icon-sun {
+      display: inline;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    padding: 0.3rem;
+    cursor: pointer;
+    color: var(--text-muted);
+  }
+
+  .menu-toggle .bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+    transition: opacity var(--transition);
+  }
+
+  .menu-toggle:hover {
+    color: var(--accent);
   }
 
   @media (max-width: 719.98px) {
     .anchors {
       display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-3) var(--space-5);
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .anchors.open {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: flex;
     }
 
     .theme-toggle {
@@ -215,4 +267,20 @@ const sections = ['publications', 'experience', 'education', 'projects', 'contac
       .querySelector('meta[name="theme-color"]')
       ?.setAttribute('content', next === 'light' ? '#f6f1e6' : '#0b0e14');
   });
+
+  const btn = document.getElementById('menu-toggle');
+  const nav = document.querySelector('.anchors');
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    // close when a nav link is clicked
+    nav.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('a')) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 </script>

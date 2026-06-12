@@ -24,6 +24,8 @@ export function mountQuoteBox(root: HTMLElement): void {
   const heatOut = root.querySelector<HTMLElement>('[data-heat-out]');
   if (!quoteEl || !attrEl || !cellEl || !shakeBtn || !expertIn || !layerIn || !heatIn) return;
 
+  let pending: ReturnType<typeof setTimeout> | null = null;
+
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // phase 1: the old words tumble up and away
@@ -86,7 +88,8 @@ export function mountQuoteBox(root: HTMLElement): void {
       tk.classList.add('lift');
     }
     // phase 2: swap in the new quote and let it settle
-    setTimeout(() => setQuote(q, true), LIFT_MS);
+    if (pending !== null) clearTimeout(pending);
+    pending = setTimeout(() => setQuote(q, true), LIFT_MS);
   }
 
   for (const input of [expertIn, layerIn, heatIn]) {
