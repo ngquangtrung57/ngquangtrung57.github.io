@@ -6,8 +6,23 @@ import Publications from '../components/Publications.astro';
 import Experience from '../components/Experience.astro';
 import Education from '../components/Education.astro';
 import Projects from '../components/Projects.astro';
+import SessionReplay from '../components/SessionReplay.astro';
 import Footer from '../components/Footer.astro';
 ---
+
+<style>
+  .colophon {
+    width: min(100% - 2.5rem, var(--wide-width));
+    margin-inline: auto;
+    padding: var(--space-12) 0 var(--space-16);
+  }
+  .colophon-label {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--text-faint);
+    margin-bottom: var(--space-4);
+  }
+</style>
 
 <BaseLayout>
   <Header />
@@ -17,6 +32,10 @@ import Footer from '../components/Footer.astro';
     <Experience />
     <Education />
     <Projects />
+    <div class="colophon" data-reveal>
+      <p class="colophon-label">three sessions from building this site with claude code</p>
+      <SessionReplay />
+    </div>
   </main>
   <Footer />
 </BaseLayout>

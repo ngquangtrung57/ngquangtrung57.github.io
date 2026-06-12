@@ -1,0 +1,349 @@
+---
+/* Simulated Claude Code terminal — auto-plays three real sessions from
+   building this site. Scripted, no API call; pure DOM animation. */
+---
+
+<div class="sr-wrap" data-sessionreplay>
+  <header class="sr-bar">
+    <span class="sr-dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span class="sr-title">$ claude</span>
+    <div class="sr-actions">
+      <button class="sr-btn" data-pause-btn type="button" aria-label="Pause replay">⏸</button>
+      <button class="sr-btn" data-replay-btn type="button" aria-label="Replay session">↺ replay</button>
+    </div>
+  </header>
+
+  <div class="sr-tabs" role="tablist" aria-label="Sessions">
+    <button class="sr-tab active" role="tab" aria-selected="true" data-tab="0">hero redesign</button>
+    <button class="sr-tab" role="tab" aria-selected="false" data-tab="1">corpus harvest</button>
+    <button class="sr-tab" role="tab" aria-selected="false" data-tab="2">a11y · 8 fixes</button>
+  </div>
+
+  <div class="sr-body" data-sr-body aria-live="polite" aria-label="Session replay output"></div>
+</div>
+
+<script>
+  import { mountSessionReplay } from '../scripts/session-replay';
+  const root = document.querySelector<HTMLElement>('[data-sessionreplay]');
+  if (root) mountSessionReplay(root);
+</script>
+
+<style>
+  .sr-wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-terminal);
+    box-shadow: 0 0 40px var(--accent-dim);
+    overflow: hidden;
+    font-family: var(--font-mono);
+  }
+
+  /* ── Title bar ── */
+  .sr-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-5);
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg-terminal) 60%, var(--bg) 40%);
+  }
+
+  .sr-dots {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .sr-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .sr-dots span:nth-child(1) { background: #ff5f57; }
+  .sr-dots span:nth-child(2) { background: #febc2e; }
+  .sr-dots span:nth-child(3) { background: #28c840; }
+
+  .sr-title {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    flex: 1;
+  }
+
+  .sr-actions {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .sr-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.1rem 0.65rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .sr-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ── Tabs ── */
+  .sr-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg-terminal) 80%, var(--bg) 20%);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .sr-tabs::-webkit-scrollbar { display: none; }
+
+  .sr-tab {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--border);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    cursor: pointer;
+    transition: color var(--transition), background var(--transition);
+    position: relative;
+  }
+  .sr-tab:hover:not(.active) {
+    color: var(--text-muted);
+  }
+  .sr-tab.active {
+    color: var(--accent);
+    background: var(--bg-terminal);
+  }
+  /* active tab "lifts" into the body */
+  .sr-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--bg-terminal);
+  }
+
+  /* ── Terminal body ── */
+  .sr-body {
+    height: 340px;
+    overflow-y: auto;
+    padding: var(--space-5) var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    scroll-behavior: smooth;
+  }
+  .sr-body::-webkit-scrollbar { width: 3px; }
+  .sr-body::-webkit-scrollbar-track { background: transparent; }
+  .sr-body::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+
+  /* ── Line types — created by JS, need :global() ── */
+
+  /* user message */
+  .sr-body :global(.sr-msg) {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+  }
+  .sr-body :global(.sr-msg-prompt) {
+    font-size: 0.68rem;
+    color: var(--accent);
+    white-space: nowrap;
+    padding-top: 0.18rem;
+    flex-shrink: 0;
+  }
+  .sr-body :global(.sr-msg-text) {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    word-break: break-word;
+  }
+
+  /* thinking indicator */
+  .sr-body :global(.sr-think) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    font-style: italic;
+  }
+  .sr-body :global(.sr-think-dot) {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    animation: sr-pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes sr-pulse {
+    0%, 100% { opacity: 0.25; }
+    50%       { opacity: 1; }
+  }
+
+  /* tool call row */
+  .sr-body :global(.sr-tool) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: 0.73rem;
+  }
+  .sr-body :global(.sr-tool-verb) {
+    color: var(--accent-2);
+    min-width: 3.2rem;
+    flex-shrink: 0;
+  }
+  .sr-body :global(.sr-tool-path) {
+    color: var(--text-muted);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .sr-body :global(.sr-tool-status) {
+    color: var(--text-faint);
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+  .sr-body :global(.sr-tool-status.done) {
+    color: var(--accent-2);
+  }
+
+  /* claude's text response (typewriter) */
+  .sr-body :global(.sr-text) {
+    font-size: 0.79rem;
+    color: var(--text);
+    line-height: 1.6;
+    padding-left: var(--space-3);
+    border-left: 2px solid var(--border);
+  }
+
+  /* diff block */
+  .sr-body :global(.sr-diff) {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    font-size: 0.71rem;
+  }
+  .sr-body :global(.sr-diff-header) {
+    padding: 0.2rem var(--space-3);
+    background: color-mix(in srgb, var(--border) 35%, transparent);
+    color: var(--text-faint);
+    font-size: 0.67rem;
+  }
+  .sr-body :global(.sr-diff-line) {
+    padding: 0.14rem var(--space-3);
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sr-body :global(.sr-diff-removed) {
+    background: color-mix(in srgb, var(--accent-hot) 10%, transparent);
+    color: var(--accent-hot);
+  }
+  .sr-body :global(.sr-diff-added) {
+    background: color-mix(in srgb, var(--accent-2) 10%, transparent);
+    color: var(--accent-2);
+  }
+
+  /* agents block */
+  .sr-body :global(.sr-agents) {
+    font-size: 0.72rem;
+  }
+  .sr-body :global(.sr-agents-label) {
+    color: var(--text-faint);
+    margin-bottom: var(--space-2);
+    font-size: 0.68rem;
+  }
+
+  /* dot grid (many agents) */
+  .sr-body :global(.sr-agents-dots) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: var(--space-2);
+  }
+  .sr-body :global(.sr-dot) {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    background: var(--border);
+    transition: background 200ms;
+  }
+  .sr-body :global(.sr-dot.done) {
+    background: var(--accent-2);
+  }
+  .sr-body :global(.sr-agents-counter) {
+    color: var(--text-faint);
+    font-size: 0.67rem;
+  }
+
+  /* labeled boxes (few agents) */
+  .sr-body :global(.sr-agents-boxes) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+  .sr-body :global(.sr-box) {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.2rem var(--space-3);
+    color: var(--text-faint);
+    font-size: 0.67rem;
+    transition: border-color 300ms, color 300ms;
+  }
+  .sr-body :global(.sr-box.done) {
+    border-color: var(--accent-2);
+    color: var(--accent-2);
+  }
+
+  /* done summary */
+  .sr-body :global(.sr-done) {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.74rem;
+    color: var(--accent);
+    padding: 0.3rem var(--space-4);
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: var(--radius-sm);
+    width: fit-content;
+  }
+
+  /* idle cursor after session ends */
+  .sr-body :global(.sr-cursor) {
+    display: inline-block;
+    width: 7px;
+    height: 0.95em;
+    background: var(--accent);
+    opacity: 0.7;
+    vertical-align: text-bottom;
+    animation: sr-blink 1.1s step-end infinite;
+  }
+
+  @keyframes sr-blink {
+    0%, 100% { opacity: 0.7; }
+    50%       { opacity: 0; }
+  }
+
+  @media (max-width: 600px) {
+    .sr-body {
+      height: 300px;
+      padding: var(--space-4);
+    }
+  }
+</style>
