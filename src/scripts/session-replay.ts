@@ -23,7 +23,7 @@ const SESSIONS: Session[] = [
     steps: [
       {
         kind: 'msg',
-        text: 'then you must spread the opening to be fill up when we move the sampler down, currently it single column, make it single column with double size. also have some description for the sampler (short and simple)',
+        text: 'The hero looks narrow now that the QuoteBox moved below it — widen it to fill the full column. Add a short description above the box too.',
       },
       { kind: 'think', ms: 1800 },
       { kind: 'tool', verb: 'Read', path: 'src/components/Hero.astro', ms: 380 },
@@ -58,7 +58,7 @@ const SESSIONS: Session[] = [
     steps: [
       {
         kind: 'msg',
-        text: "use as many subagents as you want with ultracode... find lots of famous quotes from famous AI researchers, papers, blogs, recent X posts about RL, multimodal, LLM. use lots of subagents for this",
+        text: 'Fill the 6×5×6 quote grid with real AI research content — papers, blogs, X posts. RL, multimodal, scaling, alignment. ultracode, as many agents as needed.',
       },
       { kind: 'think', ms: 2600 },
       {
@@ -98,7 +98,7 @@ const SESSIONS: Session[] = [
   {
     label: 'a11y · 8 fixes',
     steps: [
-      { kind: 'msg', text: 'ok can do all of this with subagents help' },
+      { kind: 'msg', text: "Fix all 8 of these with subagents. Parallel where the files don't overlap." },
       { kind: 'think', ms: 1200 },
       {
         kind: 'text',
@@ -109,9 +109,9 @@ const SESSIONS: Session[] = [
         label: '3 agents · parallel',
         count: 3,
         tags: [
-          'quotebox · race condition + aria-live',
-          'header · hamburger + github + theme flash',
-          'layout · tabindex + noreferrer + footer year',
+          'quotebox.ts · race + aria',
+          'Header.astro · nav + icons',
+          'index · profile · Footer',
         ],
         ms: 3800,
       },
@@ -176,7 +176,7 @@ async function renderMsg(
   row.className = 'sr-msg'
   const prompt = document.createElement('span')
   prompt.className = 'sr-msg-prompt'
-  prompt.textContent = 'you'
+  prompt.textContent = '>'
   const textEl = document.createElement('span')
   textEl.className = 'sr-msg-text'
   textEl.textContent = text
