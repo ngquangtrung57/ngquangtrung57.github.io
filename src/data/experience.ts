@@ -26,6 +26,8 @@ export const experience: ExperienceItem[] = [
     supervisors: [
       { name: 'Prof. Ziwei Liu', url: 'https://liuziwei7.github.io/' },
       { name: 'Dr. Bo Li', url: 'https://brianboli.com/' },
+      { name: 'Kaichen Zhang', url: 'https://kcz358.github.io/' },
+      { name: 'Yuhao Dong', url: 'https://github.com/dongyh20' },
     ],
     bullets: [
       'Working on improving multi-hop reasoning in Vision Language Models on video understanding tasks with RL (ongoing).',

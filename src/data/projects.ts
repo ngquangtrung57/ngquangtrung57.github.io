@@ -11,6 +11,7 @@ export const projects: Project[] = [
       github: 'https://github.com/EvolvingLMMs-Lab/lmms-eval',
     },
     tags: ['Evaluation', 'VLM', 'ALM'],
+    stars: 4200,
   },
   {
     id: 'lmms-engine',
@@ -22,6 +23,7 @@ export const projects: Project[] = [
       github: 'https://github.com/EvolvingLMMs-Lab/lmms-engine',
     },
     tags: ['Training', 'Multimodal'],
+    stars: 700,
   },
   {
     id: 'aero-1-audio',

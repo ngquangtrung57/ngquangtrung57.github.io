@@ -65,6 +65,8 @@ export interface Project {
     post?: string;
   };
   tags: string[];
+  /** Static star fallback; real-time count fetched client-side if github is set. */
+  stars?: number;
 }
 
 export interface SkillGroup {
