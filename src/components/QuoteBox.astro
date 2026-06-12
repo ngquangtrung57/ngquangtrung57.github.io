@@ -101,6 +101,13 @@
     min-height: 6.2em; /* room for the longest quote, so swapping doesn't shift layout */
   }
 
+  /* in the full-width hero column quotes wrap to fewer lines */
+  @media (min-width: 921px) {
+    .quote {
+      min-height: 5.3em;
+    }
+  }
+
   /* word spans; .tk elements are (re)built by the script */
   .quote :global(.tk) {
     display: inline-block;
