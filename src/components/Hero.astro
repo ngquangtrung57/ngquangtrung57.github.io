@@ -53,14 +53,10 @@ const links = [
     padding: var(--space-16) 0 var(--space-12);
   }
 
-  /* the hero breathes wider than --content-width */
+  /* single column: the opening reads first, the box sits beneath it */
   .hero-inner {
-    width: min(100% - 2.5rem, var(--wide-width));
+    width: min(100% - 2.5rem, var(--content-width));
     margin-inline: auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    align-items: center;
-    gap: var(--space-12);
   }
 
   h1 {
@@ -153,6 +149,7 @@ const links = [
 
   .hero-term {
     min-width: 0;
+    margin-top: var(--space-12);
   }
 
   @media (max-width: 920px) {
@@ -160,9 +157,8 @@ const links = [
       padding-top: var(--space-12);
     }
 
-    .hero-inner {
-      grid-template-columns: 1fr;
-      gap: var(--space-8);
+    .hero-term {
+      margin-top: var(--space-8);
     }
   }
 </style>
