@@ -1,6 +1,18 @@
 ---
 import { profile } from '../data/profile';
 const year = new Date().getFullYear();
+
+// ── Visitor tracking ──────────────────────────────────────────────────────────
+// GoatCounter: sign up free at goatcounter.com, pick code "ngquangtrung57"
+//   Update BaseLayout.astro data-goatcounter URL to match.
+const GC_SITE = 'ngquangtrung57';
+
+// Flag Counter: sign up free at flagcounter.com → "Get your free counter" →
+//   paste the 4-char code you receive (e.g. "Ab1C") into FC_CODE below.
+const FC_CODE = 'XXXX';
+
+const FC_DARK  = `https://s01.flagcounter.com/count2/${FC_CODE}/bg_0D1119/txt_5F6775/border_222A39/columns_6/maxflags_24/viewers_0/labels_1/pageviews_1/flags_0/percent_0/`;
+const FC_LIGHT = `https://s01.flagcounter.com/count2/${FC_CODE}/bg_F6F1E6/txt_99907C/border_D9CFB8/columns_6/maxflags_24/viewers_0/labels_1/pageviews_1/flags_0/percent_0/`;
 ---
 
 <footer id="contact">
@@ -14,9 +26,42 @@ const year = new Date().getFullYear();
       <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer">scholar</a>
     </div>
 
+    <div class="visitor-wrap">
+      <p class="visitor-count">
+        <span class="count-num" id="gc-count">···</span> visits ·
+        <a
+          href={`https://${GC_SITE}.goatcounter.com`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="stats-link"
+        >view stats ↗</a>
+      </p>
+      <!-- Flag Counter — themed per site colour scheme; swap dark/light via CSS -->
+      <a
+        href={`https://info.flagcounter.com/${FC_CODE}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visitor flag counter"
+        class="flag-link"
+      >
+        <img class="flag-img flag-img--dark" src={FC_DARK}  alt="Flag Counter" loading="lazy" />
+        <img class="flag-img flag-img--light" src={FC_LIGHT} alt="Flag Counter" loading="lazy" />
+      </a>
+    </div>
+
     <p class="copyright">© {year} Nguyen Quang Trung · Built with Astro</p>
   </div>
 </footer>
+
+<script define:vars={{ gcSite: GC_SITE }}>
+  fetch(`https://${gcSite}.goatcounter.com/counter/.json`)
+    .then(r => r.json())
+    .then(({ count }) => {
+      const el = document.getElementById('gc-count');
+      if (el && count) el.textContent = count;
+    })
+    .catch(() => {});
+</script>
 
 <style>
   footer {
@@ -59,8 +104,53 @@ const year = new Date().getFullYear();
     text-decoration: none;
   }
 
-  .copyright {
+  .visitor-wrap {
     margin-top: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .visitor-count {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-faint);
+  }
+
+  .count-num {
+    color: var(--accent);
+  }
+
+  .stats-link {
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    transition: color var(--transition);
+  }
+  .stats-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .flag-link {
+    display: inline-block;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    line-height: 0;
+    opacity: 0.85;
+    transition: opacity var(--transition);
+  }
+  .flag-link:hover { opacity: 1; }
+
+  .flag-img { display: block; max-width: 100%; }
+  .flag-img--light { display: none; }
+
+  :global([data-theme='light']) .flag-img--dark  { display: none; }
+  :global([data-theme='light']) .flag-img--light { display: block; }
+
+  .copyright {
+    margin-top: var(--space-4);
     font-size: 0.85rem;
     color: var(--text-muted);
   }
