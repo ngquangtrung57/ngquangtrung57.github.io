@@ -19,38 +19,115 @@ interface Session {
 
 const SESSIONS: Session[] = [
   {
-    label: 'hero redesign',
+    label: '3am debug',
     steps: [
       {
         kind: 'msg',
-        text: 'The hero looks narrow now that the QuoteBox moved below it — widen it to fill the full column. Add a short description above the box too.',
+        text: "why does the quotebox freeze when i click fast. been staring at this for 2hrs pls help",
       },
-      { kind: 'think', ms: 1800 },
-      { kind: 'tool', verb: 'Read', path: 'src/components/Hero.astro', ms: 380 },
-      { kind: 'tool', verb: 'Read', path: 'src/styles/tokens.css', ms: 260 },
+      { kind: 'think', ms: 2000 },
+      { kind: 'tool', verb: 'Read', path: 'src/scripts/quotebox.ts', ms: 340 },
+      { kind: 'tool', verb: 'Read', path: 'src/components/QuoteBox.astro', ms: 250 },
+      { kind: 'tool', verb: 'Bash', path: "grep -n 'setTimeout' src/scripts/quotebox.ts", ms: 140 },
       {
         kind: 'text',
-        text: "Hero column is capped at ~40rem — half the old two-column width. I'll expand it to --wide-width (64rem) so it fills the full measure, then add a short intro line above the QuoteBox.",
+        text: "Found it. render() fires setTimeout on every click without ever clearing the previous one — fast clicks stack up multiple pending renders that all fire in sequence, locking the animation.",
       },
       {
         kind: 'diff',
-        file: 'src/components/Hero.astro',
-        removed: ['  width: min(100% - 2.5rem, 40rem);'],
-        added:   ['  width: min(100% - 2.5rem, var(--wide-width));'],
-      },
-      {
-        kind: 'diff',
-        file: 'src/components/Hero.astro',
-        removed: [],
+        file: 'src/scripts/quotebox.ts',
+        removed: [
+          '  const render = () => {',
+          '    setTimeout(() => { draw() }, 120)',
+        ],
         added: [
-          '<p class="term-intro">',
-          '  A little toy I built — a box of 180 real AI quotes.',
-          '  Three knobs, every combination opens a different one.',
-          '</p>',
+          '  let pending: ReturnType<typeof setTimeout> | null = null',
+          '  const render = () => {',
+          '    if (pending !== null) clearTimeout(pending)',
+          '    pending = setTimeout(() => { draw() }, 120)',
         ],
       },
+      {
+        kind: 'text',
+        text: "Same pattern in the snow-globe reset path — fixing that too:",
+      },
+      {
+        kind: 'diff',
+        file: 'src/scripts/quotebox.ts',
+        removed: ['    resetTimer = setTimeout(triggerReset, 4000)'],
+        added: [
+          '    if (resetTimer !== null) clearTimeout(resetTimer)',
+          '    resetTimer = setTimeout(triggerReset, 4000)',
+        ],
+      },
+      { kind: 'tool', verb: 'Build', path: 'npm run build', ms: 2400 },
+      {
+        kind: 'text',
+        text: "Clean. Tested at 20 clicks/sec in devtools — no stacking, debounces correctly every time.",
+      },
       { kind: 'gap', ms: 300 },
-      { kind: 'done', text: '2 files  ·  4 tool calls  ·  build clean ✓' },
+      { kind: 'done', text: '1 file  ·  6 lines  ·  race condition sealed ✓' },
+    ],
+  },
+  {
+    label: 'make it alive',
+    steps: [
+      {
+        kind: 'msg',
+        text: "hero looks kinda dead idk. make it feel more alive without breaking the layout",
+      },
+      { kind: 'think', ms: 2600 },
+      { kind: 'tool', verb: 'Read', path: 'src/components/Hero.astro', ms: 300 },
+      { kind: 'tool', verb: 'Read', path: 'src/styles/global.css', ms: 230 },
+      { kind: 'tool', verb: 'Read', path: 'src/styles/tokens.css', ms: 180 },
+      {
+        kind: 'text',
+        text: "Plan: radial gradient bloom behind the name, staggered bio line entry on paint, subtle grid-dot layer that drifts on scroll. All respect prefers-reduced-motion.",
+      },
+      {
+        kind: 'diff',
+        file: 'src/styles/global.css',
+        removed: [],
+        added: [
+          '.hero { position: relative; overflow: hidden; }',
+          '.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;',
+          '  background: radial-gradient(ellipse at 18% 55%, var(--accent-dim), transparent 62%); }',
+          '@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; } }',
+        ],
+      },
+      {
+        kind: 'diff',
+        file: 'src/components/Hero.astro',
+        removed: ['{bio.map(line => <p class="bio" set:html={line} />)}'],
+        added: [
+          '{bio.map((line, i) => (',
+          '  <p class="bio" style={`animation-delay:${i * 90}ms`} set:html={line} />',
+          '))}',
+        ],
+      },
+      {
+        kind: 'diff',
+        file: 'src/styles/global.css',
+        removed: [],
+        added: [
+          '.hero .bio { animation: fade-up 500ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }',
+          '@media (prefers-reduced-motion: reduce) { .hero .bio { animation: none; } }',
+        ],
+      },
+      {
+        kind: 'agents',
+        label: 'cross-browser smoke · 4 agents',
+        count: 4,
+        tags: ['Chrome 124', 'Firefox 126', 'Safari 17', 'Mobile'],
+        ms: 3200,
+      },
+      {
+        kind: 'text',
+        text: "All green. Safari needed -webkit-mask on one gradient rule — patched. Reduced-motion path confirmed static.",
+      },
+      { kind: 'tool', verb: 'Build', path: 'npm run build', ms: 2200 },
+      { kind: 'gap', ms: 260 },
+      { kind: 'done', text: '3 files  ·  34 lines  ·  build clean ✓' },
     ],
   },
   {
@@ -58,66 +135,156 @@ const SESSIONS: Session[] = [
     steps: [
       {
         kind: 'msg',
-        text: 'Fill the 6×5×6 quote grid with real AI research content — papers, blogs, X posts. RL, multimodal, scaling, alignment. ultracode, as many agents as needed.',
+        text: "fill the quote grid. 6 topics × 5 eras × 6 heat = 180 slots. go wild with agents lol",
       },
-      { kind: 'think', ms: 2600 },
+      { kind: 'think', ms: 3400 },
       {
         kind: 'text',
-        text: "Launching a 3-phase workflow: 30 finder agents (6 topics × 5 eras) in parallel → chunk-of-4 verifiers → 6 writer agents landing JSON to disk.",
+        text: "4-phase workflow: 30 finders in parallel → chunk-of-4 verifiers → gap-fill pass → 6 writers to disk. Deduping on 48-char normalized key between phases.",
       },
       {
         kind: 'agents',
         label: 'phase 1 · finders · 30 parallel',
         count: 30,
         tags: [],
-        ms: 3400,
+        ms: 4200,
       },
       {
         kind: 'text',
-        text: '257 raw candidates. Deduping on 48-char normalized key, then verifying 4 cells at a time...',
+        text: "261 raw candidates across 180 cells. Running verifiers in chunks of 4...",
       },
       {
         kind: 'agents',
-        label: 'phase 2 · verifiers · 76 agents',
-        count: 76,
+        label: 'phase 2 · verifiers · 65 agents',
+        count: 65,
         tags: [],
-        ms: 2200,
+        ms: 3200,
       },
-      { kind: 'text', text: '3 thin cells under quota. Running gap-fill finders...' },
+      {
+        kind: 'text',
+        text: "4 cells still thin after dedup — attribution unclear or quote too short. Gap-fill round:",
+      },
       {
         kind: 'agents',
-        label: 'phase 3 · writers',
+        label: 'phase 3 · gap-fill · 8 agents',
+        count: 8,
+        tags: [],
+        ms: 1800,
+      },
+      {
+        kind: 'agents',
+        label: 'phase 4 · writers',
         count: 6,
         tags: ['llms.json', 'rl.json', 'multimodal.json', 'scaling.json', 'agents.json', 'alignment.json'],
-        ms: 1600,
+        ms: 2000,
       },
-      { kind: 'gap', ms: 400 },
-      { kind: 'done', text: '136 agents  ·  257 verified quotes  →  180-quote grid ✓' },
+      {
+        kind: 'text',
+        text: "180/180 filled. Spot-checking heat distribution — balanced within ±2 per row.",
+      },
+      { kind: 'gap', ms: 380 },
+      { kind: 'done', text: '109 agents  ·  261 candidates  →  180-slot grid ✓' },
     ],
   },
   {
-    label: 'a11y · 8 fixes',
+    label: 'scroll reveal',
     steps: [
-      { kind: 'msg', text: "Fix all 8 of these with subagents. Parallel where the files don't overlap." },
-      { kind: 'think', ms: 1200 },
+      {
+        kind: 'msg',
+        text: "sections just pop in instantly, feels kinda abrupt. scroll animations? nothing too crazy",
+      },
+      { kind: 'think', ms: 1600 },
+      { kind: 'tool', verb: 'Read', path: 'src/pages/index.astro', ms: 270 },
+      { kind: 'tool', verb: 'Read', path: 'src/styles/global.css', ms: 200 },
+      { kind: 'tool', verb: 'Read', path: 'src/scripts/', ms: 160 },
       {
         kind: 'text',
-        text: 'Splitting 8 fixes across 3 agents by file ownership — no conflicts.',
+        text: "IntersectionObserver on [data-reveal] — fade + 18px lift, 600ms ease. Gated behind html.js so no flash on first paint. Reduced-motion path gets instant reveal.",
       },
       {
-        kind: 'agents',
-        label: '3 agents · parallel',
-        count: 3,
-        tags: [
-          'quotebox.ts · race + aria',
-          'Header.astro · nav + icons',
-          'index · profile · Footer',
+        kind: 'diff',
+        file: 'src/styles/global.css',
+        removed: [],
+        added: [
+          'html.js [data-reveal] { opacity: 0; transform: translateY(18px);',
+          '  transition: opacity 600ms ease, transform 600ms cubic-bezier(0.2, 0.7, 0.3, 1); }',
+          'html.js [data-reveal].revealed { opacity: 1; transform: none; }',
         ],
-        ms: 3800,
       },
-      { kind: 'tool', verb: 'Build', path: 'npm run build', ms: 2400 },
+      {
+        kind: 'diff',
+        file: 'src/scripts/reveal.ts',
+        removed: [],
+        added: [
+          'export function mountReveal() {',
+          '  const els = document.querySelectorAll("[data-reveal]")',
+          '  const obs = new IntersectionObserver(entries => {',
+          '    entries.filter(e => e.isIntersecting).forEach(e => {',
+          '      e.target.classList.add("revealed"); obs.unobserve(e.target)',
+          '    })}, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" })',
+          '  els.forEach(el => obs.observe(el)) }',
+        ],
+      },
+      {
+        kind: 'diff',
+        file: 'src/pages/index.astro',
+        removed: ['<Publications />', '<Experience />', '<Projects />'],
+        added: ['<Publications data-reveal />', '<Experience data-reveal />', '<Projects data-reveal />'],
+      },
+      { kind: 'tool', verb: 'Build', path: 'npm run build', ms: 2200 },
+      {
+        kind: 'text',
+        text: "Verified with 6x CPU throttle — smooth. rootMargin -10% stops short sections from never triggering on mobile.",
+      },
+      { kind: 'tool', verb: 'Bash', path: 'npm run preview', ms: 1400 },
       { kind: 'gap', ms: 280 },
-      { kind: 'done', text: '6 files  ·  80 insertions  ·  build clean ✓' },
+      { kind: 'done', text: '4 files  ·  40 lines  ·  build clean ✓' },
+    ],
+  },
+  {
+    label: 'ship it',
+    steps: [
+      {
+        kind: 'msg',
+        text: "ok i think it's ready. check og tags + json-ld look right then just push it",
+      },
+      { kind: 'think', ms: 2000 },
+      { kind: 'tool', verb: 'Read', path: 'src/layouts/BaseLayout.astro', ms: 310 },
+      { kind: 'tool', verb: 'Bash', path: 'curl -sI https://ngquangtrung57.github.io', ms: 920 },
+      {
+        kind: 'text',
+        text: "Two things: og:image has no width/height hints so Twitter crops it randomly. JSON-LD Person is missing jobTitle — easy structured-data win for search.",
+      },
+      {
+        kind: 'diff',
+        file: 'src/layouts/BaseLayout.astro',
+        removed: ['<meta property="og:image" content={ogImage} />'],
+        added: [
+          '<meta property="og:image" content={ogImage} />',
+          '<meta property="og:image:width"  content="1200" />',
+          '<meta property="og:image:height" content="630" />',
+          '<meta name="twitter:image" content={ogImage} />',
+        ],
+      },
+      {
+        kind: 'diff',
+        file: 'src/layouts/BaseLayout.astro',
+        removed: ['"name": profile.name,'],
+        added: ['"name": profile.name,', '"jobTitle": "Undergraduate Researcher",'],
+      },
+      { kind: 'tool', verb: 'Build', path: 'npm run build', ms: 2600 },
+      { kind: 'tool', verb: 'Bash', path: 'git push origin main', ms: 3400 },
+      {
+        kind: 'text',
+        text: "Pages CDN propagating — usually live in under 90s.",
+      },
+      { kind: 'tool', verb: 'Bash', path: "curl -s https://ngquangtrung57.github.io | grep 'og:image'", ms: 2100 },
+      {
+        kind: 'text',
+        text: "Live and resolving. OG tags confirmed in response headers.",
+      },
+      { kind: 'gap', ms: 320 },
+      { kind: 'done', text: '1 file  ·  6 lines  ·  live at ngquangtrung57.github.io ✓' },
     ],
   },
 ]
@@ -280,6 +447,7 @@ async function renderDiff(
 // Completion ratios for labeled-box agents — staggered to feel parallel
 const STAGGER: Record<number, number[]> = {
   3: [0.52, 0.82, 1.0],
+  4: [0.35, 0.58, 0.78, 1.0],
   6: [0.14, 0.28, 0.46, 0.63, 0.80, 1.0],
 }
 
